@@ -1,8 +1,8 @@
 {
   "schema": "sacq_release_readiness_v1",
   "updated": "2026-10-07",
-  "publication": "not_published",
-  "repository": "deferred_by_owner",
+  "publication": "uploaded_to_repository; public release deferred by owner",
+  "repository": "https://github.com/haesunglee116/SACQ",
   "owner_code_license": "deferred_by_owner",
   "distribution": "sacq-research",
   "python_import": "sacq",
@@ -56,13 +56,13 @@
     "Actual packed allocation -> 338-layer index -> calibration -> full 50-episode diagnostic rollout with exact-gated inference acceleration"
   ],
   "validation": {
-    "full_cpu_tests": 186,
+    "full_cpu_tests": 191,
     "installed_wheel_core_tests": 13,
     "cpu_example": "passed",
     "source_staging": "passed",
     "source_scan": "passed",
     "gpu_model_end_to_end": "All five public driver stages and explicit result aggregation passed on a real model using an approved diagnostic fixture. Existing bank plus one newly fitted candidate; not full-bank fitting or scientific benchmark reproduction.",
-    "github_actions": "configured, not run on GitHub",
+    "github_actions": "Workflow configured for push/pull_request; hosted run status not verified by this record",
     "installed_wheel_cache_tests": 3,
     "actual_gr00t_source_assembly": {
       "revision": "63ff416404087491ee09cf2563b54744d099d6ec",
@@ -567,7 +567,7 @@
       },
       "limitation": "One unaccelerated inference call and eight environment steps; no completed episode, success rate or acceleration validation",
       "slurm_job_id": 280112,
-      "scope": "New evaluation builder output derived from jobs 280106/280111, not the old calibrated overlays; one archived task/episode and one eight-step chunk. Public pipeline driver and full rollout completion remain untested."
+      "scope": "Earlier one-chunk RPC component check. Superseded for orchestration coverage by public_five_stage_driver; original evidence retained."
     },
     "allocation_actual_bank_preflight": {
       "status": "PASS_INPUT_PREFLIGHT_ONLY",
@@ -669,10 +669,18 @@
       "public_aggregation": "PASS",
       "held_out": false,
       "full_bank_fitting": false
+    },
+    "reference_preset": {
+      "name": "gr00t_libero_sacq2_seed17",
+      "status": "archived reference; awaiting author selection as public preset",
+      "new_tests": 5,
+      "gpu_rerun": false,
+      "allocation_layers": 338,
+      "codebook_layers": 331,
+      "background_gptq_layers": 111
     }
   },
   "remaining_before_publication": [
-    "Owner-selected GitHub destination and authentication",
     "Owner-selected license and rights-holder confirmation for research code"
   ],
   "remaining_before_turnkey_reproduction": [

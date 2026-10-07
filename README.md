@@ -1,7 +1,9 @@
-# SACQ — public release working tree
+# SACQ — GR00T–LIBERO
 
-This working tree continues the submitted code supplement. The submission snapshot
-is preserved separately; this directory is not yet a published release.
+GR00T–LIBERO implementation of SACQ. This repository contains the numerical
+core, model integration, execution tools and validation documentation.
+The code has been uploaded to the project repository; public release and the
+author-code license remain pending the authors' decision.
 
 This supplement exposes the numerical implementation and selected experiment
 source snapshots. It is **not yet an end-to-end reproduction release**. No model
@@ -14,6 +16,11 @@ fitting/allocation adapter, five-stage driver, index/calibration/evaluation job 
 and remaining integration limits.
 SimplER and OpenVLA-OFT integration are deferred to later releases.
 Calibration data is currently external, not an accidentally omitted artifact.
+
+A recorded SACQ2 reference preset and spec-preparation command are described in
+[the runbook](gr00t_libero/RUNBOOK.md#recorded-sacq2-reference-preset). The author
+has not yet selected it as the public paper preset; external inputs remain
+required.
 
 ## Pipeline
 
@@ -119,24 +126,31 @@ claimed to be bitwise-equivalent training.
 
 ## Real-runtime validation status
 
-Existing-environment GPU smoke checks passed for BF16/SACQ forward computation,
-calibration backward and one optimizer update, official-state reset/rendering,
-and policy-to-simulator communication executing one eight-step action chunk.
-Fresh-process checkpoint continuation matched exactly with deterministic
-execution controls; default-runtime backward computations were not bitwise
-reproducible. Fresh policy and simulator venvs subsequently passed the RPC check,
-including a source tree rebuilt from public upstream commits plus the bundled
-overlays. The actual index worker also completed a two-layer software fixture.
-These bounded checks are not a full benchmark reproduction or a fresh-host
-container test. See [validation evidence and limits](VALIDATION.md).
+Fresh policy and simulator environments passed real-model checks. The public
+five-stage driver then completed a diagnostic using one newly fitted candidate
+and an existing bank, a four-suite allocation step, 338-layer index correction,
+one calibration update and 50 rollout episodes. Explicit aggregation found no
+missing episodes. The source archive passed 186 tests at that release; current
+preset additions bring the local suite to 191 passing tests.
 
-## What remains before a complete public reproduction release
+This validates software integration within the tested scope, not full-bank
+fitting, fresh-host container installation or paper success-rate reproduction.
+See [validation evidence and limits](VALIDATION.md). The archived SACQ2 reference
+preset has a different 331-codebook selection and has not been rerun by the new
+preset command.
 
-1. Complete input preparation and explicit stage configuration examples.
-2. Supply immutable model/data identities and per-experiment sample manifests;
-   the external checkpoints and private captures are not part of this source release.
-3. Validate complete connected execution beyond the bounded component checks.
-4. Assemble and inspect the final distribution after these remaining changes.
+## Reproduction inputs and supported scope
+
+The five-stage driver and explicit aggregation have completed a real-model
+software diagnostic. Installation guides, input-preparation helpers and source/
+wheel packages are available. The diagnostic reused an existing multi-K bank,
+fitted one new candidate, ran one allocation move and one calibration update,
+and completed 50 evaluation episodes. It is not full paper-result reproduction.
+
+Scientific reproduction still requires the selected checkpoint, captures,
+background artifacts and their episode provenance. These are external inputs,
+not included in the repository. See [the runbook](gr00t_libero/RUNBOOK.md) and
+[validation record](VALIDATION.md) for the exact supported path and limits.
 
 The first release supports the pinned GR00T–LIBERO model and evaluation layout.
 Other model layouts and seeds are not promised by the existing adapters.
@@ -159,7 +173,7 @@ python -m build
 ```
 
 GitHub Actions is configured for CPU tests, the synthetic example, source checks,
-package builds and an installed-wheel check outside the checkout. That workflow
-has not yet run on GitHub because the destination repository is undecided.
+package builds and an installed-wheel check outside the checkout. The workflow is triggered by pushes and pull requests. Its GitHub run status
+must be checked in the Actions tab; local test results do not establish CI success.
 Repository preparation status is recorded in `RELEASE_READINESS.json`.
 See [draft release notes](RELEASE_NOTES.md) for the initial release contents and limits.

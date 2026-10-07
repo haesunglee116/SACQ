@@ -1,0 +1,144 @@
+{
+  "schema": "sacq_reference_preset_v1",
+  "name": "gr00t_libero_sacq2_seed17",
+  "status": "archived_reference_pending_author_selection",
+  "scientific_approval": false,
+  "description": "Archived SACQ2 configuration, not the 338-codebook software smoke and not a held-out reproduction claim.",
+  "suites": [
+    "libero_10",
+    "libero_goal",
+    "libero_object",
+    "libero_spatial"
+  ],
+  "fitting": {
+    "vlm_seed": 20260713,
+    "vlm_sample_size": 50000,
+    "vlm_iters": 8,
+    "dit_seed": 20260601,
+    "dit_sample_size": 200000,
+    "dit_iters": 12,
+    "group_size": 64,
+    "vector_dim": 4,
+    "rotate": false,
+    "scale_squared_weighting": false,
+    "vlm_metric_v2": "diag",
+    "dit_ff_up_metric_v2": "diag_mean",
+    "dit_proj_out": "none",
+    "dit_noise_seed": "7000 + sorted request position",
+    "request_limit": 64,
+    "token_hook_cap": "disabled; every selected request contributes",
+    "dit_statistics_background": "legacy fs2 VLM_ENV + embedding HQQ4 + vision HQQ4"
+  },
+  "candidate_k": [
+    2048,
+    1024,
+    512,
+    256,
+    128,
+    64,
+    32,
+    16
+  ],
+  "allocation": {
+    "mode": "reuse_exact_archived_selection",
+    "file": "sacq2_allocation.csv",
+    "sha256": "90a11369595480bd86d9753efe91ac9d719831805bf34675619d8e3be5d74a77",
+    "target_nominal_bpw": 2.0,
+    "actual_nominal_bpw": 1.9996885382059801,
+    "candidate_layers": 338,
+    "codebook_layers": 331,
+    "frozen_gptq_layers": 111,
+    "origin_search": {
+      "start_k": 90000,
+      "min_bit": 1.0,
+      "target_payload_bytes": 355161252,
+      "target_nominal_bits": 1.25,
+      "selected_checkpoint": 1.5,
+      "refresh_every": 100,
+      "checkpoint_step": 0.1,
+      "scope_policy": "hard",
+      "requests_per_suite": 10,
+      "aggregation": "equal mean across all four suites",
+      "workers_per_suite": 2
+    }
+  },
+  "index_settings": {
+    "damping": 0.1,
+    "block_columns": 128,
+    "noise_seed_base": 7000,
+    "moment_chunk_rows": 2048,
+    "torch_num_threads": 2,
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true
+  },
+  "training": {
+    "limit": 640,
+    "epochs": 12,
+    "global_batch": 6,
+    "codebook_lr": 0.0001,
+    "scale_lr": 1e-05,
+    "val_every": 10,
+    "steps_per_invocation": 0,
+    "fp32_codebook_grad": true,
+    "resume": true,
+    "expected_updates": 1152
+  },
+  "rollout": {
+    "environment_seed": 17,
+    "policy_seed": 20260824,
+    "episodes_per_task": 50,
+    "n_envs": 1,
+    "action_steps": 8,
+    "max_episode_steps": 720,
+    "termination": "official_done_or_720",
+    "success": "success_any",
+    "settling_steps": 0
+  },
+  "requests": {
+    "calibration_total": 640,
+    "calibration_train": 576,
+    "calibration_validation": 64,
+    "index_positions": "all original positions i in [0,640) where i % 10 != 0",
+    "order": "preserve original capture order"
+  },
+  "background": {
+    "vision": "original frozen GPTQ payloads in the recorded job; 104 Linear layers",
+    "allocation_scalar_slots": "7 fixed GPTQ payloads matching allocation 3/4bit slots",
+    "vlsa": "HQQ4 group64",
+    "embedding": "original affine embedding4"
+  },
+  "provenance": {
+    "common_fitting_allocation": {
+      "file": "protocol.json",
+      "sha256": "8a29d0d87c1e5ba7e0cc9b86b8ff0b384dc78b02410b1f5cd3242279479caada"
+    },
+    "calibration_protocols": [
+      {
+        "suite": "libero_10",
+        "file": "protocol.json",
+        "sha256": "d2ac5093d9fac5763b4faab9aa08278e35d28573b2eb9b786299b53d7f979fd4"
+      },
+      {
+        "suite": "libero_goal",
+        "file": "protocol.json",
+        "sha256": "3eaa382945c442b8869e7b029e6c8e4ed6ecff6d8b44889c5976aa2f39907f67"
+      },
+      {
+        "suite": "libero_object",
+        "file": "protocol.json",
+        "sha256": "a59f4df00944d89ebb34dc8e79a0c62e7972defabbb0e1806cf8759212256f9d"
+      },
+      {
+        "suite": "libero_spatial",
+        "file": "protocol.json",
+        "sha256": "e4901db492ca7b528b44614f081d8b461ab8a2ab8bc3651f1fb7f18f144a1a94"
+      }
+    ]
+  },
+  "limitations": [
+    "Development episode provenance unresolved in archived records; no held-out claim",
+    "Exact checkpoint/capture/bank/background inputs are external",
+    "This reference is not yet confirmed by the author as the public paper preset",
+    "Origin allocation search targeted 1.25 and recorded selected_checkpoint 1.5; this preset reuses its actual 2.0 checkpoint rather than relabeling that search"
+  ]
+}

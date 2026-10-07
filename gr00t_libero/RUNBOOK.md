@@ -6,6 +6,43 @@ not a downloadable paper preset. Model weights, captures with episode provenance
 fitted candidates and frozen background payloads are not included. See
 [validation scope](../VALIDATION.md) for the checks actually completed.
 
+## Recorded SACQ2 reference preset
+
+`presets/gr00t_libero_sacq2_seed17.json` records an actual archived SACQ2
+configuration. Its selection as the public paper preset is awaiting the author;
+it must not be presented as the validated 338-codebook software fixture.
+The bundled allocation CSV has 338 candidates: 331 codebooks and seven scalar
+slots. Downstream jobs use 111 frozen GPTQ payloads. Nominal BPW is
+1.9996885382059801 over the candidate scope.
+
+The preset supplies index settings, calibration settings (640 ordered requests,
+576 training / 64 validation, 1,152 updates, codebook LR 1e-4, scale LR 1e-5),
+and the pinned seed17 rollout settings. It preserves fitting/search provenance
+as metadata; the executable reference route **reuses the exact allocation**.
+It does not yet automate fresh fitting/allocation or download any input.
+
+Prepare the external input bindings in the existing builder format. Omit the
+preset-owned `allocation`, `job.index_settings`, `job.training` and
+`plan.rollout` fields; the helper fills those fields and rejects conflicting
+values. Model, processor, bank/background records, ordered observations,
+workspace, output paths and genuine reset/noise/provenance inputs remain your
+explicit bindings. It does not turn unknown episode provenance into a PASS.
+
+```bash
+python gr00t_libero/preset.py index --bindings index-inputs.json --output index-spec.json
+python gr00t_libero/jobs.py index --spec index-spec.json --output-dir /absolute/new/index-job
+# After actual index completion, bind those shard jobs and receipts:
+python gr00t_libero/preset.py calibration --bindings calibration-inputs.json --output calibration-spec.json
+python gr00t_libero/jobs.py calibration --spec calibration-spec.json --output-dir /absolute/new/calibration-job
+# After actual calibration completion, bind its job and completion:
+python gr00t_libero/preset.py evaluation --bindings evaluation-inputs.json --output evaluation-spec.json
+python gr00t_libero/jobs.py evaluation --spec evaluation-spec.json --output-dir /absolute/new/evaluation-job
+```
+
+These commands prepare job specifications; execute them through the pipeline
+commands below. The reference helper does not launch GPUs or choose a different
+model, task subset, request ordering or scientific protocol.
+
 ## Before starting
 
 Prepare the policy and simulator environments using [ENVIRONMENT.md](ENVIRONMENT.md),

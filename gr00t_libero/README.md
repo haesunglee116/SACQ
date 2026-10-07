@@ -1,4 +1,4 @@
-# GR00T–LIBERO integration (in progress)
+# GR00T–LIBERO integration
 
 This directory narrows the model-level release to GR00T on LIBERO. Calibration
 observations, teacher tensors, model weights and simulator assets are deliberately
@@ -421,7 +421,8 @@ a hardcoded worker setting. Resolve this when introducing the public presets.
 
 ## Still required before advertising turnkey reproduction
 
-The released sources and driver are not yet an end-to-end validated recipe.
+The five-stage driver has passed the documented connected software diagnostic.
+This is not yet a turnkey recipe for reproducing the full paper benchmarks.
 The dependency environments and public source assembly have real-model component
 checks. A connected software diagnostic completed allocation, index correction,
 calibration and 50 rollout episodes, using an existing bank plus one newly fitted
