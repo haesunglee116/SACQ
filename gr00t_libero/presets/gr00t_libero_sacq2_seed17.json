@@ -1,7 +1,7 @@
 {
   "schema": "sacq_reference_preset_v1",
   "name": "gr00t_libero_sacq2_seed17",
-  "status": "archived_reference_pending_author_selection",
+  "status": "author_selected_paper_reference",
   "scientific_approval": false,
   "description": "Archived SACQ2 configuration, not the 338-codebook software smoke and not a held-out reproduction claim.",
   "suites": [
@@ -27,7 +27,10 @@
     "dit_noise_seed": "7000 + sorted request position",
     "request_limit": 64,
     "token_hook_cap": "disabled; every selected request contributes",
-    "dit_statistics_background": "legacy fs2 VLM_ENV + embedding HQQ4 + vision HQQ4"
+    "dit_statistics_background": "legacy fs2 VLM_ENV + embedding HQQ4 + vision HQQ4",
+    "vlm_max_tokens": 9223372036854775807,
+    "metrics_calib_calls": 48,
+    "vlm_checkpoint_suite": "libero_spatial"
   },
   "candidate_k": [
     2048,
@@ -138,12 +141,20 @@
       "file": "allocation_ckpt2.00.csv",
       "sha256": "90a11369595480bd86d9753efe91ac9d719831805bf34675619d8e3be5d74a77",
       "export_transform": "CRLF to LF only; all row values preserved"
+    },
+    "original_launcher": {
+      "file": "workshop_common_rebuild_20260920.py",
+      "sha256": "fb486b57c05478769962b1df6f08e4638e8db2b8974b4c7e56e29cd36d818faa"
     }
   },
   "limitations": [
     "Development episode provenance unresolved in archived records; no held-out claim",
     "Exact checkpoint/capture/bank/background inputs are external",
-    "This reference is not yet confirmed by the author as the public paper preset",
     "Origin allocation search targeted 1.25 and recorded selected_checkpoint 1.5; this preset reuses its actual 2.0 checkpoint rather than relabeling that search"
-  ]
+  ],
+  "author_selection": {
+    "choice": "submitted GR00T-LIBERO SACQ 2bit experiment",
+    "quote": "1\ubc88\ub300\ub85c \ud574",
+    "meaning": "Selects the public reference configuration; does not approve new runs or establish held-out sample provenance"
+  }
 }

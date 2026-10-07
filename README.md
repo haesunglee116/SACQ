@@ -18,8 +18,8 @@ SimplER and OpenVLA-OFT integration are deferred to later releases.
 Calibration data is currently external, not an accidentally omitted artifact.
 
 A recorded SACQ2 reference preset and spec-preparation command are described in
-[the runbook](gr00t_libero/RUNBOOK.md#recorded-sacq2-reference-preset). The author
-has not yet selected it as the public paper preset; external inputs remain
+[the runbook](gr00t_libero/RUNBOOK.md#recorded-sacq2-reference-preset). The author has selected the submitted SACQ2 configuration as the reference;
+external inputs remain
 required.
 
 ## Pipeline
@@ -131,7 +131,7 @@ five-stage driver then completed a diagnostic using one newly fitted candidate
 and an existing bank, a four-suite allocation step, 338-layer index correction,
 one calibration update and 50 rollout episodes. Explicit aggregation found no
 missing episodes. The source archive passed 186 tests at that release; current
-preset additions bring the local suite to 191 passing tests.
+preset additions bring the local suite to 195 passing tests.
 
 This validates software integration within the tested scope, not full-bank
 fitting, fresh-host container installation or paper success-rate reproduction.

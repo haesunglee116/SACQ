@@ -56,7 +56,7 @@
     "Actual packed allocation -> 338-layer index -> calibration -> full 50-episode diagnostic rollout with exact-gated inference acceleration"
   ],
   "validation": {
-    "full_cpu_tests": 191,
+    "full_cpu_tests": 195,
     "installed_wheel_core_tests": 13,
     "cpu_example": "passed",
     "source_staging": "passed",
@@ -672,12 +672,13 @@
     },
     "reference_preset": {
       "name": "gr00t_libero_sacq2_seed17",
-      "status": "archived reference; awaiting author selection as public preset",
-      "new_tests": 5,
+      "status": "author-selected submitted SACQ2 reference; command preparation CPU tested",
+      "new_tests": 9,
       "gpu_rerun": false,
       "allocation_layers": 338,
       "codebook_layers": 331,
-      "background_gptq_layers": 111
+      "background_gptq_layers": 111,
+      "upstream_command_preparation": "44 fitting commands and original allocation search to 1.25 with 2.0 checkpoint selection; no new scientific run"
     }
   },
   "remaining_before_publication": [

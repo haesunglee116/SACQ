@@ -2,15 +2,15 @@
 
 Run these commands from the extracted source distribution, not from the installed
 numerical wheel alone. This is the execution order and artifact contract; it is
-not a downloadable paper preset. Model weights, captures with episode provenance,
+not a bundled model or dataset. Model weights, captures with episode provenance,
 fitted candidates and frozen background payloads are not included. See
 [validation scope](../VALIDATION.md) for the checks actually completed.
 
 ## Recorded SACQ2 reference preset
 
 `presets/gr00t_libero_sacq2_seed17.json` records an actual archived SACQ2
-configuration. Its selection as the public paper preset is awaiting the author;
-it must not be presented as the validated 338-codebook software fixture.
+configuration selected by the author as the paper reference preset.
+It is distinct from the validated 338-codebook software fixture.
 The bundled allocation CSV has 338 candidates: 331 codebooks and seven scalar
 slots. Downstream jobs use 111 frozen GPTQ payloads. Nominal BPW is
 1.9996885382059801 over the candidate scope.
@@ -19,7 +19,8 @@ The preset supplies index settings, calibration settings (640 ordered requests,
 576 training / 64 validation, 1,152 updates, codebook LR 1e-4, scale LR 1e-5),
 and the pinned seed17 rollout settings. It preserves fitting/search provenance
 as metadata; the executable reference route **reuses the exact allocation**.
-It does not yet automate fresh fitting/allocation or download any input.
+Fresh fitting/allocation commands can also be prepared as described below.
+Neither route downloads inputs or launches experiments automatically.
 
 Prepare the external input bindings in the existing builder format. Omit the
 preset-owned `allocation`, `job.index_settings`, `job.training` and
@@ -42,6 +43,56 @@ python gr00t_libero/jobs.py evaluation --spec evaluation-spec.json --output-dir 
 These commands prepare job specifications; execute them through the pipeline
 commands below. The reference helper does not launch GPUs or choose a different
 model, task subset, request ordering or scientific protocol.
+
+## Preparing fitting and allocation from the reference settings
+
+Use `preset_stages.py` to generate commands with the recorded scientific arguments.
+Bindings contain **paths only**, not replacement hyperparameters. Example fitting bindings:
+
+```json
+{
+  "workspace": "/absolute/prepared-workspace",
+  "processor": "/absolute/processor",
+  "models": {
+    "libero_10": "/absolute/models/libero_10",
+    "libero_goal": "/absolute/models/libero_goal",
+    "libero_object": "/absolute/models/libero_object",
+    "libero_spatial": "/absolute/models/libero_spatial"
+  },
+  "output_root": "/absolute/new/fitting-results",
+  "vlm_requests": "/absolute/original-64-vlm-requests",
+  "dit_requests": "/absolute/original-64-dit-requests"
+}
+```
+
+```bash
+python gr00t_libero/preset_stages.py fitting --bindings fitting-inputs.json --output-dir /absolute/new/fitting-plan
+```
+
+The plan contains 44 ordered commands: four metric collections, eight shared
+VLM fits, and 32 suite-specific DiT fits. Its 8,128 candidate payloads cover all
+eight K values. Use `stage-row.json` as the `fitting` stage in your execution
+configuration (see pipeline commands below); its entrypoints refer to the
+prepared workspace. After fitting finishes, build the bank with `bank.py
+--build-spec /absolute/new/fitting-plan/inventory-spec.json`, as documented below.
+
+For allocation bindings, retain `workspace`, `processor`, and all four `models`;
+choose a new `output_root`, and replace `vlm_requests`/`dit_requests` with
+`bank_manifest` (the completed bank inventory JSON) and `allocation_requests`
+(the original 40 captures, ten filenames prefixed with each suite name).
+
+```bash
+python gr00t_libero/preset_stages.py allocation --bindings allocation-inputs.json --output-dir /absolute/new/allocation-plan
+```
+
+Use that `stage-row.json` for the allocation stage. The original search goes to
+**1.25 nominal bits**; SACQ2 uses its intermediate **`allocation_ckpt2.00.csv`**,
+not the final `allocation.csv`. This preserves the recorded search trajectory.
+The downstream `preset.py` helper deliberately reuses the bundled archival CSV;
+a newly computed allocation is a separate artifact and must be explicitly bound
+through the ordinary job builders if it differs. Fresh commands do not guarantee
+identical allocations with different input artifacts. Original captures, models,
+frozen background payloads and scientific provenance are still external inputs.
 
 ## Before starting
 

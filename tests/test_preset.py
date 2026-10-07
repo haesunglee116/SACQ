@@ -46,3 +46,67 @@ class PresetTests(unittest.TestCase):
             rows = list(csv.DictReader(f))
         self.assertEqual(len(rows), 338)
         self.assertEqual(sum(int(x['k']) < 80000 for x in rows), 331)
+
+
+class UpstreamPresetTests(unittest.TestCase):
+    def setUp(self):
+        import tempfile
+        from pathlib import Path
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.suites = json.loads(PRESET.read_text())['suites']
+
+    def bindings(self):
+        return dict(workspace=str(self.root/'workspace'), processor=str(self.root/'processor'),
+                    models={s: str(self.root/s) for s in self.suites}, output_root=str(self.root/'results'))
+
+    def captures(self, name, names):
+        folder = self.root/name
+        folder.mkdir()
+        for name in names:
+            (folder/(name+'.msgpack')).write_bytes(b'fixture')
+        return str(folder)
+
+    def test_fitting_full_candidate_coverage_and_order(self):
+        from gr00t_libero.preset_stages import prepare
+        b = self.bindings()
+        b['vlm_requests'] = self.captures('vlm', map(str, range(64)))
+        b['dit_requests'] = self.captures('dit', map(str, range(64)))
+        row = prepare('fitting', b, self.root/'plan')
+        self.assertEqual(len(row['commands']), 44)
+        self.assertEqual(len(row['outputs']), 8128+8)
+        self.assertEqual(len(set(row['outputs'])), len(row['outputs']))
+        groups = json.loads((self.root/'plan/inventory-spec.json').read_text())['groups']
+        self.assertEqual(sum(len(g['layers']) for g in groups), 8128)
+        for c in row['commands'][:4]:
+            self.assertIn('--calib-calls', c['argv'])
+        self.assertFalse(json.loads((self.root/'plan/preset-receipt.json').read_text())['executed'])
+
+    def test_allocation_keeps_original_search_and_intermediate_selection(self):
+        from gr00t_libero.preset_stages import prepare
+        b = self.bindings()
+        b['allocation_requests'] = self.captures('alloc', [f'{s}_{i:02}' for s in self.suites for i in range(10)])
+        bank = self.root/'bank.json'; bank.write_text('{}')
+        b['bank_manifest'] = str(bank)
+        row = prepare('allocation', b, self.root/'plan')
+        argv = row['commands'][0]['argv']
+        self.assertEqual(argv[argv.index('--target-nominal-bits')+1], '1.25')
+        self.assertEqual(argv[argv.index('--n-gpus')+1], '8')
+        self.assertTrue(any(p.endswith('allocation_ckpt2.00.csv') for p in row['outputs']))
+        self.assertEqual(len(row['inputs']), 42)
+
+    def test_incomplete_capture_set_rejected_before_writing(self):
+        from gr00t_libero.preset_stages import prepare
+        b = self.bindings()
+        b['vlm_requests'] = self.captures('vlm', ['one'])
+        b['dit_requests'] = self.captures('dit', ['one'])
+        with self.assertRaisesRegex(ValueError, '64'):
+            prepare('fitting', b, self.root/'plan')
+        self.assertFalse((self.root/'plan').exists())
+
+    def test_hyperparameter_override_rejected(self):
+        from gr00t_libero.preset_stages import prepare
+        b = self.bindings(); b['min_bit'] = 2
+        with self.assertRaisesRegex(ValueError, 'path-only'):
+            prepare('allocation', b, self.root/'plan')
