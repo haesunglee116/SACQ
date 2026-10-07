@@ -1,0 +1,683 @@
+{
+  "schema": "sacq_release_readiness_v1",
+  "updated": "2026-10-07",
+  "publication": "not_published",
+  "repository": "deferred_by_owner",
+  "owner_code_license": "deferred_by_owner",
+  "distribution": "sacq-research",
+  "python_import": "sacq",
+  "scope": {
+    "numerical_core": "CPU tested",
+    "gr00t_libero": "prepared adapters for pinned legacy layout",
+    "simpler": "deferred by owner; draft preserved outside release",
+    "openvla_oft": "not integrated in this release",
+    "first_release": "GR00T-LIBERO only, owner-confirmed"
+  },
+  "completed": [
+    "Explicit index/calibration/evaluation job builders",
+    "Explicit calibration configuration and output directory",
+    "Trainer background-install callback",
+    "Strict metric fitter argument",
+    "Static rollout and simulator runtime",
+    "Explicit episode-manifest aggregation",
+    "CPU example and CI workflow",
+    "Source and wheel package builds",
+    "Explicit aggregation with partial/final separation and declared denominators",
+    "Source archive unpack/hash/staging check configured in CI",
+    "Manifest-driven SACQ/background layer counts and frozen precision",
+    "Explicit fitted-bank inventory with exact candidate identity and checksum lookup",
+    "Reference and unresolved-import inventory coverage checks",
+    "Explicit reconstruction cache lifetime API for independent calibration requests",
+    "Pinned local GR00T Git export with overlay application and complete source receipts",
+    "Per-job calibration output ownership and isolated teacher/prepared-batch cache paths",
+    "DiT fitter receives explicit checkpoint after CLI parsing, without default-path overwrite",
+    "Explicit fitter-output groups to allocation bank manifest and hashed input list",
+    "Allocation CSV and bank manifest directly select index/calibration artifacts",
+    "Pinned rollout plans expand directly into expected episode aggregation manifests",
+    "Explicit index correction damping, block, noise, accumulation and precision settings",
+    "Offline import-only runtime probe with distinct failure and timeout outcomes",
+    "Documented serialized captures, order-dependent split/noise and teacher cache inputs; reject unsupported calibration file extensions",
+    "Separated policy/simulator environment documentation with source pins and observed extra HQQ dependency",
+    "POSIX import-probe process-group cleanup with live-descendant timeout regression",
+    "Fresh separate policy and simulator dependency environments with tested installation fixes",
+    "Public GR00T upstream plus explicit runtime overlays; no private fork required",
+    "Pinned LIBERO upstream export plus 14 source overlays and retained license/provenance",
+    "Actual generated index job and two-layer GPU correction smoke",
+    "Real VLM single-layer fitting through the public stage adapter, followed by bank inventory and packed-header validation",
+    "Explicit ordered capture-provenance input preparation CLI; no inferred episode identities or sample selection",
+    "Public five-stage episode-identity audit with manifest-bound recomputation before execution; coverage is relative to the supplied task registry",
+    "Portable seed17/env1 reset-journal preparation; actual 50-state regeneration matches archived observations and RNG journal bytes",
+    "Explicit noise-input generation CLI using the unchanged bundled algorithm; runtime identity and destination checks",
+    "Manifest-backed allocation preflight accepts portable fitter output paths while checking original candidate coverage, hashes and codebook sizes",
+    "Input-only per-stage protocol extensions allow generated downstream plans without invalidating earlier completion receipts; synthetic five-stage driver test passes",
+    "Optional public-driver management of evaluation execution receipts with root locks, exact stage protocol binding and terminal failure/success process states",
+    "Actual full 337-layer index worker outputs consumed by the calibration job builder and worker; one optimizer update and best-state VLM/DiT exports completed",
+    "Actual calibration completion consumed by evaluation builder; newly exported overlays loaded for one policy-to-simulator action chunk",
+    "Actual packed allocation -> 338-layer index -> calibration -> full 50-episode diagnostic rollout with exact-gated inference acceleration"
+  ],
+  "validation": {
+    "full_cpu_tests": 186,
+    "installed_wheel_core_tests": 13,
+    "cpu_example": "passed",
+    "source_staging": "passed",
+    "source_scan": "passed",
+    "gpu_model_end_to_end": "All five public driver stages and explicit result aggregation passed on a real model using an approved diagnostic fixture. Existing bank plus one newly fitted candidate; not full-bank fitting or scientific benchmark reproduction.",
+    "github_actions": "configured, not run on GitHub",
+    "installed_wheel_cache_tests": 3,
+    "actual_gr00t_source_assembly": {
+      "revision": "63ff416404087491ee09cf2563b54744d099d6ec",
+      "files": 1075,
+      "hash_mismatches": 0,
+      "model_execution": "BF16 and calibrated SACQ forward smoke passed; full pipeline not run"
+    },
+    "actual_model_runtime_import": {
+      "status": "IMPORTS_PASSED",
+      "modules": [
+        "torch",
+        "transformers",
+        "gr00t.policy.gr00t_policy",
+        "index_worker",
+        "calibration_worker",
+        "fixed_model"
+      ],
+      "elapsed_seconds": 864.9306255802512,
+      "scope": "Imports only; no model construction, forward pass or simulator evaluation"
+    },
+    "actual_gpu_forward_smoke": {
+      "date": "2026-10-06",
+      "slurm_job_id": 279640,
+      "gpu": "RTX 4090",
+      "suite": "libero_spatial",
+      "input_count": 1,
+      "input_batch_size": 5,
+      "noise_seed": 7000,
+      "request_sha256": "62e9dc0bba100f8aed2e8c1d5aadffa4d54f2c2b75674eddf9a0fd67ff65983c",
+      "results": {
+        "bf16": {
+          "shape": [
+            5,
+            16,
+            7
+          ],
+          "finite": true,
+          "repeat_max_abs_diff": 0.0,
+          "seconds_two_forwards": 0.5083253560587764
+        },
+        "sacq": {
+          "shape": [
+            5,
+            16,
+            7
+          ],
+          "finite": true,
+          "repeat_max_abs_diff": 0.0,
+          "seconds_two_forwards": 0.4327052151784301
+        }
+      },
+      "limitations": [
+        "No optimizer update, index correction, fitting or allocation executed",
+        "No simulator or rollout executed",
+        "No benchmark accuracy or equivalence with archived output claimed"
+      ],
+      "status": "PASS"
+    },
+    "actual_gpu_calibration_backward_smoke": {
+      "status": "PASS",
+      "kind": "SOFTWARE_ONE_UPDATE_NOT_CALIBRATION_RUN",
+      "layers": 337,
+      "loss_before": 0.013815035112202168,
+      "loss_after": 0.013614184223115444,
+      "gradient_tensors": 674,
+      "nonzero_gradient_tensors": 674,
+      "changed_parameter_tensors": 674,
+      "indices_unchanged": true,
+      "frozen_parameters_unchanged": true,
+      "shape": [
+        5,
+        16,
+        7
+      ],
+      "lr_codebook": 0.0001,
+      "lr_scale": 1e-05,
+      "weight_decay": 0.0,
+      "noise_seed": 7001,
+      "date": "2026-10-06",
+      "slurm_job_id": 279753,
+      "gpu": "RTX 4090",
+      "request_count": 1,
+      "request_batch_size": 5,
+      "optimizer_updates": 1,
+      "scope": "Disposable software smoke, not a full calibration run or benchmark"
+    },
+    "actual_simulator_reset_render_smoke": {
+      "status": "PASS",
+      "kind": "SOFTWARE_RESET_RENDER_NOT_ROLLOUT",
+      "task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+      "episode_id": 0,
+      "reset_seed": 17,
+      "official_state_exact": true,
+      "observation_shapes": {
+        "video.image": [
+          256,
+          256,
+          3
+        ],
+        "video.wrist_image": [
+          256,
+          256,
+          3
+        ],
+        "state.x": [
+          1
+        ],
+        "state.y": [
+          1
+        ],
+        "state.z": [
+          1
+        ],
+        "state.roll": [
+          1
+        ],
+        "state.pitch": [
+          1
+        ],
+        "state.yaw": [
+          1
+        ],
+        "state.gripper": [
+          2
+        ]
+      },
+      "observation_sha256": "0fc1d5fa9b7f4abe9c2ac2cc0c0e135f420363cc9a79c0de1ff0717e3b633b61",
+      "archived_image_hash_match": true,
+      "limitation": "No policy RPC, action step, episode or success-rate evaluation",
+      "date": "2026-10-06",
+      "slurm_job_id": 279864,
+      "gpu": "RTX 4090"
+    },
+    "gpu_checkpoint_resume": {
+      "default_runtime": "Exact continuation FAILED; identical-input backward repeats also differ",
+      "deterministic_backward_repeat": "PASS; all 674 gradient tensors exactly equal",
+      "deterministic_fresh_process_resume": "PASS; all trainable parameters, AdamW state and actions exactly equal (job 279915)",
+      "production_defaults_changed": false
+    },
+    "actual_policy_simulator_rpc_smoke": {
+      "status": "PASS",
+      "kind": "SOFTWARE_RPC_ONE_ACTION_CHUNK_NOT_BENCHMARK",
+      "task_index": 1,
+      "episode_id": 0,
+      "policy_seed": 20260824,
+      "noise_manifest_sha256": "5524c4118fde953dac5d5af86a6f6def818d179f803982ad515f04db08ed5cd5",
+      "initial_observation_sha256": "0fc1d5fa9b7f4abe9c2ac2cc0c0e135f420363cc9a79c0de1ff0717e3b633b61",
+      "executed_steps": 8,
+      "action_shapes": {
+        "action.x": [
+          8,
+          1
+        ],
+        "action.y": [
+          8,
+          1
+        ],
+        "action.z": [
+          8,
+          1
+        ],
+        "action.roll": [
+          8,
+          1
+        ],
+        "action.pitch": [
+          8,
+          1
+        ],
+        "action.yaw": [
+          8,
+          1
+        ],
+        "action.gripper": [
+          8,
+          1
+        ]
+      },
+      "limitation": "One unaccelerated inference call and eight environment steps; no completed episode, success rate or acceleration validation",
+      "date": "2026-10-06",
+      "slurm_job_id": 279917,
+      "gpu": "RTX 4090"
+    },
+    "clean_venv_distribution": {
+      "status": "PASS",
+      "kind": "CLEAN_VENV_CORE_AND_SOURCE_ARCHIVE_VALIDATION",
+      "dependency_installation": "offline cached distributions into new venv; no system-site-packages",
+      "artifacts": {
+        "sacq_research-0.1.0.tar.gz": "7d310c4c4506c9fa95a7c2326365b94b5c4425bd71873aad026875ab7ffe7633",
+        "sacq_research-0.1.0-py3-none-any.whl": "8e68799b16c0eecc8f841fa2b83ce923b87620f2897aab21e7ef17de37c7fac9"
+      },
+      "date": "2026-10-06",
+      "test_counts": {
+        "installed_core": 13,
+        "installed_cache": 3,
+        "source_full_suite": 133
+      },
+      "dependency_check": "PASS; 12 compatible installed packages",
+      "source_archive_integrity": {
+        "files_checked": 128,
+        "staged_sources": 66,
+        "status": "PASS"
+      },
+      "limitations": [
+        "CPU package and archive only; not a fresh GR00T/CUDA/simulator installation",
+        "No new scientific rollout was submitted"
+      ]
+    },
+    "clean_policy_environment": {
+      "status": "PASS",
+      "kind": "SOFTWARE_VALIDATION_NOT_BENCHMARK",
+      "results": {
+        "bf16": {
+          "shape": [
+            5,
+            16,
+            7
+          ],
+          "finite": true,
+          "repeat_max_abs_diff": 0.0,
+          "seconds_two_forwards": 0.45732886204496026
+        },
+        "sacq": {
+          "shape": [
+            5,
+            16,
+            7
+          ],
+          "finite": true,
+          "repeat_max_abs_diff": 0.0,
+          "seconds_two_forwards": 0.43312370777130127
+        }
+      },
+      "date": "2026-10-06",
+      "slurm_job_id": 279954,
+      "elapsed_seconds": 19,
+      "environment": "New Python 3.10.19 venv, system-site-packages disabled",
+      "dependency_versions": "All 140 original distribution versions match; nvidia-ml-py 13.615.71 added; sacq-research wheel installed",
+      "dependency_check": "142 packages compatible",
+      "hadamard_source_commit": "1cc807efbd6cc001df359822d60bf6052dd66859",
+      "flash_attention_wheel_sha256": "f09928f2c7e4dfbe6efca5a997862898495263c87afe662c18fb1936eb192eab",
+      "limitations": [
+        "Existing host driver, CUDA toolkit, Python interpreter and node-local checkpoint/assets reused",
+        "New policy venv tested; simulator environment was not rebuilt",
+        "Forward only in the new environment; prior backward/resume/RPC checks used the previous environment"
+      ]
+    },
+    "policy_installer_tests": {
+      "status": "PASS",
+      "tests": 4,
+      "scope": "Dry-run side effects, existing-directory protection, corrupted-wheel rejection and staged requirements; no second full environment installation"
+    },
+    "clean_policy_simulator_rpc": {
+      "status": "PASS",
+      "kind": "SOFTWARE_RPC_ONE_ACTION_CHUNK_NOT_BENCHMARK",
+      "task_index": 1,
+      "episode_id": 0,
+      "policy_seed": 20260824,
+      "noise_manifest_sha256": "5524c4118fde953dac5d5af86a6f6def818d179f803982ad515f04db08ed5cd5",
+      "initial_observation_sha256": "0fc1d5fa9b7f4abe9c2ac2cc0c0e135f420363cc9a79c0de1ff0717e3b633b61",
+      "executed_steps": 8,
+      "action_shapes": {
+        "action.x": [
+          8,
+          1
+        ],
+        "action.y": [
+          8,
+          1
+        ],
+        "action.z": [
+          8,
+          1
+        ],
+        "action.roll": [
+          8,
+          1
+        ],
+        "action.pitch": [
+          8,
+          1
+        ],
+        "action.yaw": [
+          8,
+          1
+        ],
+        "action.gripper": [
+          8,
+          1
+        ]
+      },
+      "limitation": "One unaccelerated inference call and eight environment steps; no completed episode, success rate or acceleration validation",
+      "date": "2026-10-06",
+      "slurm_job_id": 280047,
+      "environment": "New Python 3.10.19 policy and simulator venvs; simulator has 79 compatible distributions",
+      "source_assets": "Existing pinned prepared GR00T and node-local modified LIBERO/assets reused; not a pristine upstream checkout test",
+      "installation_fixes": [
+        "termcolor 3.3.0 and future 0.18.2 required beyond resolver metadata",
+        "User-specific robosuite log path configured by release helper"
+      ],
+      "first_attempt": "280044 failed at missing termcolor before simulator execution; fixed and rerun"
+    },
+    "public_upstream_policy_simulator_rpc": {
+      "status": "PASS",
+      "kind": "SOFTWARE_RPC_ONE_ACTION_CHUNK_NOT_BENCHMARK",
+      "task_index": 1,
+      "episode_id": 0,
+      "policy_seed": 20260824,
+      "noise_manifest_sha256": "5524c4118fde953dac5d5af86a6f6def818d179f803982ad515f04db08ed5cd5",
+      "initial_observation_sha256": "0fc1d5fa9b7f4abe9c2ac2cc0c0e135f420363cc9a79c0de1ff0717e3b633b61",
+      "executed_steps": 8,
+      "action_shapes": {
+        "action.x": [
+          8,
+          1
+        ],
+        "action.y": [
+          8,
+          1
+        ],
+        "action.z": [
+          8,
+          1
+        ],
+        "action.roll": [
+          8,
+          1
+        ],
+        "action.pitch": [
+          8,
+          1
+        ],
+        "action.yaw": [
+          8,
+          1
+        ],
+        "action.gripper": [
+          8,
+          1
+        ]
+      },
+      "limitation": "One unaccelerated inference call and eight environment steps; no completed episode, success rate or acceleration validation",
+      "slurm_job_id": 280055,
+      "date": "2026-10-06",
+      "gr00t_upstream_revision": "4b1dca9d88d2a0b9ea5a65aa61c82ff89f5c4f0e",
+      "libero_upstream_revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+      "prepared_files": 1481,
+      "source_scope": "Pinned public upstream commits plus bundled source overlays; no research-fork checkout contents or untracked simulator assets copied",
+      "remaining_external_inputs": "Existing checkpoints, captured request, saved policy noise and reset journal reused"
+    },
+    "public_index_worker": {
+      "status": "PASS",
+      "date": "2026-10-06",
+      "slurm_job_id": 280056,
+      "requests": 1,
+      "layers": [
+        {
+          "layer": "backbone.model.model.language_model.layers.0.mlp.down_proj",
+          "indices_only_verified": true,
+          "hook_calls": 1,
+          "token_rows": 755,
+          "report": {
+            "revision": "sacq_vector_compensation_r1",
+            "status": "PASS",
+            "roles": {
+              "whole": {
+                "changed_indices": 894175,
+                "total_indices": 3145728,
+                "restored_from_column": 0,
+                "complete": true
+              }
+            },
+            "damping": 0.1,
+            "block_columns": 128,
+            "layer_output_mse_before": 0.007124161040759144,
+            "layer_output_mse_after": 0.0006947159773834834,
+            "method": "conditional_input_H_vector_GPTQ_fixed_books_scales"
+          }
+        },
+        {
+          "layer": "action_head.model.transformer_blocks.0.ff.net.2",
+          "indices_only_verified": true,
+          "hook_calls": 4,
+          "token_rows": 820,
+          "report": {
+            "revision": "sacq_vector_compensation_r1",
+            "status": "PASS",
+            "roles": {
+              "whole": {
+                "changed_indices": 518679,
+                "total_indices": 2359296,
+                "restored_from_column": 0,
+                "complete": true
+              }
+            },
+            "damping": 0.1,
+            "block_columns": 128,
+            "layer_output_mse_before": 0.040095081435373485,
+            "layer_output_mse_after": 0.025411437043712976,
+            "method": "conditional_input_H_vector_GPTQ_fixed_books_scales"
+          }
+        }
+      ],
+      "scope": "Two-layer software fixture using a previously corrected bank, not a scientific second-index run; generated job builder and actual original worker both executed"
+    },
+    "public_vlm_fitting_worker": {
+      "status": "PASS",
+      "scope": "One real-model VLM layer fit and actual bank inventory/payload check; no allocation/calibration/rollout run",
+      "layer": "backbone.model.model.language_model.layers.0.mlp.down_proj",
+      "k": 512,
+      "slurm_job_id": 280070,
+      "date": "2026-10-07",
+      "elapsed_seconds": 23,
+      "requests": 1,
+      "source": "Public upstream source assembly and explicit release_stage adapter"
+    },
+    "capture_manifest_tests": {
+      "status": "PASS",
+      "tests": 5,
+      "scope": "Order/position preservation, explicit episode provenance, duplicate rejection and input checksum mismatch; synthetic payloads, no model decoding"
+    },
+    "public_sample_audit": {
+      "tests": 10,
+      "scope": "Nine auditor tests and one pipeline integration test; synthetic identities only. Does not establish provenance truth, canonical registry completeness, execution authorization or connected model reproduction."
+    },
+    "public_reset_inputs": {
+      "status": "PASS",
+      "episodes": 50,
+      "environment_steps": 0,
+      "policy_forward_calls": 0,
+      "elapsed_seconds": 68.79296660004184,
+      "reference_rng_sha256": "6bdbd70ee94f79b22edf4e4255b3543eae136dc78d5921529cd3895e9e49838c",
+      "matching_archived_observations": 50,
+      "same_rng_journal_hash": true,
+      "job_id": 280074,
+      "scope": "One Spatial task, all 50 official resets; no policy call or action step. Reset loop AST matched original seed17 wrapper transformations.",
+      "original_reset_source_sha256": "5cd353649ae33eafae9e245aa203c3152870e788b54307a27b57d691555c6983"
+    },
+    "public_noise_inputs": {
+      "tests": 3,
+      "scope": "Synthetic CPU tensors: exact episode/call draw order, unchanged global RNG, immutable destination, missing settings and runtime mismatch. No CUDA cross-runtime equivalence claim."
+    },
+    "connected_index_calibration": {
+      "date": "2026-10-07",
+      "index_job": 280106,
+      "index_elapsed_seconds": 220,
+      "codebook_layers": 337,
+      "all_indices_only_verified": true,
+      "calibration_job": 280111,
+      "calibration_elapsed_seconds": 32,
+      "optimizer_updates": 1,
+      "input_requests": 2,
+      "initial_validation_error": 0.282903,
+      "endpoint_validation_error": 0.283674,
+      "selected_state": "initial best (step 0)",
+      "frozen_background_layers": 105,
+      "outputs": [
+        "vlm",
+        "dit",
+        "best_state"
+      ],
+      "scope": "Disposable Spatial software fixture. Existing corrected bank was re-indexed with one archived request; calibration used two archived requests. Not a new scientific calibration result, full fitting/allocation chain, or completed rollout."
+    },
+    "connected_calibration_evaluation_rpc": {
+      "status": "PASS",
+      "kind": "SOFTWARE_RPC_ONE_ACTION_CHUNK_NOT_BENCHMARK",
+      "task_index": 1,
+      "episode_id": 0,
+      "policy_seed": 20260824,
+      "noise_manifest_sha256": "5524c4118fde953dac5d5af86a6f6def818d179f803982ad515f04db08ed5cd5",
+      "initial_observation_sha256": "0fc1d5fa9b7f4abe9c2ac2cc0c0e135f420363cc9a79c0de1ff0717e3b633b61",
+      "executed_steps": 8,
+      "action_shapes": {
+        "action.x": [
+          8,
+          1
+        ],
+        "action.y": [
+          8,
+          1
+        ],
+        "action.z": [
+          8,
+          1
+        ],
+        "action.roll": [
+          8,
+          1
+        ],
+        "action.pitch": [
+          8,
+          1
+        ],
+        "action.yaw": [
+          8,
+          1
+        ],
+        "action.gripper": [
+          8,
+          1
+        ]
+      },
+      "limitation": "One unaccelerated inference call and eight environment steps; no completed episode, success rate or acceleration validation",
+      "slurm_job_id": 280112,
+      "scope": "New evaluation builder output derived from jobs 280106/280111, not the old calibrated overlays; one archived task/episode and one eight-step chunk. Public pipeline driver and full rollout completion remain untested."
+    },
+    "allocation_actual_bank_preflight": {
+      "status": "PASS_INPUT_PREFLIGHT_ONLY",
+      "date": "2026-10-07",
+      "process_exit_code": 0,
+      "candidate_layers": 338,
+      "candidate_parameters": 1893728256,
+      "checked_artifacts": 7112,
+      "logical_suites": 4,
+      "model_forward_calls": 0,
+      "allocation_moves": 0,
+      "gpu_jobs": 0,
+      "log_sha256": "75f608892aa5b722b5c5d67966d1339899188088031cb4d7108544c1d788fd72",
+      "bank_manifest_sha256": "6de28a64766622e84ded1012276239794436107f1a77c327a56619286bf63275",
+      "limitation": "Alternative seed6 metric-v2 bank, not established as the submitted bank. Exact artifact coverage and payload/header checks only; no scientific allocation or public-driver execution."
+    },
+    "calibration_index_shard_settings": {
+      "status": "PASS",
+      "tests": 3,
+      "scope": "Synthetic consistent join and mismatch/missing-settings rejection; no numerical worker change or model rerun."
+    },
+    "actual_allocation_one_step": {
+      "status": "PASS_ONE_STEP_ALLOCATION_DIAGNOSTIC",
+      "job_id": 280324,
+      "elapsed_seconds": 519.6118562221527,
+      "suites": 4,
+      "candidate_layers": 338,
+      "steps": 1,
+      "proxy_before": 0.1127783165164693,
+      "proxy_after": 0.10968223193241863,
+      "final_nominal_bpw": 3.998892580287929,
+      "changed_layers": [
+        "backbone.model.model.language_model.layers.6.self_attn.v_proj"
+      ],
+      "limitation": "Scalar HQQ4 to HQQ3 transition only; candidate bank preflight verified but no codebook candidate numerically selected. Not a full 1.5-bit allocation, fitting-to-rollout chain, or paper result."
+    },
+    "allocation_runtime_manifest_path": {
+      "cpu_regression_tests": 2,
+      "issue": "packed_weight_gpu still enforced legacy parent directory after manifest preflight",
+      "fix": "Explicit exact manifest resolver for runtime; legacy mode retains original directory checks; BF16 reconstruction body unchanged",
+      "gpu_retry_job": 280326,
+      "gpu_retry_status": "PASS"
+    },
+    "connected_packed_allocation_index_calibration": {
+      "status": "PASS_FITTING_ARTIFACT_ALLOCATION_INDEX_CALIBRATION_CHAIN",
+      "allocation_job": 280326,
+      "allocation_steps": 1,
+      "start_k": 512,
+      "proxy_before": 0.16842482667519384,
+      "proxy_after": 0.16693158237026262,
+      "nominal_bpw": 2.24968853820598,
+      "index_job": 280327,
+      "index_layers": 338,
+      "index_elapsed_seconds": 77.92518186569214,
+      "calibration_updates": 1,
+      "limitations": [
+        "Existing multi-K candidates plus one actual public fitting output; not full-bank fitting from scratch",
+        "Index/calibration use existing frozen GPTQ background fixture; allocator uses its original fixed HQQ background",
+        "One-step diagnostic, not target 1.5-bit allocation or benchmark result",
+        "This earlier component test did not exercise the full driver; subsequent public_five_stage_driver validation passed."
+      ]
+    },
+    "connected_full_rollout": {
+      "status": "PASS_SOFTWARE_DIAGNOSTIC",
+      "job_id": 280333,
+      "episodes": 50,
+      "elapsed_seconds": 476.4565315246582,
+      "returncode": 0,
+      "worker_status": "COMPLETE_DIAGNOSTIC",
+      "execution_receipt": "FINISHED",
+      "codebook_layers": 338,
+      "full_action_checks": 3,
+      "cache": "ENABLED",
+      "cuda_graph": "CAPTURE_EXACT_PASS",
+      "rng_unchanged": true,
+      "held_out": false,
+      "paper_evidence": false
+    },
+    "public_five_stage_driver": {
+      "status": "PASS_SOFTWARE_DIAGNOSTIC",
+      "jobs": [
+        280419,
+        280433,
+        280437
+      ],
+      "completed_stages": [
+        "fitting",
+        "allocation",
+        "index",
+        "calibration",
+        "evaluation"
+      ],
+      "fitted_layers": 1,
+      "allocation_moves": 1,
+      "index_layers": 338,
+      "calibration_updates": 1,
+      "expected_episodes": 50,
+      "completed_episodes": 50,
+      "public_aggregation": "PASS",
+      "held_out": false,
+      "full_bank_fitting": false
+    }
+  },
+  "remaining_before_publication": [
+    "Owner-selected GitHub destination and authentication",
+    "Owner-selected license and rights-holder confirmation for research code"
+  ],
+  "remaining_before_turnkey_reproduction": [
+    "External checkpoint/capture/background inputs and provenance must be supplied for the selected scientific protocol",
+    "Full-bank fitting and full held-out benchmark reproduction are not established by the software diagnostic",
+    "Worker layout and seed17 contract are pinned; arbitrary model/seed configurations are not supported"
+  ]
+}

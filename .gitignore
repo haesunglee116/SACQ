@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+
+# Local model/data/results are not release source.
+*.pt
+*.pth
+*.safetensors
+*.msgpack
+*.pkl
+*.npz
+*.npy
+.env
+.env.*

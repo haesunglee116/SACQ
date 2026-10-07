@@ -1,0 +1,14 @@
+{
+  "description": "Contract accepted by the submitted seed17 evaluation worker; no execution authorization is granted by this file.",
+  "rollout": {
+    "environment_seed": 17,
+    "policy_seed": 20260824,
+    "episodes_per_task": 50,
+    "n_envs": 1,
+    "action_steps": 8,
+    "max_episode_steps": 720,
+    "termination": "official_done_or_720",
+    "success": "success_any",
+    "settling_steps": 0
+  }
+}

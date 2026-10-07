@@ -1,0 +1,78 @@
+{
+  "upstream_revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "license": "MIT; see third_party/LIBERO-MIT.txt",
+  "meaning": "Exact tracked Python modifications plus the required locally added object-definition module; extra untracked assets/tasks are not exported",
+  "files": [
+    {
+      "file": "libero/libero/benchmark/__init__.py",
+      "upstream_sha256": "4ce6edbb00b3280692f2e2b2e8a14bf6e2d5878965b0484a386c0355a867ecc5",
+      "overlay_sha256": "651a603a07baa0b5175c8f0cd8a5bc8514442ca0971df0c3f0ce59fcd4d74643"
+    },
+    {
+      "file": "libero/libero/benchmark/libero_suite_task_map.py",
+      "upstream_sha256": "0c950df0a785aa55de968bb38ccd865d2017f71ddbe6f48cfd05ac0742b6d62d",
+      "overlay_sha256": "0feec8499da91e25a134273b6624ffa7adb9c6dc7da23f8cb5e3cd8998d1c80f"
+    },
+    {
+      "file": "libero/libero/envs/base_object.py",
+      "upstream_sha256": "88ee0d4b2a39f39437d97fb12ec08831cb5064e23a7456d2f882e3baab246f1a",
+      "overlay_sha256": "3b451e7f9b6e2ebf860d764c2ca8f119ed06fa54128df52b7039af11149c68a6"
+    },
+    {
+      "file": "libero/libero/envs/objects/__init__.py",
+      "upstream_sha256": "cced646bb88ab95e21b5475d8d7dc46a5db4e6c881c63637a1a27e15dd844c04",
+      "overlay_sha256": "68e7cd03b7a9569637658b23c41812958c6c49b1a75a6584cce6f4865dbdfee3"
+    },
+    {
+      "file": "libero/libero/envs/objects/articulated_objects.py",
+      "upstream_sha256": "f5187b0381d69a2a8736c1dcb646e5fa7c138a42950f92e30c21c2efaed52faa",
+      "overlay_sha256": "952a5661a630dd0b07f55c518cfcd5050e5328a5596e7304c6722aed8145c2cd"
+    },
+    {
+      "file": "libero/libero/envs/objects/google_scanned_objects.py",
+      "upstream_sha256": "626e25dfa8b102f7f7b406ef6a997003f1308b48cf52e7c22762e9eb86a1ec4c",
+      "overlay_sha256": "ac3c84b5abcf486b962b10d43caf7b9f143b61e2800e3bdc36b2166a8390f456"
+    },
+    {
+      "file": "libero/libero/envs/objects/hope_objects.py",
+      "upstream_sha256": "70ee607faf5dca4f69c5db96fbf79080990b7c39a0f08d99b074c67f0acbd62d",
+      "overlay_sha256": "04df11e2d1525a8e7335485e33999961ac27bd460b347f8ebd80ce46d4c01ae8"
+    },
+    {
+      "file": "libero/libero/envs/objects/turbosquid_objects.py",
+      "upstream_sha256": "4de4205eabb588600fd9669f6ee6e2ef12e47e13d9b421257215d34f836f9804",
+      "overlay_sha256": "30e1ecc549c828d2d8fd56627c403cd90be120cc4e65439423159caa568da48a"
+    },
+    {
+      "file": "libero/libero/envs/regions/base_region_sampler.py",
+      "upstream_sha256": "08c12685b443d723bdffc3e1820cfb1a9b54eeda54a261ccaeacb7f04f9ab88d",
+      "overlay_sha256": "c39cdc8189a1ff8c3a15dc8f2144ab1527702e6bb20749427e3c8a49549cbdb2"
+    },
+    {
+      "file": "libero/libero/envs/utils.py",
+      "upstream_sha256": "81813480479dbd7fd938479dcdc17c258608b3ea4efdefc3e13aff100a89fd6a",
+      "overlay_sha256": "654197c32b8795fb98dc07b2ffaa3df4525349887f55f4e5cc37f95395cf9452"
+    },
+    {
+      "file": "libero/libero/utils/download_utils.py",
+      "upstream_sha256": "614d4233e633bd3ba98377bcad90f38f70b5b8218b1825dda2b943d4ba302dbc",
+      "overlay_sha256": "866573158b6df25e4f5ecce8c3c1d46ae74c73b2ac8001c613c11b71bed0fcba"
+    },
+    {
+      "file": "libero/libero/utils/mu_utils.py",
+      "upstream_sha256": "98fd321045dc5687722c89a79e64a7a3583b47cbed948aebfac98e3243d18bc9",
+      "overlay_sha256": "f46ddeef2b719b2788b596fe781a22ef991eed638b9b5482d430ad7841112d7e"
+    },
+    {
+      "file": "libero/libero/utils/task_generation_utils.py",
+      "upstream_sha256": "262c952f6484bbc2f39ee33e634662ed47b8e564509df737a3dbad01cb23301a",
+      "overlay_sha256": "3a936787e35b6770b94110c6b6d1e84e10b2d228f4d5aafeb9a62b1155fb39d8"
+    },
+    {
+      "file": "libero/libero/envs/objects/self_designed_object.py",
+      "upstream_sha256": null,
+      "overlay_sha256": "09474c99af4f69b3fe17c4f70fb511626bbb210834aa75edee9fec91eb4507c6",
+      "origin": "Required locally added module imported by objects/__init__.py"
+    }
+  ]
+}

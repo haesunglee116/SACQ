@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sacq-research"
+version = "0.1.0"
+description = "SACQ numerical core and GR00T-LIBERO research integration"
+readme = "README.md"
+license-files = ["third_party/Apache-2.0.txt", "third_party/LIBERO-MIT.txt", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "numpy>=1.24"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["sacq"]

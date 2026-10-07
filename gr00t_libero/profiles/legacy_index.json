@@ -1,0 +1,12 @@
+{
+  "description": "Values transcribed from the submitted LIBERO index worker; not experiment approval.",
+  "index_settings": {
+    "damping": 0.1,
+    "block_columns": 128,
+    "noise_seed_base": 7000,
+    "moment_chunk_rows": 2048,
+    "torch_num_threads": 2,
+    "allow_tf32_matmul": true,
+    "allow_tf32_cudnn": true
+  }
+}

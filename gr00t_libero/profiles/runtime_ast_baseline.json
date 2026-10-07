@@ -1,0 +1,7 @@
+{
+  "description": "AST hashes of the submitted dynamically assembled functions before materialization; empty Python-version-only type_params fields excluded.",
+  "functions": {
+    "rollout": "75ace64603ec61dd6d52ed6b6ba01145a5f81709c2d8bb6bff446f018317ed44",
+    "simulator": "2414422b39566b910875cd531f975a97b5113b25e4daddeaf4f4fb5b338b1744"
+  }
+}

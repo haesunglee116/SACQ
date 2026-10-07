@@ -1,0 +1,216 @@
+{
+  "easydict": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/articulated_objects.py"
+  ],
+  "gr00t": [
+    "libero_pro_eval/quantization_analysis/workshop_suitealloc_long500_s7_env1_20260919/source/worker.py",
+    "libero_transfer_quantstats_20260922/gr00t_rollout_model.py",
+    "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+    "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+    "libero_pro_eval/measure_hotspot_protection_proxy.py",
+    "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+    "libero_pro_eval/train_spinquant_r1r2_vla_objective.py",
+    "libero_pro_eval/coord_descent_final_multisuite_2026_08_24.py",
+    "libero_pro_eval/coord_descent_alloc_setting1_improved_2026_08_23.py",
+    "libero_pro_eval/measure_gr00t_dit_fullstack_proxy_2026_07_21.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_codebook_2026_06_27.py",
+    "libero_pro_eval/measure_dit_scalar_vs_vector_2026_07_17.py",
+    "libero_pro_eval/measure_codebook_mechanism_ab_2026_06_16.py",
+    "gr00t_final_seed17_20260922/index_worker.py",
+    "libero_pro_eval/quantization_analysis/workshop_metricv2_calibration_20260919/source/train_centroid_ft_2026_08_05.py",
+    "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/dit_metrics.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_action_proxy_2026_06_27.py",
+    "libero_pro_eval/measure_gr00t_swiglu_codebook_proxy_2026_07_11.py",
+    "libero_pro_eval/measure_gr00t_top5_qkdiag_trainval_proxy_2026_07_02.py",
+    "libero_pro_eval/measure_gr00t_qkfull_swiglu_combo_proxy_2026_07_11.py"
+  ],
+  "gr00t.configs.model.gr00t_n1d7": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "gr00t.data.embodiment_tags": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/env_utils.py"
+  ],
+  "gr00t.model.modules.dit": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "gr00t.model.modules.embodiment_conditioned_mlp": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "gr00t.model.modules.qwen3_backbone": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "gr00t.policy.server_client": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/request_capture.py"
+  ],
+  "gymnasium": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py"
+  ],
+  "gymnasium.envs.registration": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py"
+  ],
+  "hqq": [
+    "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+    "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+    "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py"
+  ],
+  "huggingface_hub": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/download_utils.py"
+  ],
+  "libero.libero": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/benchmark/__init__.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/download_utils.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py"
+  ],
+  "libero.libero.benchmark.libero_suite_task_map": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/benchmark/__init__.py"
+  ],
+  "libero.libero.envs": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py"
+  ],
+  "libero.libero.envs.base_object": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/__init__.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/articulated_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/google_scanned_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/hope_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/turbosquid_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/self_designed_object.py"
+  ],
+  "libero.libero.envs.objects": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/mu_utils.py"
+  ],
+  "libero.libero.utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py"
+  ],
+  "libero.libero.utils.bddl_generation_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/mu_utils.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/task_generation_utils.py"
+  ],
+  "libero.libero.utils.download_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/download_utils.py"
+  ],
+  "libero.libero.utils.mu_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/task_generation_utils.py"
+  ],
+  "libero.libero.utils.object_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/mu_utils.py"
+  ],
+  "numpy": [
+    "libero_pro_eval/quantization_analysis/workshop_suitealloc_long500_s7_env1_20260919/source/worker.py",
+    "libero_pro_eval/vast12_hqq_sim_2026_09_09.py",
+    "libero_pro_eval/rollout_exact_acceleration_20260920.py",
+    "gr00t_final_seed17_20260922/seed17_adapter.py",
+    "gr00t_final_seed17_20260922/simulator.py",
+    "libero_pro_eval/quantization_analysis/workshop_metricv2_calibration_20260919/source/centroid_ft_cached_batches_launcher_2026_08_26.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/articulated_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/google_scanned_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/hope_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/turbosquid_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/regions/base_region_sampler.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/utils.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/eval/sim/LIBERO/libero_env.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/self_designed_object.py"
+  ],
+  "robosuite": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/regions/base_region_sampler.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/utils.py"
+  ],
+  "robosuite.models.objects": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/articulated_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/google_scanned_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/hope_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/turbosquid_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/self_designed_object.py"
+  ],
+  "robosuite.utils.errors": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/regions/base_region_sampler.py"
+  ],
+  "robosuite.utils.mjcf_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/google_scanned_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/hope_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/objects/turbosquid_objects.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/utils.py"
+  ],
+  "robosuite.utils.placement_samplers": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/regions/base_region_sampler.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/utils.py"
+  ],
+  "robosuite.utils.transform_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/envs/regions/base_region_sampler.py"
+  ],
+  "safetensors": [
+    "libero_pro_eval/fs2_fitfarm_2026_07_23.py"
+  ],
+  "termcolor": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/download_utils.py"
+  ],
+  "torch": [
+    "libero_pro_eval/quantization_analysis/workshop_suitealloc_long500_s7_env1_20260919/source/worker.py",
+    "libero_pro_eval/fixed_episode_noise_2026_09_09.py",
+    "libero_transfer_quantstats_20260922/gr00t_rollout_model.py",
+    "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+    "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+    "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+    "libero_pro_eval/measure_hotspot_protection_proxy.py",
+    "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+    "libero_pro_eval/train_spinquant_r1r2_vla_objective.py",
+    "libero_pro_eval/spinquant_stiefel_optimizer.py",
+    "libero_pro_eval/rollout_exact_acceleration_20260920.py",
+    "libero_pro_eval/rollout_acceleration_default_20260920.py",
+    "libero_pro_eval/dit_graph_audit_20260920.py",
+    "libero_pro_eval/coord_descent_final_multisuite_2026_08_24.py",
+    "libero_pro_eval/coord_descent_floor_scope_persistent_2026_08_23.py",
+    "libero_pro_eval/coord_descent_alloc_setting1_improved_2026_08_23.py",
+    "libero_pro_eval/proxy_fast_2026_07_24.py",
+    "libero_pro_eval/measure_gr00t_dit_fullstack_proxy_2026_07_21.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_codebook_2026_06_27.py",
+    "libero_pro_eval/measure_dit_scalar_vs_vector_2026_07_17.py",
+    "libero_pro_eval/measure_codebook_mechanism_ab_2026_06_16.py",
+    "libero_pro_eval/artifact_registry.py",
+    "gr00t_final_seed17_20260922/calibration_worker.py",
+    "gr00t_final_seed17_20260922/fixed_model.py",
+    "gr00t_final_seed17_20260922/index_worker.py",
+    "simplerenv_n17_feasibility_2026_08_27/sacq_compensation_stats_r1_2026_09_10.py",
+    "simplerenv_n17_feasibility_2026_08_27/sacq_vector_compensation_core_r1_2026_09_10.py",
+    "libero_pro_eval/quantization_analysis/workshop_metricv2_calibration_20260919/source/centroid_ft_cached_batches_launcher_2026_08_26.py",
+    "libero_pro_eval/quantization_analysis/workshop_metricv2_calibration_20260919/source/train_centroid_ft_2026_08_05.py",
+    "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/dit_metrics.py",
+    "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/dit_fitter.py",
+    "libero_pro_eval/fs2_fitfarm_2026_07_23.py",
+    "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/vlm_fitter.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_action_proxy_2026_06_27.py",
+    "libero_pro_eval/measure_gr00t_swiglu_codebook_proxy_2026_07_11.py",
+    "libero_pro_eval/measure_gr00t_top5_qkdiag_trainval_proxy_2026_07_02.py",
+    "libero_pro_eval/measure_gr00t_qkfull_swiglu_combo_proxy_2026_07_11.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/benchmark/__init__.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "torch.distributions": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "torch.nn.functional": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "tqdm": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/external_dependencies/LIBERO/libero/libero/utils/download_utils.py"
+  ],
+  "transformers": [
+    "libero_pro_eval/quantization_analysis/workshop_suitealloc_long500_s7_env1_20260919/source/worker.py",
+    "gr00t_final_seed17_20260922/calibration_worker.py",
+    "gr00t_final_seed17_20260922/index_worker.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "transformers.feature_extraction_utils": [
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ],
+  "tree": [
+    "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+    "libero_pro_eval/measure_hotspot_protection_proxy.py",
+    "libero_pro_eval/train_spinquant_r1r2_vla_objective.py",
+    "libero_pro_eval/coord_descent_final_multisuite_2026_08_24.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_codebook_2026_06_27.py",
+    "libero_pro_eval/measure_dit_scalar_vs_vector_2026_07_17.py",
+    "libero_pro_eval/measure_codebook_mechanism_ab_2026_06_16.py",
+    "libero_pro_eval/measure_gr00t_qk_diag_action_proxy_2026_06_27.py",
+    "libero_pro_eval/Isaac-GR00T-N1.7/gr00t/model/gr00t_n1d7/gr00t_n1d7.py"
+  ]
+}

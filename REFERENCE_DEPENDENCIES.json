@@ -1,0 +1,138 @@
+{
+  "scope": "static imports only; dynamic file loaders also require manual resolution",
+  "snapshots": [
+    {
+      "file": "reference_sources/adapters/gr00t_index_worker.py",
+      "external_imports": [
+        "gr00t",
+        "torch",
+        "transformers"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "gr00t_fixed_model",
+        "measure_hotspot_protection_proxy",
+        "oft_index_worker",
+        "sacq_compensation_stats_r1_2026_09_10",
+        "sacq_vector_compensation_core_r1_2026_09_10"
+      ]
+    },
+    {
+      "file": "reference_sources/allocation/coord_descent_alloc_setting1_improved_2026_08_23.py",
+      "external_imports": [
+        "gr00t",
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "analyze_hqq_hadamard_mlp_outliers",
+        "artifact_registry",
+        "measure_dit_scalar_vs_vector_2026_07_17",
+        "measure_dit_single_layer_downgrade_sensitivity",
+        "measure_embedding_vision_quant_memory_v1",
+        "measure_gr00t_dit_fullstack_proxy_2026_07_21",
+        "measure_hotspot_protection_proxy",
+        "proxy_fast_2026_07_24"
+      ]
+    },
+    {
+      "file": "reference_sources/allocation/coord_descent_final_multisuite_2026_08_24.py",
+      "external_imports": [
+        "gr00t",
+        "torch",
+        "tree"
+      ],
+      "bundled_reference_imports_not_installed": [
+        "coord_descent_alloc_setting1_improved_2026_08_23",
+        "coord_descent_floor_scope_persistent_2026_08_23"
+      ],
+      "unbundled_project_imports": [
+        "artifact_registry",
+        "measure_hotspot_protection_proxy"
+      ]
+    },
+    {
+      "file": "reference_sources/allocation/coord_descent_floor_scope_persistent_2026_08_23.py",
+      "external_imports": [
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [
+        "coord_descent_alloc_setting1_improved_2026_08_23",
+        "train_spinquant_r1r2_vla_objective"
+      ],
+      "unbundled_project_imports": []
+    },
+    {
+      "file": "reference_sources/calibration/train_centroid_ft_2026_08_05.py",
+      "external_imports": [
+        "gr00t",
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [
+        "train_spinquant_r1r2_vla_objective"
+      ],
+      "unbundled_project_imports": [
+        "analyze_hqq_hadamard_mlp_outliers",
+        "artifact_registry",
+        "measure_dit_scalar_vs_vector_2026_07_17",
+        "measure_dit_single_layer_downgrade_sensitivity",
+        "measure_embedding_vision_quant_memory_v1",
+        "measure_gr00t_dit_fullstack_proxy_2026_07_21",
+        "measure_hotspot_protection_proxy",
+        "proxy_fast_2026_07_24"
+      ]
+    },
+    {
+      "file": "reference_sources/calibration/train_spinquant_r1r2_vla_objective.py",
+      "external_imports": [
+        "gr00t",
+        "torch",
+        "tree"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "spinquant_stiefel_optimizer"
+      ]
+    },
+    {
+      "file": "reference_sources/metric_v2/dit_fitter.py",
+      "external_imports": [
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "fs2_fitfarm_2026_07_23",
+        "measure_gr00t_qk_diag_codebook_2026_06_27"
+      ]
+    },
+    {
+      "file": "reference_sources/metric_v2/dit_metrics.py",
+      "external_imports": [
+        "gr00t",
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "measure_dit_scalar_vs_vector_2026_07_17",
+        "measure_dit_single_layer_downgrade_sensitivity",
+        "measure_embedding_vision_quant_memory_v1",
+        "measure_gr00t_dit_fullstack_proxy_2026_07_21",
+        "measure_hotspot_protection_proxy"
+      ]
+    },
+    {
+      "file": "reference_sources/metric_v2/vlm_fitter.py",
+      "external_imports": [
+        "torch"
+      ],
+      "bundled_reference_imports_not_installed": [],
+      "unbundled_project_imports": [
+        "measure_gr00t_qk_diag_action_proxy_2026_06_27",
+        "measure_gr00t_qk_diag_codebook_2026_06_27",
+        "measure_gr00t_qkfull_swiglu_combo_proxy_2026_07_11",
+        "measure_gr00t_swiglu_codebook_proxy_2026_07_11",
+        "proxy_fast_2026_07_24"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+include .gitignore .gitattributes
+include README.md METHOD_MAP.md VALIDATION.md THIRD_PARTY_NOTICES.md RELEASE_NOTES.md
+include SOURCE_HASHES.json REFERENCE_DEPENDENCIES.json RELEASE_READINESS.json
+recursive-include third_party *.txt
+recursive-include reference_sources *.py
+recursive-include gr00t_libero *.py *.json *.csv *.md *.toml *.txt LICENSE
+recursive-include tests *.py
+recursive-include examples *.py
+recursive-include tools *.py
+recursive-include .github *.yml
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

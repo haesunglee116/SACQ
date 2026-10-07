@@ -1,0 +1,138 @@
+[
+  {
+    "symbol": "_sample_vectors",
+    "source_sha256": "db5bafcbecd90a3cde2b27e89fa13d985284ef186fc8c1246be057574eb4d488"
+  },
+  {
+    "symbol": "_assign_vectors_chunked",
+    "source_sha256": "db5bafcbecd90a3cde2b27e89fa13d985284ef186fc8c1246be057574eb4d488"
+  },
+  {
+    "symbol": "_weighted_kmeans_nd",
+    "source_sha256": "db5bafcbecd90a3cde2b27e89fa13d985284ef186fc8c1246be057574eb4d488"
+  },
+  {
+    "symbol": "effective_group_size",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "1cb5b290da23c4d7cd92e4be228086ef61994181e9e1e2282e24fae70c9efcd8"
+  },
+  {
+    "symbol": "sample_vectors_with_importance",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "0b20df1edb0d3de8e504b25868dc546927cdaf135a96b7ac2a9645956ba779a4"
+  },
+  {
+    "symbol": "sample_vectors_with_full_metric",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "42f2bfec564e1a665c20de0c5321ce5e451b90d76b2d307547263ba96a264ce7"
+  },
+  {
+    "symbol": "assign_vectors_diag",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "6e3f94a71f927fb73aff9cc6ca07a8f99b98d934e3df66e535e2fb0775cc1073"
+  },
+  {
+    "symbol": "gather_full_block_metric",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "ed56ea5c19aae4bc23e2d56ae0913eeb3330371a1a6e74a243c258bccc433f15"
+  },
+  {
+    "symbol": "assign_vectors_full",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "19afd4607884b173c0f35d2403ed7d72f73926e09961b409b3ca915e6b652ef6"
+  },
+  {
+    "symbol": "weighted_kmeans_diag",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "3a4769265196cdd6ee5def0cc23828e538236ba525576cadedec3bb6d79bb88e"
+  },
+  {
+    "symbol": "weighted_kmeans_full",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "ec47aa209b1a00631913546800392fb157943e98b00eca739137d1b7450276d5"
+  },
+  {
+    "symbol": "quantize_vector_codebook",
+    "source_sha256": "f889f298d773db98d25652be4430abefff066fcd658344c8dc9df005e4a91a72",
+    "symbol_sha256": "def7a3ce2971899b1ade152fee51ee55012fc5ae8980bd5d2910094418627f3e"
+  },
+  {
+    "symbol": "apply_swiglu_down_diag_curvature",
+    "source_sha256": "960a1ee8429a38e354d3b8c87c7946705419a37305d5f54f7edb8033b9aa7c33",
+    "symbol_sha256": "0912dab53483672ce6152ebea014965b71a08278ebaf885143f71edb97ebaed2"
+  },
+  {
+    "symbol": "gelu_derivative",
+    "source_sha256": "8c841edd787de4ae1aef43d4dbe62e290dee53d4245a26744f899664f710ca3b",
+    "symbol_sha256": "dc8f5569b3ff596783b0820cda577438f4e444c49451cf68273ddbe207424449"
+  },
+  {
+    "symbol": "require",
+    "source_sha256": "350d46fd326d60e4efb7a3f6a08db812f6ef1091765d067e4c84bfb6074aee55",
+    "symbol_sha256": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4"
+  },
+  {
+    "symbol": "FullMoment",
+    "source_sha256": "350d46fd326d60e4efb7a3f6a08db812f6ef1091765d067e4c84bfb6074aee55",
+    "symbol_sha256": "7a90bd8d1bfc3299b51fef599b6238eab75bffea98acb8cb062c3d6b3e612091"
+  },
+  {
+    "source_sha256": "3cc01b537e783063231cb18ee8f0d531897345963a9c156ed9a0871885ec692f",
+    "symbol": "entire_module"
+  },
+  {
+    "symbol": "_FP32CodebookGather",
+    "source_sha256": "5acd26d99d98473903fd6705295dc169c7ae94a044cd425623bd1261211f8d79",
+    "symbol_sha256": "a35c51c62a6ff09a39cd0582f36089e4e1a31f5d43373a4a12c3d53fb6041492"
+  },
+  {
+    "symbol": "pack_indices",
+    "source_sha256": "5acd26d99d98473903fd6705295dc169c7ae94a044cd425623bd1261211f8d79",
+    "symbol_sha256": "8412625f0409bb66f6e15f8f88053c184d4d6478086d50eced0d25997b1bce0e"
+  },
+  {
+    "symbol": "QuantLinear",
+    "source_sha256": "5acd26d99d98473903fd6705295dc169c7ae94a044cd425623bd1261211f8d79",
+    "symbol_sha256": "b3a326b791441ddb4247ab90b414e42c43d02be482ae5057d43475215f060e3e"
+  },
+  {
+    "export": "reference_sources/metric_v2/vlm_fitter.py",
+    "source_sha256": "960a1ee8429a38e354d3b8c87c7946705419a37305d5f54f7edb8033b9aa7c33"
+  },
+  {
+    "export": "reference_sources/metric_v2/dit_fitter.py",
+    "source_sha256": "7ff637e165cb28614dcf99889553bb8285629aa9712fa23e4efedd5c533d8b36"
+  },
+  {
+    "export": "reference_sources/metric_v2/dit_metrics.py",
+    "source_sha256": "8c841edd787de4ae1aef43d4dbe62e290dee53d4245a26744f899664f710ca3b"
+  },
+  {
+    "export": "reference_sources/allocation/coord_descent_final_multisuite_2026_08_24.py",
+    "source_sha256": "7662213b34da58cc9352349e75d5c0a18cf54e81cc1a3a2a7041a6d70355e83c"
+  },
+  {
+    "export": "reference_sources/allocation/coord_descent_floor_scope_persistent_2026_08_23.py",
+    "source_sha256": "20f6bc0d24851c1eecc773a94603ec6e699f874d51fb3d6b36c4e787fd8eef14"
+  },
+  {
+    "export": "reference_sources/allocation/coord_descent_alloc_setting1_improved_2026_08_23.py",
+    "source_sha256": "6cb99dea7650f59c56e518265d7e083b6bd2f08d326ee64ecfad706956aeac5f"
+  },
+  {
+    "export": "reference_sources/calibration/train_centroid_ft_2026_08_05.py",
+    "source_sha256": "5acd26d99d98473903fd6705295dc169c7ae94a044cd425623bd1261211f8d79"
+  },
+  {
+    "export": "reference_sources/calibration/train_spinquant_r1r2_vla_objective.py",
+    "source_sha256": "97adba871934d20afedc7d90e4df2ca2d0ae4bbab8c6ec3db9c2b34fc884d001"
+  },
+  {
+    "export": "reference_sources/adapters/gr00t_index_worker.py",
+    "source_sha256": "223a0c0409661479a9f4da18e5c61ef6c8f9bbc41c3412288b2b2aae1a965ef9"
+  },
+  {
+    "export": "reference_sources/adapters/oft_index_worker_r2.py",
+    "source_sha256": "e0653984736e3ec3b14dc34f7caba743f1d2fc32da942669c382c1a301cc8a28"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "description": "Arguments extracted from the submitted calibration worker; not a universal paper preset or execution approval.",
+  "provenance": "gr00t_final_seed17_20260922/calibration_worker.py in the submission snapshot",
+  "training": {
+    "limit": 640,
+    "epochs": 12,
+    "global_batch": 6,
+    "codebook_lr": 0.0001,
+    "scale_lr": 0.00001,
+    "val_every": 10,
+    "steps_per_invocation": 0,
+    "fp32_codebook_grad": true,
+    "resume": true,
+    "expected_updates": 1152
+  }
+}
