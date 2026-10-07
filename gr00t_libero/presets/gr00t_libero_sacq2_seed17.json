@@ -42,7 +42,7 @@
   "allocation": {
     "mode": "reuse_exact_archived_selection",
     "file": "sacq2_allocation.csv",
-    "sha256": "90a11369595480bd86d9753efe91ac9d719831805bf34675619d8e3be5d74a77",
+    "sha256": "09fc310abacaa9008d7471be43dd8496e834408ca156400d6a880f06365d81ed",
     "target_nominal_bpw": 2.0,
     "actual_nominal_bpw": 1.9996885382059801,
     "candidate_layers": 338,
@@ -133,7 +133,12 @@
         "file": "protocol.json",
         "sha256": "e4901db492ca7b528b44614f081d8b461ab8a2ab8bc3651f1fb7f18f144a1a94"
       }
-    ]
+    ],
+    "original_allocation": {
+      "file": "allocation_ckpt2.00.csv",
+      "sha256": "90a11369595480bd86d9753efe91ac9d719831805bf34675619d8e3be5d74a77",
+      "export_transform": "CRLF to LF only; all row values preserved"
+    }
   },
   "limitations": [
     "Development episode provenance unresolved in archived records; no held-out claim",
