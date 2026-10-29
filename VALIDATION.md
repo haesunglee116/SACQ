@@ -858,3 +858,18 @@ simulator install or a full pipeline test. Backward/resume/RPC were not rerun
 in this new venv. See `gr00t_libero/environments/POLICY_INSTALL.md` for the
 tested dependencies and required installation order. Private logs and exact
 receipt are under ignored `dist/clean_policy_20261006/`.
+
+## Single-request inference packaging (2026-10-29)
+
+Added a simulator-free BF16/SACQ A16 entrypoint and relocatable model-input
+bundle exporter. Four CPU tests cover relocation, refusal to overwrite, file
+tampering, unlisted model files, quantized-artifact bindings, path escape, missing
+settings and nested export rejection. These are packaging tests, not GPU forward
+or numerical-equivalence evidence. The new entrypoint has not been GPU-validated.
+The old smoke fixture references a node-local `/tmp` checkpoint unavailable on
+the current host; no substitute checkpoint or benchmark protocol was selected.
+No model bundle has been published by this change.
+
+The complete CPU suite passed **208 tests**. The source distribution built
+successfully and includes both entrypoints, the inference guide and new tests.
+The publication source/license checker reported no errors.

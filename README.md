@@ -17,6 +17,7 @@ integrated into this release.
 | Understand the method and source mapping | [Method map](METHOD_MAP.md) |
 | Obtain the calibration set | [LIBERO calibration data](data/libero_calibration/README.md) |
 | Set up the model and simulator | [Environment guide](gr00t_libero/ENVIRONMENT.md) |
+| Generate actions without a simulator | [Single-request inference](gr00t_libero/INFERENCE.md) |
 | Run fitting through evaluation | [Execution runbook](gr00t_libero/RUNBOOK.md) |
 | Inspect the recorded SACQ2 configuration | [Reference preset](gr00t_libero/presets/gr00t_libero_sacq2_seed17.json) |
 | Match final settings to recorded results | [Experiment map](experiments/gr00t_libero/README.md) |
@@ -81,7 +82,7 @@ separately from Git: [download the four suite archives](https://github.com/haesu
 
 ## Validation and supported scope
 
-The current CPU suite passes 204 tests. The existing real-model validation records a diagnostic
+The current CPU suite passes 208 tests. The existing real-model validation records a diagnostic
 connecting fitting, allocation, index correction, calibration and a 50-episode
 rollout. The diagnostic reused an existing candidate bank, fitted one candidate
 and performed one calibration update. It is not a complete rerun of all paper

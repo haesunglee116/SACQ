@@ -6,6 +6,10 @@ for the selected observations, and [Capture and teacher inputs](CAPTURE_INPUTS.m
 for the serialized format. Observation archives are distributed separately;
 model checkpoints, teacher caches and simulator assets are external inputs.
 
+For simulator-free BF16/SACQ A16 action generation, use the
+[single-request inference guide](INFERENCE.md). It includes a portable input-bundle
+exporter; the new entrypoint still requires GPU validation and model artifacts.
+
 ## Included
 
 - Transitive local Python helpers for the selected fitters, allocator, index
