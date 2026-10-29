@@ -1,8 +1,9 @@
-# License decision for the repository owner
+# License decision and scope
 
-**Recommendation: Apache-2.0 for original SACQ code and documentation.** This is
-a recommendation, not a license grant. No top-level `LICENSE` has been installed
-and the repository's visibility has not been changed.
+**Owner approved Apache-2.0 for original SACQ code and documentation.**
+The top-level [LICENSE](LICENSE) and package metadata implement this decision.
+Repository visibility remains unchanged. Existing authorship and third-party
+notices are preserved.
 
 Apache-2.0 permits commercial use and redistribution, contains an express patent
 license from contributors, and requires preservation of applicable notices and
@@ -14,19 +15,17 @@ requiring preservation of its copyright and license notice. It does not include
 the same express patent provisions. See the [MIT text](https://choosealicense.com/licenses/mit/).
 Neither choice means commercial use is prohibited.
 
-## Concrete decision remaining
+## Scope of the decision
 
-Confirm **Apache-2.0 for original source and documentation**, and the copyright
-holder/name to appear in the project notice. After confirmation, add the
-standard license text, update package metadata, and run the publication check.
-An owner-selected license covers only rights the owner can grant; it does not
-replace the retained third-party terms.
+The owner-selected license applies to original SACQ code and documentation.
+It does not replace third-party licenses or grant rights to external model
+weights, simulator assets or the separately distributed calibration observations.
 
 ## Included and external materials
 
 | Material | Current handling |
 |---|---|
-| Original SACQ algorithms, integration, tests, docs | Top-level owner license pending |
+| Original SACQ algorithms, integration, tests, docs | Apache-2.0 |
 | GR00T-derived code/overlays | Existing Apache-2.0 text and provenance retained |
 | LIBERO overlays | MIT notice retained |
 | Two CUTLASS-derived MMA headers in acceleration sources | NVIDIA BSD notice retained at the top of each header; modified header is identified in the source manifest |

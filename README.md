@@ -106,6 +106,8 @@ archive for model adapters, tests, examples and calibration manifests.
 GitHub Actions defines CPU checks and packaging checks; local test results do
 not certify a hosted workflow run.
 
-The original research-code license remains pending. Third-party materials retain
-their applicable terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-The recommended owner-license choice is documented in [LICENSE_REVIEW.md](LICENSE_REVIEW.md).
+Original SACQ code and documentation are licensed under [Apache-2.0](LICENSE).
+Third-party materials retain their applicable terms; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The code license does not
+relicense external models or the separately distributed calibration data.
+See [LICENSE_REVIEW.md](LICENSE_REVIEW.md) for the scope of the owner's decision.

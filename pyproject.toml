@@ -7,7 +7,8 @@ name = "sacq-research"
 version = "0.1.0"
 description = "SACQ numerical core and GR00T-LIBERO research integration"
 readme = "README.md"
-license-files = ["third_party/Apache-2.0.txt", "third_party/LIBERO-MIT.txt", "THIRD_PARTY_NOTICES.md"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "third_party/Apache-2.0.txt", "third_party/LIBERO-MIT.txt", "THIRD_PARTY_NOTICES.md"]
 requires-python = ">=3.10"
 dependencies = ["torch>=2.2", "numpy>=1.24"]
 

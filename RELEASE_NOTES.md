@@ -1,5 +1,12 @@
 # Release notes
 
+## Owner-approved license — 2026-10-29
+
+- Applied Apache-2.0 to original SACQ code and documentation.
+- Included the top-level license in source and wheel distributions and declared the SPDX identifier in package metadata.
+- Retained third-party terms; dataset/model licensing and repository visibility are unchanged.
+
+
 ## Final inference source integration — 2026-10-29
 
 - Added a configuration/source/evidence map for final W1.5A8 latency and the earlier W1.5A8 success evaluation.
@@ -75,5 +82,5 @@ are included. Third-party terms remain separate; see
 ### Publication status
 
 Source code is available in the SACQ GitHub repository. Calibration dataset assets are available in the calibration-v1 release.
-No package-index release is claimed by this update. The license for original
-research code remains pending; third-party terms are retained.
+No package-index release is claimed by this update. Original SACQ code and
+documentation use Apache-2.0; third-party terms are retained.

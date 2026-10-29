@@ -1,4 +1,4 @@
-include .gitignore .gitattributes
+include .gitignore .gitattributes LICENSE
 include README.md METHOD_MAP.md VALIDATION.md THIRD_PARTY_NOTICES.md RELEASE_NOTES.md LICENSE_REVIEW.md
 include SOURCE_HASHES.json REFERENCE_DEPENDENCIES.json RELEASE_READINESS.json
 recursive-include third_party *.txt

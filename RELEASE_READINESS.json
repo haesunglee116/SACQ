@@ -3,7 +3,7 @@
   "updated": "2026-10-29",
   "publication": "source and calibration assets uploaded to GitHub repository",
   "repository": "https://github.com/haesunglee116/SACQ",
-  "owner_code_license": "deferred_by_owner",
+  "owner_code_license": "Apache-2.0",
   "distribution": "sacq-research",
   "python_import": "sacq",
   "scope": {
@@ -681,9 +681,7 @@
       "upstream_command_preparation": "44 fitting commands and original allocation search to 1.25 with 2.0 checkpoint selection; no new scientific run"
     }
   },
-  "remaining_before_publication": [
-    "Owner-selected license and rights-holder confirmation for research code"
-  ],
+  "remaining_before_publication": [],
   "remaining_before_turnkey_reproduction": [
     "External checkpoint/capture/background inputs and provenance must be supplied for the selected scientific protocol",
     "Full-bank fitting and full held-out benchmark reproduction are not established by the software diagnostic",
@@ -714,5 +712,7 @@
     "CPU_tests": 204,
     "new_integration_tests": 6,
     "package_build": "sdist and wheel built; unpacked source release checks passed"
-  }
+  },
+  "owner_code_license_scope": "original SACQ code and documentation; third-party terms retained; dataset/model licensing separate",
+  "owner_license_approval": "User: 그래 그렇게 추천대로 하자."
 }
