@@ -5,7 +5,7 @@
 - Reorganized the entry README around installation, data and the execution runbook.
 - Added exact manifests for 2,560 calibration requests across four LIBERO suites.
 - Added a standalone dataset checksum verifier.
-- Observation archives are prepared separately; asset download links are pending.
+- Observation archives are available in the calibration-v1 GitHub Release; uploaded sizes and SHA-256 digests match the verified originals.
 - Model kernels and scientific experiment settings are unchanged.
 
 ## 0.1.0 — research source release
@@ -64,6 +64,6 @@ are included. Third-party terms remain separate; see
 
 ### Publication status
 
-Source code is available in the SACQ GitHub repository. No package-index release
-or dataset asset publication is claimed by this update. The license for original
+Source code is available in the SACQ GitHub repository. Calibration dataset assets are available in the calibration-v1 release.
+No package-index release is claimed by this update. The license for original
 research code remains pending; third-party terms are retained.

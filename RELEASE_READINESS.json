@@ -1,7 +1,7 @@
 {
   "schema": "sacq_release_readiness_v1",
   "updated": "2026-10-29",
-  "publication": "source uploaded to repository; dataset asset upload pending",
+  "publication": "source and calibration assets uploaded to GitHub repository",
   "repository": "https://github.com/haesunglee116/SACQ",
   "owner_code_license": "deferred_by_owner",
   "distribution": "sacq-research",
@@ -694,11 +694,12 @@
     "requests": 2560,
     "observations": 12800,
     "bytes": 5038404660,
-    "archive_publication": "pending",
+    "archive_publication": "uploaded; GitHub asset sizes and SHA-256 digests verified",
     "selection_seed": 0,
     "environment_seed": 1234,
     "archive_manifest": "data/libero_calibration/archives.json",
     "archive_preparation": "all four archives verified against request SHA-256 hashes",
-    "compressed_bytes": 2262497547
+    "compressed_bytes": 2262497547,
+    "release_url": "https://github.com/haesunglee116/SACQ/releases/tag/calibration-v1"
   }
 }

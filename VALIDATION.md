@@ -8,7 +8,7 @@
 - Four observation archives: all payloads reread after compression and matched against the published SHA-256 file manifest.
 - Local documentation links and Git whitespace checks passed.
 - No scientific experiment was rerun and no inference/training implementation was changed.
-- Dataset assets are prepared locally; public download URLs remain pending.
+- Dataset assets are uploaded to calibration-v1; all four GitHub asset sizes and SHA-256 digests match the verified local archives.
 - Package builds were not rerun: the default Python lacks the build frontend.
 
 

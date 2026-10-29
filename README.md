@@ -74,7 +74,7 @@ selection seed **0**, matching the count to **640 per suite**, then divided into
 The four-suite set contains **2,560 requests / 12,800 observations**, totaling
 **5.038 GB** before compression. See the [dataset page](data/libero_calibration/README.md)
 for file hashes, layout and download status. Large data files are distributed
-separately from Git; archive download links are not yet published.
+separately from Git: [download the four suite archives](https://github.com/haesunglee116/SACQ/releases/tag/calibration-v1).
 
 ## Validation and supported scope
 
