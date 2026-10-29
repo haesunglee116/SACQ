@@ -1,5 +1,17 @@
 # Validation scope
 
+## Repository/data update — 2026-10-29
+
+- Full CPU test discovery: **198 tests passed**, including three new dataset-verifier tests.
+- Source release check: **175 files checked, no errors**.
+- Calibration manifest: all 2,560 request positions, split counts, unique paths and sizes checked.
+- Four observation archives: all payloads reread after compression and matched against the published SHA-256 file manifest.
+- Local documentation links and Git whitespace checks passed.
+- No scientific experiment was rerun and no inference/training implementation was changed.
+- Dataset assets are prepared locally; public download URLs remain pending.
+- Package builds were not rerun: the default Python lacks the build frontend.
+
+
 ## Public five-stage driver completion (2026-10-07)
 
 The public `pipeline.run` entrypoint executed **all five stages**, each with

@@ -1,6 +1,14 @@
 # Release notes
 
-## 0.1.0 — draft, not published
+## Repository update — 2026-10-29
+
+- Reorganized the entry README around installation, data and the execution runbook.
+- Added exact manifests for 2,560 calibration requests across four LIBERO suites.
+- Added a standalone dataset checksum verifier.
+- Observation archives are prepared separately; asset download links are pending.
+- Model kernels and scientific experiment settings are unchanged.
+
+## 0.1.0 — research source release
 
 The first release packages the SACQ numerical implementation and the selected
 GR00T–LIBERO research pipeline. SimplER and OpenVLA-OFT integration are deferred.
@@ -28,6 +36,9 @@ outside this working tree.
 
 ### What a user still supplies
 
+The selected calibration set is documented in [the dataset guide](data/libero_calibration/README.md).
+Observation archives are distributed separately from the source checkout.
+
 Model checkpoints and processors, calibration captures and their provenance,
 fitted or frozen background artifacts as applicable, simulator assets, and
 explicit experiment/episode manifests are external inputs. See
@@ -53,7 +64,6 @@ are included. Third-party terms remain separate; see
 
 ### Publication status
 
-The owner has deferred the GitHub destination and the license for original
-research code. No release tag, remote repository or published package is claimed.
-These notes are a draft to accompany the first approved publication, not a
-statement that redistribution rights or full reproduction have been finalized.
+Source code is available in the SACQ GitHub repository. No package-index release
+or dataset asset publication is claimed by this update. The license for original
+research code remains pending; third-party terms are retained.

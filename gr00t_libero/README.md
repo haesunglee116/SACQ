@@ -1,8 +1,10 @@
 # GR00T–LIBERO integration
 
-This directory narrows the model-level release to GR00T on LIBERO. Calibration
-observations, teacher tensors, model weights and simulator assets are deliberately
-excluded. Do not replace missing data or ambiguous scientific settings with defaults.
+This directory provides the model integration and explicit pipeline commands.
+Use the [published calibration manifest and dataset guide](../data/libero_calibration/README.md)
+for the selected observations, and [Capture and teacher inputs](CAPTURE_INPUTS.md)
+for the serialized format. Observation archives are distributed separately;
+model checkpoints, teacher caches and simulator assets are external inputs.
 
 ## Included
 

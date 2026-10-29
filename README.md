@@ -1,170 +1,94 @@
 # SACQ — GR00T–LIBERO
 
-GR00T–LIBERO implementation of SACQ. This repository contains the numerical
-core, model integration, execution tools and validation documentation.
-The code has been uploaded to the project repository; public release and the
-author-code license remain pending the authors' decision.
+SACQ research implementation: structure-aware vector-codebook quantization,
+mixed-bit allocation, index correction, and codebook/scale calibration for VLA models.
 
-This supplement exposes the numerical implementation and selected experiment
-source snapshots. It is **not yet an end-to-end reproduction release**. No model
-weights, private replay captures, simulator assets, credentials, machine launchers,
-Git history, or author contact information are included.
+This repository currently integrates **GR00T–LIBERO**. The numerical core and
+model pipeline are available; model checkpoints and simulator assets are external.
+SimplER, OpenVLA-OFT, AQLM comparisons and the latest A8 acceleration kernels are
+not yet integrated into this release.
 
-The first public release targets **GR00T–LIBERO only**. See
-`gr00t_libero/README.md` for the expanded local dependency bundle, path-explicit
-fitting/allocation adapter, five-stage driver, index/calibration/evaluation job builders, explicit result aggregation,
-and remaining integration limits.
-SimplER and OpenVLA-OFT integration are deferred to later releases.
-Calibration data is currently external, not an accidentally omitted artifact.
+## Start here
 
-A recorded SACQ2 reference preset and spec-preparation command are described in
-[the runbook](gr00t_libero/RUNBOOK.md#recorded-sacq2-reference-preset). The author has selected the submitted SACQ2 configuration as the reference;
-external inputs remain
-required.
+| Goal | Guide |
+|---|---|
+| Run the small CPU example | [Installation](#installation) |
+| Understand the method and source mapping | [Method map](METHOD_MAP.md) |
+| Obtain the calibration set | [LIBERO calibration data](data/libero_calibration/README.md) |
+| Set up the model and simulator | [Environment guide](gr00t_libero/ENVIRONMENT.md) |
+| Run fitting through evaluation | [Execution runbook](gr00t_libero/RUNBOOK.md) |
+| Inspect the recorded SACQ2 configuration | [Reference preset](gr00t_libero/presets/gr00t_libero_sacq2_seed17.json) |
+| Check what has actually been tested | [Validation record](VALIDATION.md) |
+
+## Installation
+
+Use Python 3.10 or later and install PyTorch appropriate for your platform:
+
+```bash
+python -m pip install -e .
+python -m examples.cpu_pipeline
+python -m unittest discover -s tests -v
+```
+
+The example and tests use CPU tensors without model weights or a simulator.
+The example is a software demonstration, not a paper experiment configuration.
+For GR00T execution, use the separate policy and simulator environments described
+in the [environment guide](gr00t_libero/ENVIRONMENT.md).
 
 ## Pipeline
 
 ```mermaid
 flowchart LR
-    A[External captures and statistics] --> B[Codebook fitting]
+    A[Calibration observations and statistics] --> B[Codebook fitting]
     B --> C[Bit allocation]
     C --> D[Index correction]
     D --> E[Codebook and scale calibration]
     E --> F[Policy rollout]
-    F --> G[Explicit episode aggregation]
+    F --> G[Result aggregation]
 ```
 
-The CPU numerical core is tested independently. Model-level execution additionally
-requires externally supplied models, data, runtime dependencies and explicit
-per-experiment settings; the diagram does not imply turnkey reproduction.
+The pipeline uses explicit input manifests and experiment configurations.
+The recorded SACQ2 preset is a reference configuration; it still requires its
+external model, candidate-bank and runtime inputs. Follow the runbook rather
+than historical defaults in reference source snapshots.
 
-The public five-stage driver completed a real-model diagnostic connecting one fitting artifact, a packed-bank
-allocation step, 338-layer index correction, one calibration update and a full
-50-episode rollout. This reuses an existing candidate bank and external inputs;
-it does not establish full-bank fitting or paper-result reproduction. See
-`VALIDATION.md` for the exact limits and resolved installation issues.
+## Repository layout
 
-## What runs independently
+| Directory | Contents |
+|---|---|
+| `sacq/` | Numerical fitting, metrics, index correction, reconstruction and packing |
+| `gr00t_libero/` | Model adapters, pipeline commands, configurations and pinned source overlays |
+| `data/libero_calibration/` | Calibration data description and exact file manifest |
+| `reference_sources/` | Research source snapshots for inspection |
+| `examples/` | Small standalone example |
+| `tests/` | Software tests |
+| `tools/` | Source-release and dataset verification tools |
 
-`sacq/` contains source-extracted implementations of:
+## Calibration data
 
-- normalized vector-codebook fitting with Euclidean, diagonal and full-block metrics;
-- downstream SwiGLU diagonal weighting and GELU derivatives;
-- full, uncentered input second-moment accumulation;
-- fixed-codebook/fixed-scale index reassignment with second-order error compensation;
-- differentiable codebook/scale reconstruction and integer index bit packing.
+Original observations were collected periodically during rollouts with a BF16
+policy using environment seed **1234**. Requests were randomly selected with
+selection seed **0**, matching the count to **640 per suite**, then divided into
+**576 training and 64 validation requests**. Each request contains five observations.
 
-The numerical function bodies are extracted from the research sources. Packaging
-does not introduce a replacement quantization algorithm. Synthetic tests are
-software checks only; they are not new benchmark measurements.
+The four-suite set contains **2,560 requests / 12,800 observations**, totaling
+**5.038 GB** before compression. See the [dataset page](data/libero_calibration/README.md)
+for file hashes, layout and download status. Large data files are distributed
+separately from Git; archive download links are not yet published.
 
-## Installation and tests
+## Validation and supported scope
 
-Use Python 3.10 or later and install PyTorch appropriate for your platform, then:
+The current CPU suite passes 198 tests. The existing real-model validation records a diagnostic
+connecting fitting, allocation, index correction, calibration and a 50-episode
+rollout. The diagnostic reused an existing candidate bank, fitted one candidate
+and performed one calibration update. It is not a complete rerun of all paper
+experiments. See [VALIDATION.md](VALIDATION.md) for the tested versions and scope.
 
-```bash
-python -m pip install -e .
-python -m unittest discover -s tests -v
-python -m examples.cpu_pipeline
-```
+The latest inference optimization results and additional benchmarks remain in
+the research workspace. Their results should not be attributed to the kernels
+currently shipped here. See [release notes](RELEASE_NOTES.md).
 
-The test suite and tiny example use CPU tensors and do not load a VLA model or
-contact a service. The example shows fitting, index correction, and eight
-codebook/scale updates on random tensors; it is not a benchmark or paper preset.
-Index correction is not guaranteed to improve every toy reconstruction objective.
-See `VALIDATION.md` for the environment actually tested for this export.
-
-## Source snapshots, not turnkey launchers
-
-`reference_sources/` provides the metric collectors/fitters, actual multi-suite
-allocator, calibration trainer, and a GR00T index adapter for inspection.
-These snapshots still require project-specific helper modules, model runtimes,
-replay manifests and artifacts not included here. Their anonymized
-`/data/workspace` paths are **placeholders**, not working download locations.
-Do not execute their historical CLI defaults as a final experiment protocol.
-Older introductory comments/defaults may describe an earlier launch; final runs
-used explicit overrides. This directory is not installed by the Python package.
-
-`REFERENCE_DEPENDENCIES.json` lists statically observed imports, including missing
-project helpers. This is an inventory, not a complete dependency lock; dynamic
-file loaders and simulator assets also need resolution.
-
-Only load trusted checkpoints. Research snapshot and resume loaders use
-`torch.load(..., weights_only=False)` and may execute Python pickle payloads.
-No untrusted downloaded checkpoint is needed for the included synthetic tests.
-
-The standalone `QuantLinear` preserves the source's within-request weight cache.
-Use `sacq.cache.reconstruction_cache_scope(model)` around each independent
-request, with optimizer steps outside the scope. This clears reconstructed
-weights on entry and exit, including exceptions, without changing parameters
-or detaching the returned loss. For manual lifetime management use
-`clear_reconstruction_cache(model)`. Never reuse a
-stale reconstructed weight after changing codebooks or scales. The optional
-FP32 gather-gradient path changes floating-point reduction order; it is not
-claimed to be bitwise-equivalent training.
-
-## Scientific boundaries
-
-- Normalized fitting and reconstructed-weight error are different objectives.
-  `scale_squared_weighting=False` retains the normalized-coordinate fitting
-  convention. Do not silently enable it while reproducing structure-aware fitting.
-- SwiGLU downstream weighting is diagonal; it does not retain correlations
-  between coordinates within a codeword. It is not a full downstream Hessian.
-- Index correction uses a full input second moment and updates indices only.
-  Model-level fixed-quantized-input collection is in the adapter snapshot;
-  the standalone solver does not select a model or calibration dataset.
-- The code supports configurations beyond any one reported experiment.
-  Seeds, background quantization, request counts and optimization settings must
-  be taken from a verified per-experiment contract, not inferred from defaults.
-- A replay request may contain multiple observations. Requests are not necessarily
-  episodes or temporal sequences. No independence assumption is implied.
-- Legacy development episode provenance is incomplete for some experiments.
-  Diagnostic-only results must not be relabeled as held-out evidence.
-- Packed tensor storage, model resident GPU allocation and inference peak GPU
-  memory are distinct quantities. Bit packing alone does not establish a
-  runnable low-memory inference implementation.
-
-## Real-runtime validation status
-
-Fresh policy and simulator environments passed real-model checks. The public
-five-stage driver then completed a diagnostic using one newly fitted candidate
-and an existing bank, a four-suite allocation step, 338-layer index correction,
-one calibration update and 50 rollout episodes. Explicit aggregation found no
-missing episodes. The source archive passed 186 tests at that release; current
-preset additions bring the local suite to 195 passing tests.
-
-This validates software integration within the tested scope, not full-bank
-fitting, fresh-host container installation or paper success-rate reproduction.
-See [validation evidence and limits](VALIDATION.md). The archived SACQ2 reference
-preset has a different 331-codebook selection and has not been rerun by the new
-preset command.
-
-## Reproduction inputs and supported scope
-
-The five-stage driver and explicit aggregation have completed a real-model
-software diagnostic. Installation guides, input-preparation helpers and source/
-wheel packages are available. The diagnostic reused an existing multi-K bank,
-fitted one new candidate, ran one allocation move and one calibration update,
-and completed 50 evaluation episodes. It is not full paper-result reproduction.
-
-Scientific reproduction still requires the selected checkpoint, captures,
-background artifacts and their episode provenance. These are external inputs,
-not included in the repository. See [the runbook](gr00t_libero/RUNBOOK.md) and
-[validation record](VALIDATION.md) for the exact supported path and limits.
-
-The first release supports the pinned GR00T–LIBERO model and evaluation layout.
-Other model layouts and seeds are not promised by the existing adapters.
-
-Third-party materials retain their applicable license terms; see
-`THIRD_PARTY_NOTICES.md`. Redistribution licensing for the original research
-code remains to be confirmed by its rights holders. This draft does not invent
-an open-source license or claim that all external artifacts may be redistributed.
-
-## Distribution and automated checks
-
-The installable distribution is named `sacq-research`; its Python import remains
-`sacq`. The wheel contains the numerical package and notices. Use the repository
-or source archive for model adapters, examples and tests.
+## Development and distribution
 
 ```bash
 python tools/release_check.py
@@ -172,8 +96,10 @@ python -m pip install build
 python -m build
 ```
 
-GitHub Actions is configured for CPU tests, the synthetic example, source checks,
-package builds and an installed-wheel check outside the checkout. The workflow is triggered by pushes and pull requests. Its GitHub run status
-must be checked in the Actions tab; local test results do not establish CI success.
-Repository preparation status is recorded in `RELEASE_READINESS.json`.
-See [draft release notes](RELEASE_NOTES.md) for the initial release contents and limits.
+The wheel installs the `sacq` numerical package. Use the repository or source
+archive for model adapters, tests, examples and calibration manifests.
+GitHub Actions defines CPU checks and packaging checks; local test results do
+not certify a hosted workflow run.
+
+The original research-code license remains pending. Third-party materials retain
+their applicable terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

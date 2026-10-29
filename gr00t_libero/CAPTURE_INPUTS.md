@@ -1,7 +1,9 @@
 # Inputs for the pinned GR00T–LIBERO pipeline
 
 This document describes the exported consumers, not a newly chosen experimental
-protocol. Captures, models, teacher tensors and simulator assets are not shipped.
+protocol. The selected calibration observations are described in the
+[dataset guide](../data/libero_calibration/README.md); archives are distributed
+separately. Models, teacher tensors and simulator assets are not shipped.
 A fresh reproduction still needs an explicitly selected dataset and its episode
 provenance. A capture hook and ordered-manifest preparation CLI are supplied;
 they do not choose or launch development episodes for the user.

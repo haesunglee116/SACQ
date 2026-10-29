@@ -1,7 +1,7 @@
 {
   "schema": "sacq_release_readiness_v1",
-  "updated": "2026-10-07",
-  "publication": "uploaded_to_repository; public release deferred by owner",
+  "updated": "2026-10-29",
+  "publication": "source uploaded to repository; dataset asset upload pending",
   "repository": "https://github.com/haesunglee116/SACQ",
   "owner_code_license": "deferred_by_owner",
   "distribution": "sacq-research",
@@ -688,5 +688,17 @@
     "External checkpoint/capture/background inputs and provenance must be supplied for the selected scientific protocol",
     "Full-bank fitting and full held-out benchmark reproduction are not established by the software diagnostic",
     "Worker layout and seed17 contract are pinned; arbitrary model/seed configurations are not supported"
-  ]
+  ],
+  "calibration_data": {
+    "manifest": "data/libero_calibration/manifest.json",
+    "requests": 2560,
+    "observations": 12800,
+    "bytes": 5038404660,
+    "archive_publication": "pending",
+    "selection_seed": 0,
+    "environment_seed": 1234,
+    "archive_manifest": "data/libero_calibration/archives.json",
+    "archive_preparation": "all four archives verified against request SHA-256 hashes",
+    "compressed_bytes": 2262497547
+  }
 }

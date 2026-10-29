@@ -1,0 +1,37 @@
+{
+  "status": "prepared; upload pending",
+  "archives": [
+    {
+      "suite": "libero_10",
+      "file": "sacq_calibration_libero_10_20261029.tar.gz",
+      "bytes": 518402283,
+      "sha256": "08f89fa934cdf7501a69542a78711bd80793ba109f60e5040e47014fec743d24",
+      "requests": 640,
+      "url": null
+    },
+    {
+      "suite": "libero_goal",
+      "file": "sacq_calibration_libero_goal_20261029.tar.gz",
+      "bytes": 512129411,
+      "sha256": "de60dd15b2746a7c8cf01bf6595b89aea35005b99eb4e65c4a3833d9403e3154",
+      "requests": 640,
+      "url": null
+    },
+    {
+      "suite": "libero_object",
+      "file": "sacq_calibration_libero_object_20261029.tar.gz",
+      "bytes": 714736871,
+      "sha256": "56dd5f3b22e9c797226af7830b8be2135ca275c9b39371d25cff3696a810598e",
+      "requests": 640,
+      "url": null
+    },
+    {
+      "suite": "libero_spatial",
+      "file": "sacq_calibration_libero_spatial_20261029.tar.gz",
+      "bytes": 517228982,
+      "sha256": "61caec31bb059a84fc0c0ef976d07cf790916e26449c73b3fd3723cb44f8a397",
+      "requests": 640,
+      "url": null
+    }
+  ]
+}
