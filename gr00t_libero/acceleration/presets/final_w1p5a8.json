@@ -1,0 +1,1833 @@
+{
+  "schema": "sacq_acceleration_recipe_v1",
+  "name": "w1p5a8_ff128_norm3reg",
+  "original_contract_sha256": "c410023213f53e125a688deff56468c66b6c8c94adfb53ff2128659a1f5454d8",
+  "compute_capability": [
+    8,
+    9
+  ],
+  "selections": {
+    "tile_selection": {
+      "file": "presets/FROZEN_GEMM_SELECTION.json",
+      "sha256": "52f262392863a8345be0308d31e7bf6728ea7a850982fcb88931f6fb5335a9b2",
+      "original_sha256": "52f262392863a8345be0308d31e7bf6728ea7a850982fcb88931f6fb5335a9b2"
+    },
+    "activation_selection": {
+      "file": "presets/FROZEN_ACTIVATION_SELECTION.json",
+      "sha256": "7f6b6f35bb9690e007c918a5287e7cfb64106e5824c7037d644461de57bd9360",
+      "original_sha256": "7f6b6f35bb9690e007c918a5287e7cfb64106e5824c7037d644461de57bd9360"
+    },
+    "decode_selection": {
+      "file": "presets/FROZEN_DECODE_SELECTION.json",
+      "sha256": "77c813bb4c2be532b8a5f48417fc68c8df6a706777560130a6cbb22e220b55d8",
+      "original_sha256": "77c813bb4c2be532b8a5f48417fc68c8df6a706777560130a6cbb22e220b55d8"
+    },
+    "large_tile_selection": {
+      "file": "presets/FROZEN_LARGE_GEMM_SELECTION.json",
+      "sha256": "28bcc481af2a76713bbcb930c1946a589391fb4837def43d6402dc7801fdc83e",
+      "original_sha256": "28bcc481af2a76713bbcb930c1946a589391fb4837def43d6402dc7801fdc83e"
+    },
+    "splitk_selection": {
+      "file": "presets/FROZEN_SPLITK_SELECTION.json",
+      "sha256": "25096d734d2812d4aeb6bb293a98ee8dfa62f1ea0f372e436979588f8cb028ee",
+      "original_sha256": "25096d734d2812d4aeb6bb293a98ee8dfa62f1ea0f372e436979588f8cb028ee"
+    },
+    "direct_decode_selection": {
+      "file": "presets/FROZEN_DIRECT_DECODE_SELECTION.json",
+      "sha256": "41fa5b9d3596bfc6325e83802e18d9f87e6ff5dfeb0047d9b723e7a639fb8e56",
+      "original_sha256": "41fa5b9d3596bfc6325e83802e18d9f87e6ff5dfeb0047d9b723e7a639fb8e56"
+    },
+    "grouped_decode_selection": {
+      "file": "presets/FROZEN_GROUPED_ALIGNED_DECODE_SELECTION.json",
+      "sha256": "01878ab81f8fb49d8b338ab46331cedb9d455dcd17726d87a982ddb3dcf92535",
+      "original_sha256": "6d46e5c793b3912380e46b504b848fac27b2eb0d6c2fb38fe9c9706032a2ea41"
+    },
+    "aligned_retimed_selection": {
+      "file": "presets/FROZEN_ALIGNED_RETIMED_SELECTION.json",
+      "sha256": "97aac58d1f45abc59f3a7ce64c623da75f4af0740442c2423e2243dc4022de2b",
+      "original_sha256": "97aac58d1f45abc59f3a7ce64c623da75f4af0740442c2423e2243dc4022de2b"
+    }
+  },
+  "projection": {
+    "projection_format": "int8_symmetric",
+    "projection_recipe": "dynamic_per_token_activation_per_output_row_weight",
+    "persistent_expanded_weight_cache": false,
+    "source_payload": "unchanged_SACQ_W1.5_plus_original_scalar_background",
+    "projection_shapes": {
+      "action_head.model.transformer_blocks.0.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.1.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.10.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.11.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.12.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.13.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.14.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.15.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.16.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.17.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.18.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.19.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.2.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.20.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.21.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.22.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.23.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.24.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.25.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.26.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.27.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.28.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.29.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.30.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.31.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.4.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.5.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.6.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.7.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.8.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.9.ff.net.0.proj": [
+        6144,
+        1536
+      ],
+      "action_head.model.transformer_blocks.0.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.1.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.10.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.11.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.12.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.13.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.14.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.15.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.16.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.17.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.18.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.19.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.2.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.20.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.21.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.22.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.23.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.24.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.25.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.26.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.27.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.28.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.29.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.3.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.30.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.31.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.4.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.5.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.6.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.7.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.8.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.9.ff.net.2": [
+        1536,
+        6144
+      ],
+      "action_head.model.transformer_blocks.0.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.0.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.0.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.0.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.1.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.1.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.1.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.1.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.10.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.10.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.10.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.10.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.11.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.11.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.11.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.11.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.12.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.12.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.12.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.12.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.13.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.13.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.13.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.13.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.14.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.14.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.14.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.14.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.15.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.15.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.15.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.15.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.16.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.16.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.16.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.16.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.17.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.17.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.17.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.17.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.18.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.18.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.18.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.18.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.19.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.19.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.19.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.19.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.2.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.2.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.2.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.2.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.20.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.20.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.20.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.20.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.21.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.21.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.21.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.21.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.22.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.22.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.22.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.22.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.23.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.23.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.23.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.23.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.24.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.24.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.24.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.24.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.25.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.25.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.25.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.25.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.26.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.26.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.26.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.26.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.27.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.27.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.27.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.27.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.28.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.28.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.28.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.28.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.29.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.29.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.29.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.29.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.30.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.30.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.30.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.30.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.31.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.31.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.31.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.31.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.4.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.4.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.4.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.4.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.5.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.5.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.5.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.5.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.6.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.6.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.6.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.6.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.7.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.7.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.7.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.7.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.8.attn1.to_k": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.8.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.8.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.8.attn1.to_v": [
+        1536,
+        2048
+      ],
+      "action_head.model.transformer_blocks.9.attn1.to_k": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.9.attn1.to_out.0": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.9.attn1.to_q": [
+        1536,
+        1536
+      ],
+      "action_head.model.transformer_blocks.9.attn1.to_v": [
+        1536,
+        1536
+      ],
+      "backbone.model.model.language_model.layers.0.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.0.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.0.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.0.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.0.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.0.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.0.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.1.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.1.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.10.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.10.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.11.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.11.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.12.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.12.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.13.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.13.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.14.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.14.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.15.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.15.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.2.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.2.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.3.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.3.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.4.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.4.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.5.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.5.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.6.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.6.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.7.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.7.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.8.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.8.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.mlp.down_proj": [
+        2048,
+        6144
+      ],
+      "backbone.model.model.language_model.layers.9.mlp.gate_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.mlp.up_proj": [
+        6144,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.self_attn.k_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.self_attn.o_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.self_attn.q_proj": [
+        2048,
+        2048
+      ],
+      "backbone.model.model.language_model.layers.9.self_attn.v_proj": [
+        1024,
+        2048
+      ],
+      "backbone.model.model.visual.blocks.0.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.0.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.0.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.0.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.1.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.1.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.1.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.1.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.10.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.10.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.10.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.10.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.11.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.11.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.11.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.11.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.12.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.12.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.12.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.12.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.13.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.13.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.13.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.13.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.14.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.14.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.14.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.14.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.15.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.15.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.15.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.15.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.16.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.16.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.16.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.16.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.17.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.17.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.17.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.17.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.18.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.18.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.18.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.18.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.19.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.19.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.19.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.19.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.2.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.2.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.2.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.2.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.20.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.20.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.20.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.20.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.21.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.21.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.21.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.21.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.22.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.22.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.22.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.22.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.23.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.23.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.23.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.23.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.3.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.3.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.3.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.3.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.4.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.4.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.4.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.4.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.5.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.5.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.5.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.5.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.6.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.6.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.6.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.6.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.7.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.7.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.7.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.7.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.8.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.8.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.8.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.8.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.blocks.9.attn.proj": [
+        1024,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.9.attn.qkv": [
+        3072,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.9.mlp.linear_fc1": [
+        4096,
+        1024
+      ],
+      "backbone.model.model.visual.blocks.9.mlp.linear_fc2": [
+        1024,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.0.linear_fc1": [
+        4096,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.0.linear_fc2": [
+        2048,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.1.linear_fc1": [
+        4096,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.1.linear_fc2": [
+        2048,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.2.linear_fc1": [
+        4096,
+        4096
+      ],
+      "backbone.model.model.visual.deepstack_merger_list.2.linear_fc2": [
+        2048,
+        4096
+      ],
+      "backbone.model.model.visual.merger.linear_fc1": [
+        4096,
+        4096
+      ],
+      "backbone.model.model.visual.merger.linear_fc2": [
+        2048,
+        4096
+      ],
+      "action_head.model.proj_out_1": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.0.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.1.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.10.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.11.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.12.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.13.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.14.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.15.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.16.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.17.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.18.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.19.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.2.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.20.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.21.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.22.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.23.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.24.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.25.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.26.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.27.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.28.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.29.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.3.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.30.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.31.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.4.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.5.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.6.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.7.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.8.norm1.linear": [
+        3072,
+        1536
+      ],
+      "action_head.model.transformer_blocks.9.norm1.linear": [
+        3072,
+        1536
+      ]
+    }
+  },
+  "accuracy_recovery_method": {
+    "projection": "INT8_symmetric_dynamic_per_token_activation_per_output_row_weight",
+    "attention": "INT8QK_FP8PV",
+    "pv_accum_dtype": "fp32+fp32",
+    "smooth_k": true,
+    "smooth_v": false,
+    "new_training_or_calibration": false
+  },
+  "setup_requires_compatible_INT8_bootstrap": true,
+  "gpu_revalidated_after_export": false
+}

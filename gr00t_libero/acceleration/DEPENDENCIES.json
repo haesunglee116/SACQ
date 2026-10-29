@@ -1,0 +1,458 @@
+{
+  "imports": {
+    "__future__": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py"
+    ],
+    "ast": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py"
+    ],
+    "benchmark_inference": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "collections": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "ctypes": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_graph_microtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "dataclasses": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py"
+    ],
+    "diffusers.models.activations": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py"
+    ],
+    "diffusers.models.attention": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py"
+    ],
+    "diffusers.models.attention_processor": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py"
+    ],
+    "gc": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py"
+    ],
+    "gr00t.eval.cosmos_quant_shim": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_integration_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_a8_candidate_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_tuning.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "gzip": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "hashlib": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "hqq.core.quantize": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "importlib": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "inspect": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rms_tail_square_runtime_r2.py"
+    ],
+    "json": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "math": [
+      "gr00t_final_seed17_20260922/exact_packed_linear.py",
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py"
+    ],
+    "numpy": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_runtime_r1.py"
+    ],
+    "os": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_affine_vec8rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_cuda_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qkv_vec4rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "pathlib": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_fusion_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_vision_norm_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_graph_microtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "re": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "rollout_bridge_r1": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rms_20261028_r1.py"
+    ],
+    "sageattention": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py"
+    ],
+    "sageattention.core": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py"
+    ],
+    "shutil": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "statistics": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_tuning.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_graph_microtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "subprocess": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "tempfile": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "textwrap": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py"
+    ],
+    "time": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "torch": [
+      "gr00t_final_seed17_20260922/exact_packed_linear.py",
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_fusion_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_affine_vec8rcpftz_integration_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_aligned_mask_bias_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_integration_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_integration_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gemm_stage6_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rms_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qkv_vec4rcpftz_integration_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_integer_round_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_round_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ffdown_residual_epilogue_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_gateup_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_qkv_aligned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ordered_epilogue_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_policy_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean41_native_order_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_y_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_shared_padded_activation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_gemm_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_exact_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_torch_epilogue_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_vision_norm_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_a8_candidate_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_exact_producers_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fast_policy_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_padded_producer_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_dynamic_scale_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_bf16_language_fusions_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_language_qk_norm_fusion_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_tuning.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_graph_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_graph_microtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "torch.nn": [
+      "gr00t_final_seed17_20260922/exact_packed_linear.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py"
+    ],
+    "torch.nn.functional": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_aligned_mask_bias_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "torch.profiler": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "torch.utils.cpp_extension": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_fusion_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_affine_vec8rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_cuda_20261029_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qkv_vec4rcpftz_cuda_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_vision_norm_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py"
+    ],
+    "transformers.feature_extraction_utils": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_graph_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py"
+    ],
+    "transformers.integrations.sdpa_attention": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py"
+    ],
+    "transformers.models.qwen3_vl": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_graph_r1.py"
+    ],
+    "transformers.models.qwen3_vl.modeling_qwen3_vl": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_vision_norm_producer_20261028_r1.py"
+    ],
+    "triton": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_aligned_mask_bias_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_integration_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rms_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_integer_round_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_round_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ffdown_residual_epilogue_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_gateup_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_qkv_aligned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ordered_epilogue_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_divide_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean41_native_order_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_y_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_gemm_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_exact_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_static_zero_affine_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_torch_epilogue_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_exact_producers_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_padded_producer_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_dynamic_scale_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_bf16_language_fusions_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_language_qk_norm_fusion_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_tuning.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_runtime_r1.py"
+    ],
+    "triton.language": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_aligned_mask_bias_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rms_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_integer_round_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_round_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ffdown_residual_epilogue_20261028_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_gateup_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_qkv_aligned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ordered_epilogue_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_divide_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean41_native_order_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_y_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_gemm_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_exact_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_static_zero_affine_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_torch_epilogue_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_exact_producers_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_padded_producer_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_dynamic_scale_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_bf16_language_fusions_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_language_qk_norm_fusion_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_runtime_r1.py"
+    ],
+    "triton.language.extra.cuda": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_bf16_language_fusions_r1.py"
+    ],
+    "triton.language.extra.cuda.libdevice": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_round_producer_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_divide_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_exact_producers_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_padded_producer_r1.py"
+    ],
+    "types": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_gateup_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_qkv_aligned_frozen_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_policy_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_a8_candidate_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fast_policy_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py"
+    ],
+    "typing": [
+      "libero_pro_eval/codebook_linear_triton_2026_08_23.py"
+    ],
+    "vllm": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_policy_20261028_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_a8_candidate_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fast_policy_r3.py"
+    ],
+    "weakref": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_integration_20261029_r2.py"
+    ]
+  },
+  "injected_module": "rollout_bridge_r1 (load the INT8 bridge before configuring kernels)",
+  "not_bundled": [
+    "GR00T model/runtime and checkpoints",
+    "SageAttention custom FP32 current-stream build",
+    "vLLM and vLLM-Omni",
+    "CUTLASS headers",
+    "PyTorch, Triton, Transformers, diffusers, HQQ"
+  ],
+  "static_inventory_is_not_runtime_validation": true
+}

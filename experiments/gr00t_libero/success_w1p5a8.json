@@ -1,0 +1,81 @@
+{
+  "schema": "sacq_recorded_success_v1",
+  "record_id": "w1p5a8_rollout_20261028",
+  "successes": 1871,
+  "episodes": 2000,
+  "success_percent": 93.55,
+  "suites": {
+    "libero_spatial": {
+      "successes": 469,
+      "episodes": 500,
+      "success_percent": 93.8
+    },
+    "libero_object": {
+      "successes": 481,
+      "episodes": 500,
+      "success_percent": 96.2
+    },
+    "libero_goal": {
+      "successes": 477,
+      "episodes": 500,
+      "success_percent": 95.4
+    },
+    "libero_10": {
+      "successes": 444,
+      "episodes": 500,
+      "success_percent": 88.8
+    }
+  },
+  "protocol": {
+    "rollout": {
+      "environment_seed": 17,
+      "policy_seed": 20260824,
+      "episodes_per_task": 50,
+      "n_envs": 1,
+      "action_steps": 8,
+      "max_episode_steps": 720,
+      "termination": "official_done_or_720",
+      "success": "success_any",
+      "settling_steps": 0
+    },
+    "denoising_steps": 4,
+    "attention_groups": {
+      "action_self": 16,
+      "vision": 24
+    },
+    "accuracy_recovery_method": {
+      "projection": "INT8_symmetric_dynamic_per_token_activation_per_output_row_weight",
+      "attention": "INT8QK_FP8PV",
+      "pv_accum_dtype": "fp32+fp32",
+      "smooth_k": true,
+      "smooth_v": false,
+      "new_training_or_calibration": false
+    }
+  },
+  "bit_accounting": {
+    "original_compressed_payload_unchanged": true,
+    "weight_row_scale_logical_bytes": 4468736,
+    "additional_logical_scale_bytes": 4466972,
+    "additional_metadata_bits_per_projection_weight": 0.015572443110827908,
+    "no_expanded_weight_cache": true
+  },
+  "diagnostic_only": true,
+  "held_out": false,
+  "implementation": "rollout_worker_int8_selected_20261028_r4.py",
+  "implementation_sha256": "ac71dc35d2da28055e6fecc1a463f428f74effad11da1719a9fd36ed1840e827",
+  "relationship_to_final_latency": "Earlier evaluated INT8 implementation; final kernels were checked against original INT8 output bytes on the timing fixture. No 2000-episode rerun of the final kernel combination.",
+  "evidence": [
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_rollout_all4_20261028_r1/FINAL_RESULT_2000_R1.json",
+      "sha256": "8ad4c7b850eddee07f4946a39fc57c83fe1408bf304db0b4e7f53f24361da18c"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_rollout_all4_20261028_r1/libero_10_r4/contract.json",
+      "sha256": "84cb86c3853800ff1b138971c3bce4aaa3d3a9332727e37f0f6b0de88fcf0e2f"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_rollout_all4_20261028_r1/FINAL_EPISODE_AUDIT_SNAPSHOT_R1.json",
+      "sha256": "041c85bb7a2f85f6e83b7ba92a4c7326612e3a81e8fcb6108bfae6557beb5b39"
+    }
+  ]
+}

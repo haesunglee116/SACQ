@@ -1,1 +1,3 @@
 * text eol=lf
+# Preserve whitespace in hash-tracked research snapshots; do not reformat on export.
+gr00t_libero/acceleration/sources/** -whitespace

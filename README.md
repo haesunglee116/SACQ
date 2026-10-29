@@ -5,8 +5,9 @@ mixed-bit allocation, index correction, and codebook/scale calibration for VLA m
 
 This repository currently integrates **GR00T–LIBERO**. The numerical core and
 model pipeline are available; model checkpoints and simulator assets are external.
-SimplER, OpenVLA-OFT, AQLM comparisons and the latest A8 acceleration kernels are
-not yet integrated into this release.
+The final A8 kernel overlay and recorded experiment map are included as opt-in
+research integrations. SimplER, OpenVLA-OFT and AQLM comparisons are not yet
+integrated into this release.
 
 ## Start here
 
@@ -18,6 +19,8 @@ not yet integrated into this release.
 | Set up the model and simulator | [Environment guide](gr00t_libero/ENVIRONMENT.md) |
 | Run fitting through evaluation | [Execution runbook](gr00t_libero/RUNBOOK.md) |
 | Inspect the recorded SACQ2 configuration | [Reference preset](gr00t_libero/presets/gr00t_libero_sacq2_seed17.json) |
+| Match final settings to recorded results | [Experiment map](experiments/gr00t_libero/README.md) |
+| Inspect/stage the final A8 kernels | [Acceleration integration](gr00t_libero/acceleration/README.md) |
 | Check what has actually been tested | [Validation record](VALIDATION.md) |
 
 ## Installation
@@ -78,15 +81,17 @@ separately from Git: [download the four suite archives](https://github.com/haesu
 
 ## Validation and supported scope
 
-The current CPU suite passes 198 tests. The existing real-model validation records a diagnostic
+The current CPU suite passes 204 tests. The existing real-model validation records a diagnostic
 connecting fitting, allocation, index correction, calibration and a 50-episode
 rollout. The diagnostic reused an existing candidate bank, fitted one candidate
 and performed one calibration update. It is not a complete rerun of all paper
 experiments. See [VALIDATION.md](VALIDATION.md) for the tested versions and scope.
 
-The latest inference optimization results and additional benchmarks remain in
-the research workspace. Their results should not be attributed to the kernels
-currently shipped here. See [release notes](RELEASE_NOTES.md).
+The final inference kernel sources, frozen choices and original measurement
+identities are included. CPU packaging tests do not revalidate GPU performance:
+the relocated A8 overlay requires an existing compatible INT8 bootstrap, and
+has not been rerun on a GPU. See the [experiment map](experiments/gr00t_libero/README.md)
+and [release notes](RELEASE_NOTES.md).
 
 ## Development and distribution
 
@@ -103,3 +108,4 @@ not certify a hosted workflow run.
 
 The original research-code license remains pending. Third-party materials retain
 their applicable terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The recommended owner-license choice is documented in [LICENSE_REVIEW.md](LICENSE_REVIEW.md).

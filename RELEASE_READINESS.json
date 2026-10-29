@@ -701,5 +701,18 @@
     "archive_preparation": "all four archives verified against request SHA-256 hashes",
     "compressed_bytes": 2262497547,
     "release_url": "https://github.com/haesunglee116/SACQ/releases/tag/calibration-v1"
+  },
+  "acceleration": {
+    "status": "source overlay and CPU integration tests; GPU revalidation pending",
+    "guide": "gr00t_libero/acceleration/README.md",
+    "source_files": 96,
+    "frozen_selections": 8,
+    "standalone_bootstrap_packaged": false,
+    "gpu_rerun": false,
+    "default_pipeline_changed": false,
+    "experiment_map": "experiments/gr00t_libero/README.md",
+    "CPU_tests": 204,
+    "new_integration_tests": 6,
+    "package_build": "sdist and wheel built; unpacked source release checks passed"
   }
 }

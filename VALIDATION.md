@@ -1,5 +1,18 @@
 # Validation scope
 
+## Final kernel source integration — 2026-10-29
+
+- Full CPU suite: **204 tests passed**, including six acceleration integration tests.
+- All 96 exported source files match hashes listed in the final experiment contract before path-only transformation. Eight frozen selection files retain their choices.
+- Installer statement order matches the original selected worker's AST.
+- Isolated source staging and refusal of source/selection tampering tested, including a forged receipt.
+- Latency denominators and success-count aggregation checked. A16 uses its separate paired BF16 control.
+- Source release audit and local documentation-link checks passed.
+- Source archive and wheel built; source archive unpacking, hash verification and existing pipeline source staging passed.
+- **No GPU rebuild, numerical rerun or success-rate rerun of the exported overlay.** The compatible full INT8 bootstrap remains external.
+- Top-level owner license remains undecided; recommendation in LICENSE_REVIEW.md.
+
+
 ## Repository/data update — 2026-10-29
 
 - Full CPU test discovery: **198 tests passed**, including three new dataset-verifier tests.

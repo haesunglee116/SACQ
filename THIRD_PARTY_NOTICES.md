@@ -34,7 +34,8 @@ been replaced for relocation; see the integration source manifest for hashes.
 | Full GR00T checkout and model weights | No | Obtain separately under their upstream terms |
 | PyTorch, NumPy, Transformers, HQQ, dm-tree, safetensors | No | External runtime dependencies; this bundle does not relicense them |
 | Modified LIBERO Python source overlays | 13 modified files and one required added module | Upstream MIT notice retained in `third_party/LIBERO-MIT.txt`, per-file provenance in `gr00t_libero/LIBERO_OVERLAY.json`; owner-code license decision also applies to original additions |
-| Full LIBERO simulator/assets, tasks and calibration captures | No | Obtain/prepare separately; no data redistribution permission is asserted here |
+| Full LIBERO simulator/assets and tasks | No | Obtain separately under upstream terms |
+| Selected calibration observations | Separate GitHub Release assets | Dataset license remains separate from the code license |
 
 The wheel installs only the `sacq` numerical package plus notices. The source
 archive also contains the integration adapters, reference snapshots, tests and
@@ -47,3 +48,31 @@ extend the supported release benchmark beyond the four original LIBERO suites.
 Additional untracked assets and task files are not included. Source preparation
 exports the pinned upstream commit and applies these overlays explicitly; the
 result must not be described as an unmodified upstream LIBERO checkout.
+
+## Final inference kernel overlay
+
+`gr00t_libero/acceleration` includes the original research's selected inference
+kernels and source-identity fixtures. `SOURCE_MANIFEST.json` records the original
+and exported hashes. Export modifications replace machine-specific paths with
+placeholders; the separate installer/staging utilities are new code.
+
+- `fused_ffup_cutlass_r1/upstream_mma_multistage.h` and its modified
+  `sacq_mma_multistage.h` retain NVIDIA's full BSD copyright/license notice.
+  The surrounding wrapper/kernel is research adaptation. CUTLASS itself remains
+  an external build dependency. [Upstream license](https://github.com/NVIDIA/cutlass/blob/main/LICENSE.txt).
+- Vision SDPA/Qwen3-VL/RoPE source fixtures derive from Hugging Face Transformers;
+  attention processor fixtures derive from Hugging Face diffusers. Their original
+  projects use Apache-2.0. Fixtures preserve method bodies for exact source guards,
+  and adapters modify their use in the inference path. The Apache-2.0 text is in
+  `third_party/Apache-2.0.txt`.
+- SageAttention preparation code is adapted from its Apache-2.0 implementation,
+  as identified in `recovery_sage_single_preparation_fp32_r2.py`. The full package
+  and custom compiled attention extension are not bundled.
+  [Upstream license](https://github.com/thu-ml/SageAttention/blob/main/LICENSE).
+- The bundled reference worker/bridge require external GR00T/vLLM-Omni bootstrap
+  code. They are integration references, not copies of those complete projects.
+
+Calibration observations are now attached to the `calibration-v1` release.
+This supersedes earlier source-only distribution descriptions; it does not
+assign a dataset license. The code and dataset licensing decisions remain
+separate. See [the owner's decision brief](LICENSE_REVIEW.md).

@@ -289,3 +289,11 @@ references; do not overwrite or delete the previous execution receipt. The four
 completed upstream stages can remain unchanged when their inputs and outputs
 retain the same identities. A terminal failed receipt is not permission to
 replace it with a different protocol.
+
+## Optional final A8 kernel source preparation
+
+For source inspection and isolated staging, follow the
+[acceleration integration guide](acceleration/README.md). This step does not
+change the A16 pipeline above or authorize a new experiment. The A8 hook requires
+the separately supplied compatible INT8 bootstrap and its model/input contracts.
+Do not enable inference-only kernels in fitting or calibration.

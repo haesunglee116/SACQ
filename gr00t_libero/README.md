@@ -682,3 +682,10 @@ terminates that group, including import-created descendants that retain the
 group. This prevents an ordinary compile-worker child outliving a timed-out
 probe. It does not claim to terminate deliberately detached descendants. On
 non-POSIX systems only the immediate subprocess is terminated.
+
+## Optional inference integration
+
+The [final A8 kernel overlay](acceleration/README.md) and
+[recorded experiment map](../experiments/gr00t_libero/README.md) are separate from
+the existing A16 pipeline. The overlay stages source and frozen choices for a
+compatible INT8 bootstrap; it is not enabled for calibration or rollout by default.

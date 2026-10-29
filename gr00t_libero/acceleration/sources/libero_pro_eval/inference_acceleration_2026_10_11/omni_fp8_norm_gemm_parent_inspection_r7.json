@@ -1,0 +1,9 @@
+{
+  "status": "READ_ONLY_INSTALLED_TRANSFORMER_SOURCE_INSPECTED",
+  "path": "@WORKSPACE@/libero_pro_eval/inference_acceleration_2026_10_11/research_a8_primary_2026_10_17/omni_0241_dit_inspected_for_fusion_r7.py",
+  "sha256": "8377ecca20255e72e101a973ec64745181a812257dea1cdc2f9ad000e7a362d3",
+  "node_source": "@LOCAL_RUNTIME@/venv_vllm_omni_0241_20261014/lib/python3.10/site-packages/vllm_omni/diffusion/models/gr00t/modeling/modules/dit.py",
+  "finding": "InstalledDiTBasicTransformerBlock norm3result feedsFFonly, thenFFoutputaddedtorawhiddenstate. A futureNorm+FFup fusedadapter maybypassstandaloneNormmaterialization whilepreservingactualmath/parameters; runtimeclass/source/shape andall3200/own25gates stillmandatory.",
+  "GPU_numerical_execution": false,
+  "production_fused_adapter_implemented": false
+}

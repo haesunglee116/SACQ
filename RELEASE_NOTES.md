@@ -1,5 +1,15 @@
 # Release notes
 
+## Final inference source integration — 2026-10-29
+
+- Added a configuration/source/evidence map for final W1.5A8 latency and the earlier W1.5A8 success evaluation.
+- Added 96 original-contract-pinned kernel/helper/fixture files and eight frozen selection tables.
+- Added isolated source staging and an opt-in installer preserving the selected installation order.
+- Retained output/RNG assertions, source guards, inference-only restrictions and original hash provenance.
+- Recorded the external bootstrap requirements and lack of GPU revalidation after packaging.
+- Added an owner-facing Apache-2.0 recommendation; license and repository visibility remain unchanged.
+
+
 ## Repository update — 2026-10-29
 
 - Reorganized the entry README around installation, data and the execution runbook.

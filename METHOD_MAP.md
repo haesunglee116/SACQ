@@ -43,3 +43,11 @@ The active model adapters now use explicit calibration callbacks, a strict-metri
 fitter argument and static rollout/simulator functions. Original reference
 snapshots remain available for comparison; they are not alternative supported
 launchers. See the integration README for supported legacy layout boundaries.
+
+## Final inference implementation
+
+The [experiment map](experiments/gr00t_libero/README.md) links recorded latency
+and success results to immutable settings and source identities.
+The [opt-in A8 overlay](gr00t_libero/acceleration/README.md) contains the selected
+INT8/CUDA/Triton implementation and frozen launch choices. Its source staging and
+installer are CPU-tested; the relocated runtime has not been GPU-revalidated.

@@ -2,6 +2,7 @@
 import argparse
 import ast
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import re
@@ -92,6 +93,15 @@ def audit(root):
         elif not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != row['export_sha256']:
             errors.append(f"{row['file']}: exported source hash mismatch")
     errors.extend(dependency_inventory_errors(root))
+    acceleration = root/'gr00t_libero/acceleration'
+    if acceleration.is_dir():
+        try:
+            spec = importlib.util.spec_from_file_location('acceleration_release_audit', acceleration/'prepare.py')
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            module.audit(acceleration)
+        except (ValueError, OSError, KeyError) as exc:
+            errors.append(f'Acceleration bundle audit: {exc}')
     return dict(files_checked=count, errors=errors,
                 publication_license='present, review required' if (root/'LICENSE').is_file() else 'pending owner decision')
 

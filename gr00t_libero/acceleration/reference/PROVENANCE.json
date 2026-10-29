@@ -1,0 +1,12 @@
+{
+  "original_worker": "codex_fair_latency_combo_ff128_norm3reg_20261029_r1.py",
+  "original_sha256": "b0776206d2a9c9fe92b2e5aa9cec7749376e6144a0429e8e1b93b08771fe47f4",
+  "export_sha256": "b0776206d2a9c9fe92b2e5aa9cec7749376e6144a0429e8e1b93b08771fe47f4",
+  "purpose": "Reference only; requires external benchmark bootstrap and data. Not a standalone entry point.",
+  "bridge": {
+    "file": "rollout_bridge_perrow_int8_r5.py",
+    "original_sha256": "f0dfab43a002f6e8d36d5f729092e44bdf4ca4014b10af12a344b4986df8f19e",
+    "export_sha256": "f0dfab43a002f6e8d36d5f729092e44bdf4ca4014b10af12a344b4986df8f19e",
+    "requires_external_bootstrap": "bootstrap_policy_perrow_int8_r5.py"
+  }
+}

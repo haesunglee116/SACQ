@@ -1,0 +1,674 @@
+[
+  {
+    "file": "gr00t_final_seed17_20260922/exact_packed_linear.py",
+    "original_sha256": "1c1aa686ba0091669ea1b85a984671aa557573ade3f6e8cb273f0a2f77933741",
+    "export_sha256": "1c1aa686ba0091669ea1b85a984671aa557573ade3f6e8cb273f0a2f77933741",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/codebook_linear_triton_2026_08_23.py",
+    "original_sha256": "230823ea3f2e0e808020545a191c6d50963271847525688cdc443961b91a4fbd",
+    "export_sha256": "230823ea3f2e0e808020545a191c6d50963271847525688cdc443961b91a4fbd",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_attnprocessor2_0_call_diffusers0380.txt",
+    "original_sha256": "bf23ea5ae40404272695b752532af4cef782d7626168f17e9f0d6652a941dd67",
+    "export_sha256": "bf23ea5ae40404272695b752532af4cef782d7626168f17e9f0d6652a941dd67",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/claude_int8_attention_path_20261028_r1.py",
+    "original_sha256": "79da9ed0fd2861c2986526dff7d1b58af486764b6b0e847bc010e2bcfc01f212",
+    "export_sha256": "79da9ed0fd2861c2986526dff7d1b58af486764b6b0e847bc010e2bcfc01f212",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_20261029_r2/binding.cpp",
+    "original_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "export_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_20261029_r2/kernel.cu",
+    "original_sha256": "b7a9a9b3d061279b9a046263ad526e71d186f7706d4ac47f10fed3d8c25c8c83",
+    "export_sha256": "b7a9a9b3d061279b9a046263ad526e71d186f7706d4ac47f10fed3d8c25c8c83",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_adaln_sharedmax_fusion_20261029_r2.py",
+    "original_sha256": "af9dd0b71593c07f020c8055923fa4189082bd993c30dffe57f02eef31070d89",
+    "export_sha256": "b0ac1a34f6fbeeacee81ebf9def210b77fd6ad053051e78b194852038f0b3b35",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_affine_vec8rcpftz_cuda_20261029_r1.py",
+    "original_sha256": "d7da9c9cd66f18664e643d39a75037030a1108c07fe5f409cb1af1b15a5d0c19",
+    "export_sha256": "65152c3e76acba5dc56754ed88e3cd85334bb9ac2bbda50802d416366f1a5c03",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_affine_vec8rcpftz_integration_20261029_r1.py",
+    "original_sha256": "a59e6b2ea86b370a43a974142aecfaf0868c5e905824a960da29452113e05770",
+    "export_sha256": "a59e6b2ea86b370a43a974142aecfaf0868c5e905824a960da29452113e05770",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_aligned_mask_bias_20261028_r2.py",
+    "original_sha256": "1c2a4d53cd8dc5b0f623158f520e1693c1a3b11e21a559f2bb22c25cc5558f87",
+    "export_sha256": "1c2a4d53cd8dc5b0f623158f520e1693c1a3b11e21a559f2bb22c25cc5558f87",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_cuda_20261029_r2.py",
+    "original_sha256": "8d97bc95b8fc6c20d537a6a1c4bc2b927167c60d4f5b4fc4c0e70fea36b2ad7f",
+    "export_sha256": "9237c60ead11ba1d66bfd13074051d9310d038ac801fc03d074c32afe02239f8",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_codebook_vec4rcpftz_integration_20261029_r2.py",
+    "original_sha256": "38187dc11f03a80b8d387584580ddd0c4a3a8050745f9deb5a383e55e0ebaeae",
+    "export_sha256": "38187dc11f03a80b8d387584580ddd0c4a3a8050745f9deb5a383e55e0ebaeae",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_cuda_20261029_r1.py",
+    "original_sha256": "23ac859295515fbfc01bf59ed1cd3d76a8e5066b0b66aa29d0e7055c5ff69e3b",
+    "export_sha256": "bb38580d4c0cbdc031c710e58db9f0cffd79930452cd2801bf02440f482616af",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4cta128_integration_20261029_r1.py",
+    "original_sha256": "939d63f48aa5ba6f4cff9079e723c37c08c8bd255d400ebf22e766412fe59504",
+    "export_sha256": "939d63f48aa5ba6f4cff9079e723c37c08c8bd255d400ebf22e766412fe59504",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_ffdecode_vec4rcpftz_cuda_20261029_r1.py",
+    "original_sha256": "cbaee133bd4b8b1b82a5e8326287ac142462490fe78e4e2c632a83cc317287af",
+    "export_sha256": "eed5d7e33c8e624e9e721ff08641c5a908baf39be8b59f5ebe0b739779018b12",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gelu_lookup_w32_20261028_r1.py",
+    "original_sha256": "7af9a2d5f3d87886eaf155adaeba09eb4f35f65dd28d929f6c3990a77694bd9e",
+    "export_sha256": "7af9a2d5f3d87886eaf155adaeba09eb4f35f65dd28d929f6c3990a77694bd9e",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_gemm_stage6_20261029_r1.py",
+    "original_sha256": "c580f97ec91360ce7f056da82f7222350dcbd93bf306cbebd1da1a16153606e2",
+    "export_sha256": "c580f97ec91360ce7f056da82f7222350dcbd93bf306cbebd1da1a16153606e2",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rms_20261028_r1.py",
+    "original_sha256": "4437ae6c65749c17ee2a83c0f9e213f0e36a7359610968a0e9d3950766943c66",
+    "export_sha256": "4437ae6c65749c17ee2a83c0f9e213f0e36a7359610968a0e9d3950766943c66",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_language_rope_reference_20261028_r2.txt",
+    "original_sha256": "ea234325c15de475147027ac7da4307167d082b13f4c62a7f2921fef4f9e5e87",
+    "export_sha256": "ea234325c15de475147027ac7da4307167d082b13f4c62a7f2921fef4f9e5e87",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_20261029_r1/binding.cpp",
+    "original_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "export_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_20261029_r1/kernel.cu",
+    "original_sha256": "b57d518bcf94eab0c62ac7c09075a21694335c409257953793d8cf34ceac4120",
+    "export_sha256": "b57d518bcf94eab0c62ac7c09075a21694335c409257953793d8cf34ceac4120",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_norm3_regpack_fusion_20261029_r1.py",
+    "original_sha256": "57526e80acbd9d9e96e01bddaf4a485f06ffea81c6492a33cff7c4ef4cd21fd2",
+    "export_sha256": "40ef786f9eecdd78547fcc54793fceb65fb1f0169d5717d76d3e4851d58dc288",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_20261028_r1.py",
+    "original_sha256": "db619226a349b36cf0c173a48455e8f64627b653eb5e257a2d0c9b3cdb1c16ef",
+    "export_sha256": "db619226a349b36cf0c173a48455e8f64627b653eb5e257a2d0c9b3cdb1c16ef",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qknorm_rope_attention_source_20261028_r1.txt",
+    "original_sha256": "58f7ede98065d4f2e8cae4eb0efa162b7eaf8fc4346d99be4176c5ac8e10abcb",
+    "export_sha256": "58f7ede98065d4f2e8cae4eb0efa162b7eaf8fc4346d99be4176c5ac8e10abcb",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qkv_vec4rcpftz_cuda_20261029_r1.py",
+    "original_sha256": "f7ab3b87c5d61286abfe959b2e724e4338b2770d45bf2d498fe593f1ff52f4f9",
+    "export_sha256": "50ea1a74da5f063aa45a89cee03eb6cd0b0dc0aa1e768166e0302dd1489a1847",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_qkv_vec4rcpftz_integration_20261029_r1.py",
+    "original_sha256": "836dddb9d4a93d021fc153cf9c84163e0ebe61134d7488854f73d96c425107e2",
+    "export_sha256": "836dddb9d4a93d021fc153cf9c84163e0ebe61134d7488854f73d96c425107e2",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_source_20261028_r1.txt",
+    "original_sha256": "6a965ca3df2d5f0856625f6259718f9645cfc4ab54e2bd56173af4faa3f056e4",
+    "export_sha256": "6a965ca3df2d5f0856625f6259718f9645cfc4ab54e2bd56173af4faa3f056e4",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_sdpa_view_20261028_r1.py",
+    "original_sha256": "50cde33419b45569ea6553da41339d554bf0ef820970a20ea5d20524bb08d14f",
+    "export_sha256": "50cde33419b45569ea6553da41339d554bf0ef820970a20ea5d20524bb08d14f",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_graph_source_20261029_r1.txt",
+    "original_sha256": "e054e3d9e0526f8e953161c50a71a2e0f743cf236ea857e9ef82b6ccb6367027",
+    "export_sha256": "e054e3d9e0526f8e953161c50a71a2e0f743cf236ea857e9ef82b6ccb6367027",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_producer_20261029_r3.py",
+    "original_sha256": "913ad07c0d56ab8e2e5c29155e1945265fc470b47657a7658d1563cd3388fa9e",
+    "export_sha256": "913ad07c0d56ab8e2e5c29155e1945265fc470b47657a7658d1563cd3388fa9e",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/codex_vision_segment_source_20261028_r1.txt",
+    "original_sha256": "c9a9c02d0772833171fe2fef73ec2bc7560bc2d9d4a37b33fda28c4d128ed53d",
+    "export_sha256": "c9a9c02d0772833171fe2fef73ec2bc7560bc2d9d4a37b33fda28c4d128ed53d",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_activation_frozen_20261028_r1.py",
+    "original_sha256": "04a9f5ec05c54cbc4193c71635e82ab08f25d37f388cd60ee8235342cca961f7",
+    "export_sha256": "04a9f5ec05c54cbc4193c71635e82ab08f25d37f388cd60ee8235342cca961f7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_decoder_20261028_r1.py",
+    "original_sha256": "67912a95a4bb424fa47c7eabbb63ec7a09d3c0820e6149afb9efaa3744ac55e7",
+    "export_sha256": "67912a95a4bb424fa47c7eabbb63ec7a09d3c0820e6149afb9efaa3744ac55e7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_frozen_20261028_r1.py",
+    "original_sha256": "ddf35ea004aeb3149ab37d24325873c8f3f0b244938be3d1eb03001bec8c0a65",
+    "export_sha256": "ddf35ea004aeb3149ab37d24325873c8f3f0b244938be3d1eb03001bec8c0a65",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_retuned_frozen_20261028_r1.py",
+    "original_sha256": "ddf35ea004aeb3149ab37d24325873c8f3f0b244938be3d1eb03001bec8c0a65",
+    "export_sha256": "ddf35ea004aeb3149ab37d24325873c8f3f0b244938be3d1eb03001bec8c0a65",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_aligned_index_unclamped_20261028_r1.py",
+    "original_sha256": "74d1bbf55d75e20cec6fbe9ef717ee77b2a4889f69ba7de9de373ff58824f48e",
+    "export_sha256": "74d1bbf55d75e20cec6fbe9ef717ee77b2a4889f69ba7de9de373ff58824f48e",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_integer_round_20261028_r1.py",
+    "original_sha256": "3ca07bf78757a9d574b987d9248d6eda306b82f716132029cec81acc7d1989d6",
+    "export_sha256": "3ca07bf78757a9d574b987d9248d6eda306b82f716132029cec81acc7d1989d6",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_direct_round_producer_20261028_r1.py",
+    "original_sha256": "660ebb154f6f331c3a4efceeef498c115d1393dbbfbca0678db9a71519d63db3",
+    "export_sha256": "660ebb154f6f331c3a4efceeef498c115d1393dbbfbca0678db9a71519d63db3",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ffdown_residual_epilogue_20261028_r2.py",
+    "original_sha256": "ec5129717f73a9ae62ec038879d3770973c4666f36693e92c2b5de684972abd5",
+    "export_sha256": "ec5129717f73a9ae62ec038879d3770973c4666f36693e92c2b5de684972abd5",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_decode_frozen_20261028_r1.py",
+    "original_sha256": "14a9dc171431e430be620b3998eedcd9170969ae25583880153f98c3813dc1e7",
+    "export_sha256": "14a9dc171431e430be620b3998eedcd9170969ae25583880153f98c3813dc1e7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_aligned_unclamped_20261028_r1.py",
+    "original_sha256": "66476190db79f7d9f936de675de281cee1965f95797e4c785745b12b7006a84e",
+    "export_sha256": "66476190db79f7d9f936de675de281cee1965f95797e4c785745b12b7006a84e",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_gateup_20261028_r1.py",
+    "original_sha256": "e86e2e3c798a6a619fb35fb5972a1b83f5d2697bf3e19409c8b001a03620cbf2",
+    "export_sha256": "e86e2e3c798a6a619fb35fb5972a1b83f5d2697bf3e19409c8b001a03620cbf2",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_grouped_qkv_aligned_frozen_20261028_r1.py",
+    "original_sha256": "889d176ea808dbc66a955aca24f55c2c041afbd9d1d9a436e9355145ae01d29c",
+    "export_sha256": "889d176ea808dbc66a955aca24f55c2c041afbd9d1d9a436e9355145ae01d29c",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_frozen_20261028_r1.py",
+    "original_sha256": "19a66084391cd5e2aba2060df95fac086752c3a135de6ff1f4f8ac898e61a39d",
+    "export_sha256": "19a66084391cd5e2aba2060df95fac086752c3a135de6ff1f4f8ac898e61a39d",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_large_m_tuned_20261028_r1.py",
+    "original_sha256": "8eb76c869ff2398b283cc25f209445ff2b40d4a5b20cb26f6d641be785fd937f",
+    "export_sha256": "8eb76c869ff2398b283cc25f209445ff2b40d4a5b20cb26f6d641be785fd937f",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_ordered_epilogue_20261028_r1.py",
+    "original_sha256": "e90e1cca1c6ef74f808fa24705f0e3c0365ab10d8b88982f3378c813c0d5fa6c",
+    "export_sha256": "e90e1cca1c6ef74f808fa24705f0e3c0365ab10d8b88982f3378c813c0d5fa6c",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_decoder_20261028_r1.py",
+    "original_sha256": "fff81c3420b3067d07c3e2f141e86ea9329656acf5d4fb2c9e19054cbe295a04",
+    "export_sha256": "fff81c3420b3067d07c3e2f141e86ea9329656acf5d4fb2c9e19054cbe295a04",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_divide_20261028_r1.py",
+    "original_sha256": "296fa4b30ed441b78031beb2990e484c374a4c45e29f0f03e5f6f269d867b25e",
+    "export_sha256": "296fa4b30ed441b78031beb2990e484c374a4c45e29f0f03e5f6f269d867b25e",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_refined_policy_20261028_r1.py",
+    "original_sha256": "b6ca70c4bfaa42d214fe87c260f06eb25d7ef386c6c33affc483024bc5fd264b",
+    "export_sha256": "b6ca70c4bfaa42d214fe87c260f06eb25d7ef386c6c33affc483024bc5fd264b",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean41_native_order_20261028_r1.py",
+    "original_sha256": "544a78dc3cde086668ca6ea43b60179c099515261bcdba5ec645bbdea21b2dcd",
+    "export_sha256": "544a78dc3cde086668ca6ea43b60179c099515261bcdba5ec645bbdea21b2dcd",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_preparation_20261028_r1.py",
+    "original_sha256": "157166a5f9683df0e48409355ce50bb3efe90af4e53b4a18ccf33f40ace45b0a",
+    "export_sha256": "157166a5f9683df0e48409355ce50bb3efe90af4e53b4a18ccf33f40ace45b0a",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_sage_mean_parallel_y_20261028_r1.py",
+    "original_sha256": "f5b6f1bcd2d02e50ffa8cc24cdc9d4929e5701a09f11694e0798d5be0509913f",
+    "export_sha256": "f5b6f1bcd2d02e50ffa8cc24cdc9d4929e5701a09f11694e0798d5be0509913f",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_shared_padded_activation_20261028_r1.py",
+    "original_sha256": "18ef219e8fcab2073d3d84246e905eb27c13b5983c7b666b9624233ca17293d6",
+    "export_sha256": "18ef219e8fcab2073d3d84246e905eb27c13b5983c7b666b9624233ca17293d6",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_frozen_20261028_r2.py",
+    "original_sha256": "afb5374571255d8e9fd37ea87c828ecc05e8b203f9339410f3eb48e0285aae1d",
+    "export_sha256": "afb5374571255d8e9fd37ea87c828ecc05e8b203f9339410f3eb48e0285aae1d",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_gemm_20261028_r1.py",
+    "original_sha256": "c2e0cb5e2bf0a9e6eaace2a66f3d62525d19e5d43dccbb1a97b9e25a5cd96883",
+    "export_sha256": "c2e0cb5e2bf0a9e6eaace2a66f3d62525d19e5d43dccbb1a97b9e25a5cd96883",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_small_m_tuned_20261028_r2.py",
+    "original_sha256": "589c9edf4b41ccf1839823cd5a5eec009f57ba80ea02e228b991643157e5353a",
+    "export_sha256": "589c9edf4b41ccf1839823cd5a5eec009f57ba80ea02e228b991643157e5353a",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_exact_20261028_r1.py",
+    "original_sha256": "82979f2faa433515cc7ef80637b724a6633e9dd477621303f157da2e90f18c8d",
+    "export_sha256": "82979f2faa433515cc7ef80637b724a6633e9dd477621303f157da2e90f18c8d",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_splitk_frozen_20261028_r1.py",
+    "original_sha256": "6537485413d8372f0b4ecbff1e04917c5f9a315b2ce43d48e0d8835d709245b1",
+    "export_sha256": "6537485413d8372f0b4ecbff1e04917c5f9a315b2ce43d48e0d8835d709245b1",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_static_zero_affine_20261028_r1.py",
+    "original_sha256": "02dc0d22ec384a5d85b27f870256ae6b6a7633846d16e61b8eaf5db1b9bc27c8",
+    "export_sha256": "02dc0d22ec384a5d85b27f870256ae6b6a7633846d16e61b8eaf5db1b9bc27c8",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_swiglu_lookup_fusion_20261028_r1.py",
+    "original_sha256": "3e2fc710d4e1e1bd581d0de187e896dc452d5318439f49f9db6a5020dfa1537d",
+    "export_sha256": "3e2fc710d4e1e1bd581d0de187e896dc452d5318439f49f9db6a5020dfa1537d",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_torch_epilogue_runtime_r2.py",
+    "original_sha256": "d6b5a6e38b03db2b60146d47a831ea39c19eefcb1a8ee5326878107aab8358a1",
+    "export_sha256": "d6b5a6e38b03db2b60146d47a831ea39c19eefcb1a8ee5326878107aab8358a1",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/int8_vision_norm_producer_20261028_r1.py",
+    "original_sha256": "2320ba3a70daef788bc3114befd50f3753ddca6a5362bd69b4c108d42ff20091",
+    "export_sha256": "f54beb60d720ed7e03a99cf228995137dbb48f1baa4920f33669369ee4c45952",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_a8_candidate_r3.py",
+    "original_sha256": "2d97626214674aea3f80865c91280a7012b259bcd364ec7cf83aae78aa2a67e8",
+    "export_sha256": "2d97626214674aea3f80865c91280a7012b259bcd364ec7cf83aae78aa2a67e8",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_exact_producers_r1.py",
+    "original_sha256": "0ed50ad2ea8438997c857590d13f857fb5ea4a6693075f5a7f4665def08153bb",
+    "export_sha256": "0ed50ad2ea8438997c857590d13f857fb5ea4a6693075f5a7f4665def08153bb",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fast_policy_r3.py",
+    "original_sha256": "f510d7786fa06065b2a0a29131f19e0be53ec4e9fce4b472afa00834010a310c",
+    "export_sha256": "f510d7786fa06065b2a0a29131f19e0be53ec4e9fce4b472afa00834010a310c",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_fused_decode_r1.py",
+    "original_sha256": "1a013c6488becebc9813fa64a0047d3318d60a9a154d6acb60ee46cbbf76a83c",
+    "export_sha256": "1a013c6488becebc9813fa64a0047d3318d60a9a154d6acb60ee46cbbf76a83c",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/perrow_int8_padded_producer_r1.py",
+    "original_sha256": "40b4080c0b5fadf84dccaf1be4ee2704ec0df0246867f10b6a68d385c776da64",
+    "export_sha256": "40b4080c0b5fadf84dccaf1be4ee2704ec0df0246867f10b6a68d385c776da64",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_sage_single_preparation_fp32_r2.py",
+    "original_sha256": "eb7126f63372ba025faf4427911ac030fc105e71472c70787846f53d7cf684df",
+    "export_sha256": "eb7126f63372ba025faf4427911ac030fc105e71472c70787846f53d7cf684df",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/vision_norm_int8_20261028_r1/binding.cpp",
+    "original_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "export_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/vision_norm_int8_20261028_r1/kernel.cu",
+    "original_sha256": "43bc22052f9c95c611bba98d48becbff0ff9f5879232edae6deee89c13bb9aad",
+    "export_sha256": "43bc22052f9c95c611bba98d48becbff0ff9f5879232edae6deee89c13bb9aad",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_dynamic_scale_r2.py",
+    "original_sha256": "b431ca2238a38c5e5ac6ce66ba4e75d6e9ca8d202f1d505e3a62271d127a7de7",
+    "export_sha256": "b431ca2238a38c5e5ac6ce66ba4e75d6e9ca8d202f1d505e3a62271d127a7de7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_joint_pair_r1.py",
+    "original_sha256": "a9ead2f1d786c24a53009f0bfec1950a691993a911635bdaff95009ba249f009",
+    "export_sha256": "a9ead2f1d786c24a53009f0bfec1950a691993a911635bdaff95009ba249f009",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_rms_tail_square_runtime_r2.py",
+    "original_sha256": "05264bf1588b04fe5d7ddcea3e81f6cd40b688ee978aee3ebfa1ef7271caf670",
+    "export_sha256": "05264bf1588b04fe5d7ddcea3e81f6cd40b688ee978aee3ebfa1ef7271caf670",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_rtn_r2.py",
+    "original_sha256": "03b5112e361161529058bd6f09978390787e0915fa2ca423bccdb7d9b59346d8",
+    "export_sha256": "03b5112e361161529058bd6f09978390787e0915fa2ca423bccdb7d9b59346d8",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1/binding.cpp",
+    "original_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "export_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1/kernel.cu",
+    "original_sha256": "e6c61f3ff0beaa91d3100c7b3e21d14b550be768e6b47c7402025561811835ce",
+    "export_sha256": "e6c61f3ff0beaa91d3100c7b3e21d14b550be768e6b47c7402025561811835ce",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1.py",
+    "original_sha256": "f6d9f1a8e2c6f7bb305cbdcec19d34f97bc74d8a8b7d36ba9f25832df9699471",
+    "export_sha256": "b1813b245ef4f03f26a24684825f909511d07aa5782cda44dc3dbc580c671677",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/common_bf16_language_fusions_r1.py",
+    "original_sha256": "885861a45bdebb0a3c2643899d07159707deb69d78b9372019d91a043949dc38",
+    "export_sha256": "885861a45bdebb0a3c2643899d07159707deb69d78b9372019d91a043949dc38",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/common_language_qk_norm_fusion_r2.py",
+    "original_sha256": "63556833f663e7ab2a9b211bd0db675a140811526e81673621b1a688ae5367e6",
+    "export_sha256": "63556833f663e7ab2a9b211bd0db675a140811526e81673621b1a688ae5367e6",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/decoder_tuning.py",
+    "original_sha256": "c9af098eddfb12438306d62dcb2459fd85ecad621c30b7e53cb75deb095d3aa9",
+    "export_sha256": "c9af098eddfb12438306d62dcb2459fd85ecad621c30b7e53cb75deb095d3aa9",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_probe_r2.py",
+    "original_sha256": "af8f5876450a498267dc09b5ffb6e02c72583b1d678362567f3f3f6ec61bb375",
+    "export_sha256": "2924357481edb13f2ef6651f5f02f3604152135827a4831898371a89eda73e39",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_r1b/binding.cpp",
+    "original_sha256": "8cb38f74b60716ea2a3305bb8f125cdcea7dc3cf841f17013cb212245b469fac",
+    "export_sha256": "8cb38f74b60716ea2a3305bb8f125cdcea7dc3cf841f17013cb212245b469fac",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/dense_bf16_skeleton_r1b/kernel.cu",
+    "original_sha256": "616aff31109c16ae9dbf2994c1c18e15c24aef4552148ee4d98554de0ea41401",
+    "export_sha256": "616aff31109c16ae9dbf2994c1c18e15c24aef4552148ee4d98554de0ea41401",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_probe_r1b.py",
+    "original_sha256": "64535a9d0631886146445ab23258273652174fbc602f8fe44c8cb76e76862494",
+    "export_sha256": "d4bc8e42f0fb7d8a4482c1e743a30bdb1ea3881272a7625b83d027802e1ac0e0",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_r1/binding.cpp",
+    "original_sha256": "cbde2066cfb7230ef0aca89306fe03d07fe474eb1759197690dc386d756aa325",
+    "export_sha256": "cbde2066cfb7230ef0aca89306fe03d07fe474eb1759197690dc386d756aa325",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_r1/kernel.cu",
+    "original_sha256": "4a27cd1cfee07d23f72a3270e726ef72b4ac44c30e48e3b8ed1673381138d0ee",
+    "export_sha256": "4a27cd1cfee07d23f72a3270e726ef72b4ac44c30e48e3b8ed1673381138d0ee",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_r1/sacq_mma_multistage.h",
+    "original_sha256": "7759be20c5e68e08bc8b28eebcf232030534aa68751ef4b605b0f5056177be47",
+    "export_sha256": "7759be20c5e68e08bc8b28eebcf232030534aa68751ef4b605b0f5056177be47",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_ffup_cutlass_r1/upstream_mma_multistage.h",
+    "original_sha256": "f762ee08aeb8201b8f2c1cd537de8f766dc6674a57a80641c258e08946543400",
+    "export_sha256": "f762ee08aeb8201b8f2c1cd537de8f766dc6674a57a80641c258e08946543400",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_r1.py",
+    "original_sha256": "419b3c0917fddaa2ab08575deaf9504e5db23d21614ab06509d8411431f4c478",
+    "export_sha256": "419b3c0917fddaa2ab08575deaf9504e5db23d21614ab06509d8411431f4c478",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/lossless_scalar_affine_runtime_r1.py",
+    "original_sha256": "a9175f56d4bcc147d25dda0092b3637746551c5465436891db8478661bd98f3a",
+    "export_sha256": "a9175f56d4bcc147d25dda0092b3637746551c5465436891db8478661bd98f3a",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_ffdown_runtime_r1.py",
+    "original_sha256": "fb4af3b630ddc45647620a2aefa34d2872ecc1bd0db2b14952c71de2c4c95572",
+    "export_sha256": "fb4af3b630ddc45647620a2aefa34d2872ecc1bd0db2b14952c71de2c4c95572",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_graph_r1.py",
+    "original_sha256": "0af4f1c8b7d36c74d170fd1ad56ecb729166b6eaf2e5397923b106a41328eae2",
+    "export_sha256": "0af4f1c8b7d36c74d170fd1ad56ecb729166b6eaf2e5397923b106a41328eae2",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_backbone_split_profile_r1.py",
+    "original_sha256": "731e050796a727c696fba382a7c18af215dcb8889c9eb1e3e77db2445edeb5a2",
+    "export_sha256": "731e050796a727c696fba382a7c18af215dcb8889c9eb1e3e77db2445edeb5a2",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_fp8_norm_gemm_parent_inspection_r7.json",
+    "original_sha256": "b29dc501fc1a731c7133a13ddb97d6a3edfc56d3a1140a4e6bb33d9749b1e153",
+    "export_sha256": "b4580473fa8606eb5d667f68ff6f5bf52ca14c8e2d8ae90fd5de2cc5e9d6d124",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_graph_microtime_r1.py",
+    "original_sha256": "41c07f5d0a5878b13f8fadca3582aa67efc9c0aa38059bda7f7f76afb8a67273",
+    "export_sha256": "41c07f5d0a5878b13f8fadca3582aa67efc9c0aa38059bda7f7f76afb8a67273",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_remaining_cost_profile_r2.py",
+    "original_sha256": "41aa2421dcdfec47872f4bfb8c06fdaeed761343f772795440b6b98bc97de464",
+    "export_sha256": "f89ed09dc90390f2b7c5ddf2e8428697fc9acd37b6166090609a2e5c1d29490a",
+    "pinned_in_final_contract": true,
+    "modifications": "Path placeholders only; numerical code unchanged"
+  }
+]

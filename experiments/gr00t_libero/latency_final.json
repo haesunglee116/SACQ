@@ -1,0 +1,140 @@
+{
+  "schema": "sacq_recorded_latency_v1",
+  "record_id": "w1p5a8_final_20261029",
+  "timing": {
+    "metric": "synchronized whole-model CPU wall median",
+    "representative_order": "forward",
+    "warmup": 5,
+    "iterations": 20,
+    "batch": 1,
+    "timing_seed": 42,
+    "denoising_steps": 4,
+    "preprocessing_included": false,
+    "input": "fixed initial observation",
+    "gpu": "RTX 4090"
+  },
+  "sample": {
+    "family": "libero",
+    "suite": "libero_10",
+    "task": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "base_seed": 17,
+    "episode_id": 0,
+    "initial_observation_sha256": "0b88c97b09c51857a3660ad46c179cbb8d146496d2ff79f61d15e79748cc14f3",
+    "initial_state_sha256": "dea5a7fd20c614e5f76cb772e7e6873a7de0cdc0f23c542b1444567b9c308444",
+    "policy_noise_seed": 20260824
+  },
+  "rows": [
+    {
+      "setting": "Original BF16 historical",
+      "wall_ms": 56.035459,
+      "vs_original": 1.0,
+      "vs_optimized_bf16": null,
+      "matched_optimized_bf16_ms": null
+    },
+    {
+      "setting": "Optimized BF16 (paired with final A8)",
+      "wall_ms": 21.28372003789991,
+      "vs_original": 2.6327850065786285,
+      "vs_optimized_bf16": 1.0,
+      "matched_optimized_bf16_ms": 21.28372003789991
+    },
+    {
+      "setting": "W1.5A16 common kernel port",
+      "wall_ms": 20.20260295830667,
+      "vs_original": 2.7736752098550745,
+      "vs_optimized_bf16": 1.0528878896977636,
+      "matched_optimized_bf16_ms": 21.271075995173305
+    },
+    {
+      "setting": "W1.5A8 final measured best",
+      "wall_ms": 14.06635349849239,
+      "vs_original": 3.983652124625319,
+      "vs_optimized_bf16": 1.5130943524333487,
+      "matched_optimized_bf16_ms": 21.28372003789991
+    }
+  ],
+  "reverse_a8": {
+    "candidate_wall_ms": 14.118583523668349,
+    "reference_INT8_wall_ms": 15.922515420243144,
+    "BF16_wall_ms": 21.257026470266283,
+    "speedup_vs_BF16": 1.5056061703804118,
+    "speedup_vs_reference_INT8": 1.1277700339804406,
+    "resident_delta_bytes": 0,
+    "setup_peak_delta_bytes": 0
+  },
+  "clock_status": "CLOCK_CONFOUNDED_RERUN_REQUIRED",
+  "clock_normalized": false,
+  "memory_delta": {
+    "forward": {
+      "resident_allocated_GB": 0.0,
+      "resident_reserved_GB": -0.0020971519999999355,
+      "peak_setup_and_measurement_GB": 0.0,
+      "peak_reserved_bytes_delta": 0
+    },
+    "reverse": {
+      "resident_allocated_GB": 0.0,
+      "resident_reserved_GB": -0.0020971519999999355,
+      "peak_setup_and_measurement_GB": 0.0,
+      "peak_reserved_bytes_delta": 0
+    }
+  },
+  "checks": {
+    "forward": {
+      "all50_timed_raw_actions_exact": true,
+      "whole_model_reference_vs_original_INT8_R1_bytes_exact": true,
+      "all4_RNG_exact": true
+    },
+    "reverse": {
+      "all50_timed_raw_actions_exact": true,
+      "whole_model_reference_vs_original_INT8_R1_bytes_exact": true,
+      "all4_RNG_exact": true
+    },
+    "original_successful_INT8_reference_bytes_exact": true
+  },
+  "new_success_rollout": false,
+  "diagnostic_only": true,
+  "held_out": false,
+  "scope": {
+    "INT8_projections": 441,
+    "attention": {
+      "action_self": 16,
+      "vision": 24
+    },
+    "recipe": {
+      "projection": "INT8_symmetric_dynamic_per_token_activation_per_output_row_weight",
+      "attention": "INT8QK_FP8PV",
+      "pv_accum_dtype": "fp32+fp32",
+      "smooth_k": true,
+      "smooth_v": false,
+      "new_training_or_calibration": false
+    }
+  },
+  "evidence": [
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a8_1p6x_goal_20261029_r1/combo_ff128_norm3reg_r1/RESULT_R1.json",
+      "sha256": "91ca75ee0c00f03cf536fa4bef0a219f410b4667e7f7d5d715c0855f2d82db6a"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a8_1p6x_goal_20261029_r1/combo_ff128_norm3reg_r1/contract.json",
+      "sha256": "c410023213f53e125a688deff56468c66b6c8c94adfb53ff2128659a1f5454d8"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a8_1p6x_goal_20261029_r1/combo_ff128_norm3reg_r1/DECISION_R1.json",
+      "sha256": "e531b486cc22bbe00553fa0bfa840212044aa551cf5472672ad5975292592a15"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a8_1p6x_goal_20261029_r1/combo_ff128_norm3reg_r1/CLOCK_AUDIT_R1.json",
+      "sha256": "ee15f337d94b6ae418a70968946079bf020726c8e2f085c868c95c887beea04e"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a8_1p6x_goal_20261029_r1/combo_ff128_norm3reg_r1/EXTENDED_MEMORY_AUDIT_R1.json",
+      "sha256": "47957b0f0719266a755609f64888daedd190143327bf187bb523d569f384792d"
+    },
+    {
+      "artifact": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/w1p5a16_common_port_20261029_r3/VALIDATED_COMPARISON.json",
+      "sha256": "00a390e15557f462076e9163bcfbd7aaf97048fef35831bd67c26780dbb5409c"
+    }
+  ],
+  "source_recipe": "../../gr00t_libero/acceleration/presets/final_w1p5a8.json",
+  "interpretation": "Historical original BF16 is a cross-run denominator. Each optimized speedup uses its own matched BF16 control. Fifty exact-action checks repeat the same fixed observation/noise; they are not fifty distinct episodes."
+}
