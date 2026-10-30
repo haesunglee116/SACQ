@@ -195,7 +195,7 @@
     "scope": "Existing fixed-input diagnostic; no rollout"
   },
   "archive": {
-    "url": "https://github.com/haesunglee116/SACQ/releases/download/inference-a8-v1/sacq_libero10_w1p5a8_fixed_input_v1.tar.gz?download=1",
+    "url": "https://github.com/haesunglee116/SACQ/releases/download/inference-a8-v1/sacq_libero10_w1p5a8_fixed_input_v1.tar.gz?download=2",
     "sha256": "5b5219155cb9776d310b75f62e646ea760b81535d3d0af87026b26767580b2bf",
     "bytes": 840416774
   },

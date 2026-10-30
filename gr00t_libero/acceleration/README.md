@@ -6,11 +6,11 @@ eight frozen launch-selection tables, an installer preserving the selected
 installation order, and a source-preparation tool. It is separate from the
 existing A16 training/evaluation pipeline and does not change its defaults.
 
-**Integration level:** source packaging, CPU staging/guard tests, and a rebuilt
-Sage FP32 extension verified byte-exact on 40 saved attention inputs. The
-full relocated model has not been revalidated on a GPU. It requires a
-compatible existing INT8 bootstrap; this is not a standalone model loader or a
-one-command reproduction of the recorded timing. See [recorded experiments](../../experiments/gr00t_libero/README.md).
+**Integration level:** full fixed-input model execution is now available through
+[the standalone runner](INFERENCE.md), including portable inputs, contract
+relocation and Sage builders. Full-model action/RNG and dispatch gates passed
+on RTX 4090. This page documents the lower-level kernel overlay API.
+See [recorded experiments](../../experiments/gr00t_libero/README.md).
 
 ## What is included
 
@@ -112,7 +112,7 @@ success records rather than attributing a new rollout result to this export.
 
 ## Bootstrap and runtime source preparation
 
-The original INT8 bootstrap and 79 supporting source files are now included in
+The original INT8 bootstrap and 81 supporting source files are now included in
 `bootstrap_sources/`, with original and exported hashes in
 [BOOTSTRAP_MANIFEST.json](BOOTSTRAP_MANIFEST.json). They cover packed model
 installation, shape adapters, storage compaction, fixed-output reuse and graph

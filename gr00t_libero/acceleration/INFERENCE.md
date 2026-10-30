@@ -130,3 +130,11 @@ runs before attributing small latency differences to code changes.
 This does not establish a new success rate, held-out generalization, arbitrary
 shape support or a hardware-independent speedup. Keep the historical latency
 and earlier rollout results separate in reporting.
+
+## Public execution verification
+
+The GitHub-downloaded bundle and all three freshly rebuilt Sage components passed
+the full runner on RTX 4090: **13.999 ms CPU wall median**, with all repeated
+action/RNG and dispatch gates passing. [Validation record](../../experiments/gr00t_libero/a8_full_inference_validation.json).
+The host/Python environment was reused; official upstream weights were reused
+after exact hash verification. This is not a new paired BF16 speedup measurement.

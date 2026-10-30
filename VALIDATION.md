@@ -1,12 +1,23 @@
 # Validation scope
 
+## Full A8 inference integration — 2026-10-30
+
+- Full CPU suite: **217 tests passed**.
+- Unified kernel/bootstrap source staging and bundle tamper checks passed.
+- Source archive built and unpacked; publication audit and source staging passed.
+- Public runner passed all original full-model gates using the GitHub-downloaded bundle and freshly rebuilt Sage libraries on RTX 4090: **13.999 ms synchronized CPU wall median**, 14.008 ms CUDA-event median.
+- All 50 repeated action checks and all four RNG checks passed; 888 INT8 GEMM equivalents, 112 Sage calls and one whole-model graph per query.
+- [Machine-readable evidence](experiments/gr00t_libero/a8_full_inference_validation.json). Original NVIDIA files were reused with exact hash verification. No new paired BF16 measurement.
+- Original and current-stream Sage packages plus the FP32 extension were rebuilt using the public builders.
+- The recorded fixed input/noise and scientific settings were preserved. This does not establish success rate on new episodes or a fresh-host installation.
+
 ## A8 runtime preparation — 2026-10-30
 
 - Full CPU suite: **214 tests passed**. Bootstrap staging/hash/path guards and unchanged kernel installation-order tests pass.
 - Source distribution built and unpacked successfully; release audit and pipeline source staging pass.
 - The portable Sage builder reproduced the original patched CUDA and binding hashes and compiled successfully with the recorded PyTorch/toolkit.
 - All 40 recorded attention input files (16 Action self-attention, 24 Vision attention) gave byte-exact output against the existing FP32 current-stream extension on RTX 4090.
-- No new inputs, fitting, rollout or latency measurement. Existing runtime reused; fresh-host installation and the full relocated model are not validated.
+- This earlier component validation performed no new fitting, rollout or latency measurement. Full-model validation is recorded above; fresh-host installation remains untested.
 - Machine-readable evidence: [a8_runtime_validation.json](experiments/gr00t_libero/a8_runtime_validation.json).
 
 The older entries below describe validation at their recorded dates.

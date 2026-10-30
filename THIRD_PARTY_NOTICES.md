@@ -76,3 +76,12 @@ Calibration observations are now attached to the `calibration-v1` release.
 This supersedes earlier source-only distribution descriptions; it does not
 assign a dataset license. The code uses Apache-2.0; dataset licensing remains separate.
 See [the owner's decision record](LICENSE_REVIEW.md).
+
+## Portable A8 inference artifacts
+
+The `inference-a8-v1` release contains quantized model overlays and fixed-background
+tensors under the included NVIDIA Open Model License, together with a recorded
+LIBERO observation/noise diagnostic fixture. Original GR00T/Cosmos base weights
+are obtained separately from the pinned upstream repositories. These model and
+data artifacts are not relicensed under SACQ's Apache-2.0 code license. Sage
+builders preserve the upstream license and apply the included source patches.

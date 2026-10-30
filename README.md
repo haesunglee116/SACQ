@@ -21,7 +21,7 @@ integrated into this release.
 | Run fitting through evaluation | [Execution runbook](gr00t_libero/RUNBOOK.md) |
 | Inspect the recorded SACQ2 configuration | [Reference preset](gr00t_libero/presets/gr00t_libero_sacq2_seed17.json) |
 | Match final settings to recorded results | [Experiment map](experiments/gr00t_libero/README.md) |
-| Inspect/stage the final A8 kernels | [Acceleration integration](gr00t_libero/acceleration/README.md) |
+| Run the final W1.5A8 model | [A8 inference guide](gr00t_libero/acceleration/INFERENCE.md) |
 | Check what has actually been tested | [Validation record](VALIDATION.md) |
 
 ## Installation
@@ -86,7 +86,7 @@ separately from Git: [download the four suite archives](https://github.com/haesu
 
 ## Validation and supported scope
 
-The current CPU suite passes 214 tests. The existing real-model validation records a diagnostic
+The current CPU suite passes 217 tests. The existing real-model validation records a diagnostic
 connecting fitting, allocation, index correction, calibration and a 50-episode
 rollout. The diagnostic reused an existing candidate bank, fitted one candidate
 and performed one calibration update. It is not a complete rerun of all paper

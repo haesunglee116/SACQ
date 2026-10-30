@@ -57,7 +57,7 @@ two experiment IDs distinct when presenting accuracy and speed.
 |---|---|---|
 | Final W1.5A8 latency | [Frozen recipe](../../gr00t_libero/acceleration/presets/final_w1p5a8.json) | [Kernel integration guide](../../gr00t_libero/acceleration/README.md), [original worker export](../../gr00t_libero/acceleration/reference/final_worker.py), [latency record](latency_final.json) |
 | Earlier W1.5A8 success | [Recorded protocol and results](success_w1p5a8.json) | Original worker and suite contract SHA-256 identities in the record |
-| Checkpoint / fixture identity | [Model input inventory](MODEL_INPUTS.json) | External weights and payloads required; not bundled here |
+| Checkpoint / fixture identity | [Model input inventory](MODEL_INPUTS.json) | Original identities retained; [portable A8 download manifest](../../gr00t_libero/acceleration/presets/inference_libero10_w1p5a8.json) supplies the release bundle and pinned upstream weights |
 | Existing SACQ2 pipeline preset | [SACQ2 preset](../../gr00t_libero/presets/gr00t_libero_sacq2_seed17.json) | Existing fitting-to-rollout pipeline; **not** the W1.5A8 checkpoint |
 
 W1.5 describes the selected compressed SACQ weight representation; A8 does not
@@ -70,3 +70,13 @@ cross-attention are not part of that 40-module attention expansion.
 The A8 row-scale metadata remains part of the runtime's storage accounting.
 “No additional memory” refers to the final kernel improvements relative to the
 existing A8 implementation, not to A8 having no overhead relative to A16.
+
+## Public integration validation
+
+The [full-model A8 runner](../../gr00t_libero/acceleration/INFERENCE.md) restores
+the same fixed-input configuration from portable assets. Its software-validation
+latency is reported separately from the historical paired comparison above.
+
+The public download/build/run roundtrip recorded **13.999 ms**, with exact action/RNG
+and dispatch gates passing. See [the integration validation](a8_full_inference_validation.json).
+It reused the host environment and does not replace the paired historical table.

@@ -1,12 +1,20 @@
 # Release notes
 
+## Full fixed-input W1.5A8 integration — 2026-10-30
+
+- Added a public model/input bundle, pinned download manifest, hash-bound contract relocation and a full-model runner.
+- Added reproducible builders for both base Sage variants and the FP32 current-stream extension.
+- Preserved the original action/RNG, weight, activation and dispatch gates; public-runner execution passed on RTX 4090.
+- Full CPU suite: 217 tests passed. Source archive build, unpacking and release checks passed.
+- See [the execution guide](gr00t_libero/acceleration/INFERENCE.md). This is fixed-input software validation on an existing host, not a new success-rate evaluation or clean-host installation test.
+
 ## A8 bootstrap and attention build support — 2026-10-30
 
 - Added 80 path-relocatable bootstrap/helper sources with original/exported SHA-256 manifests.
 - Added isolated bootstrap staging, pinned external package requirements and a version checker.
 - Added a portable builder for the recorded Sage FP32 current-stream extension, checking all source/header hashes and preserving upstream license terms.
 - Rebuilt the extension and verified byte-exact output on 40 saved Action/Vision attention inputs against the existing implementation.
-- This is component validation; full-model relocation, public LIBERO-10 inputs/contracts and end-to-end timing remain pending.
+- At this component stage, full-model integration was pending; it is completed in the full-integration entry above.
 
 ## Owner-approved license — 2026-10-29
 

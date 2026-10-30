@@ -1,7 +1,7 @@
 {
   "schema": "sacq_release_readiness_v1",
   "updated": "2026-10-30",
-  "publication": "public GitHub repository, calibration assets, and representative Spatial inference artifacts",
+  "publication": "Public GitHub repository, calibration assets, Spatial inference and LIBERO-10 A8 fixed-input artifacts",
   "repository": "https://github.com/haesunglee116/SACQ",
   "owner_code_license": "Apache-2.0",
   "distribution": "sacq-research",
@@ -56,7 +56,7 @@
     "Actual packed allocation -> 338-layer index -> calibration -> full 50-episode diagnostic rollout with exact-gated inference acceleration"
   ],
   "validation": {
-    "full_cpu_tests": 211,
+    "full_cpu_tests": 217,
     "installed_wheel_core_tests": 13,
     "cpu_example": "passed",
     "source_staging": "passed",
@@ -701,22 +701,27 @@
     "release_url": "https://github.com/haesunglee116/SACQ/releases/tag/calibration-v1"
   },
   "acceleration": {
-    "status": "Kernel overlay plus bootstrap source staging and portable Sage FP32 builder; full-model relocation pending",
-    "guide": "gr00t_libero/acceleration/README.md",
+    "status": "Full fixed-input W1.5A8 runner GPU validated",
+    "guide": "gr00t_libero/acceleration/INFERENCE.md",
     "source_files": 96,
     "frozen_selections": 8,
-    "standalone_bootstrap_packaged": false,
-    "gpu_rerun": false,
+    "standalone_bootstrap_packaged": true,
+    "gpu_rerun": true,
     "default_pipeline_changed": false,
     "experiment_map": "experiments/gr00t_libero/README.md",
-    "CPU_tests": 214,
+    "CPU_tests": 217,
     "new_integration_tests": 9,
     "package_build": "sdist and wheel built; unpacked source release checks passed",
-    "bootstrap_source_files": 80,
+    "bootstrap_source_files": 82,
     "bootstrap_sources_packaged": true,
     "sage_extension_compile_pass": true,
     "sage_extension_actual_input_byte_checks": 40,
-    "validation": "experiments/gr00t_libero/a8_runtime_validation.json"
+    "validation": "experiments/gr00t_libero/a8_full_inference_validation.json",
+    "base_sage_build_pass": true,
+    "release_url": "https://github.com/haesunglee116/SACQ/releases/tag/inference-a8-v1",
+    "public_download_roundtrip": true,
+    "wall_median_ms": 13.998811016790569,
+    "all_action_rng_checks_pass": true
   },
   "owner_code_license_scope": "original SACQ code and documentation; third-party terms retained; dataset/model licensing separate",
   "owner_license_approval": "User: \uadf8\ub798 \uadf8\ub807\uac8c \ucd94\ucc9c\ub300\ub85c \ud558\uc790.",
@@ -729,6 +734,6 @@
     "upstream_access": "Original GR00T/Cosmos from pinned official repositories; Cosmos requires user access approval",
     "reference_output": "byte-exact for both conditions on one 5-observation request",
     "fresh_host_install": false,
-    "a8_included": false
+    "a8_included": true
   }
 }

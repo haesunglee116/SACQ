@@ -1,5 +1,5 @@
 {
-  "description": "Original immutable input identities; large artifacts remain external. Paths are archive-relative identifiers, not runnable public paths.",
+  "description": "Original immutable input identities; paths are archive-relative provenance identifiers. Portable A8 release input identities are in gr00t_libero/acceleration/presets/inference_libero10_w1p5a8.json.",
   "plan": {
     "artifact": "gr00t_final_seed17_20260922/sacq1.5/libero_10/rollout/task_plans/0.json",
     "sha256": "4925e10bd37d600eb2e262ea24e771888bc8a62cffd280b4936f45571f5897c2"
