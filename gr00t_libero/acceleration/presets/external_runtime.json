@@ -9,16 +9,95 @@
   },
   "vllm_omni": {
     "source_tag": "v0.24.1",
-    "source_commit": "b9e9d236c3f78afd405119a5b686ebebeeb53984"
+    "source_commit": "b9e9d236c3f78afd405119a5b686ebebeeb53984",
+    "files": [
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/__init__.py",
+        "sha256": "6ce9e77de645c9a73fb656a827aadb4ff3e0c0ee5d40d770bdd355113183a6bc"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/configs/__init__.py",
+        "sha256": "8275f56bcee73f8cd8311c610fdf074dadf68d321656d2871104bc30ff2ad3b0"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/configs/embodiment_configs.py",
+        "sha256": "f832851a2c26dd8e54c0c7cbd59a6124885f7943ff45cdf1cde44632cca65608"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/configs/gr00t_n1d7.py",
+        "sha256": "730852a29336644972661213689007b774d717f66d4b09e665a12158d8698776"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/__init__.py",
+        "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/embodiment_tags.py",
+        "sha256": "60ab386cace6e0c4c1bd306012a14371cb5977fbf309b839d24f79acf9102c1e"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/state_action/__init__.py",
+        "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/state_action/action_chunking.py",
+        "sha256": "042c0e3a931973e978b020d8689464114c89fb61f5e50324e25e9e2786eb9a7e"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/state_action/pose.py",
+        "sha256": "a2853505464851fdf7735240d9fbd2a36d5c883a063def526d648171bf63dfac"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/state_action/state_action_processor.py",
+        "sha256": "371059a0fa8da31a44a595df31c19fa69c6c2496e10616a1472b1de8bc6725e6"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/types.py",
+        "sha256": "97408d100edbf853520329c0924bd5f21d4eadd64b27ed37141cf88ad8cbc858"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/dataio/utils.py",
+        "sha256": "51a0a41f58daff7437bf84dbf64b2103f3e7baad8c69d82c29ed101a601a85fc"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/__init__.py",
+        "sha256": "dcc5b06a12a63faf9177981adf09ca548576207ab00cdac55b43408951d975bd"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/gr00t_n1d7.py",
+        "sha256": "eb2726cb520b392b90a9c451a8b596a04d4ec580a212783b8563fde675718c37"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/modules/__init__.py",
+        "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/modules/dit.py",
+        "sha256": "8377ecca20255e72e101a973ec64745181a812257dea1cdc2f9ad000e7a362d3"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/modules/embodiment_conditioned_mlp.py",
+        "sha256": "813c05c5d2e6bd8b670df7ece4d3d88a2cbf1cade510647468d4ab9c10bf472e"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/modeling/processing_gr00t_n1d7.py",
+        "sha256": "739587c07d5f79b82c3f0face777c33e0c1664325b9416b7226cd6e38ef1135d"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/pipeline_gr00t.py",
+        "sha256": "8d61847e6f931f222c1ae49ad1535d0614fa834f76ee888dfcedea544725457e"
+      },
+      {
+        "file": "vllm_omni/diffusion/models/gr00t/policy.py",
+        "sha256": "8cc078487e1eb133b7679f2a08284a20d8f732ca15911db2281990c0fb008fa7"
+      }
+    ]
   },
   "cuda_arch": "8.9",
   "gpu_family": "SM89",
   "sageattention_commit": "d1a57a546c3d395b1ffcbeecc66d81db76f3b4b5",
-  "status": "PINNED_REQUIREMENTS_NOT_A_COMPLETE_INSTALLER",
-  "missing_public_reproduction_inputs": [
-    "LIBERO-10 quantized checkpoint and fixed observation/noise/reference-action bundle",
-    "Relocated hash-bound bootstrap contracts and selection tables",
-    "Base SageAttention package with current-stream changes and original raw-binding oracle",
-    "GR00T/vLLM-Omni integration and remaining compiled extension receipts"
-  ]
+  "status": "PUBLIC_FIXED_INPUT_RUNNER_VALIDATED_EXISTING_HOST",
+  "missing_public_reproduction_inputs": [],
+  "vllm_wheel_url": "https://github.com/vllm-project/vllm/releases/download/v0.24.0/vllm-0.24.0+cu129-cp38-abi3-manylinux_2_28_x86_64.whl",
+  "installation_scope": "Explicit runtime installation required; not a clean-host installation test."
 }

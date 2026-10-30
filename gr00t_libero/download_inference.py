@@ -9,7 +9,10 @@ from pathlib import Path
 import shutil
 import tarfile
 import urllib.request
-from inference import sha, resolve
+try:
+    from .inference import sha, resolve
+except ImportError:  # Direct script invocation.
+    from inference import sha, resolve
 
 
 def materialize(manifest, output, *, local_model=None, local_processor=None, condition='sacq'):

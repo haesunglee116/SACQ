@@ -94,9 +94,10 @@ experiments. See [VALIDATION.md](VALIDATION.md) for the tested versions and scop
 
 The final inference kernel sources, frozen choices and original measurement
 identities are included. CPU packaging tests do not revalidate GPU performance:
-the full relocated A8 model still needs contract/runtime integration. Bootstrap
-sources and a portable Sage FP32 builder are included; the rebuilt attention
-extension passed byte-equality checks on 40 recorded inputs. See the [experiment map](experiments/gr00t_libero/README.md)
+the [standalone A8 runner](gr00t_libero/acceleration/INFERENCE.md) now includes a
+portable fixed-input bundle, relocated contracts and Sage builders. Full-model
+action/RNG and dispatch gates passed on RTX 4090 using the public runner.
+The rebuilt attention extension also passed byte-equality checks on 40 recorded inputs. See the [experiment map](experiments/gr00t_libero/README.md)
 and [release notes](RELEASE_NOTES.md).
 
 ## Development and distribution

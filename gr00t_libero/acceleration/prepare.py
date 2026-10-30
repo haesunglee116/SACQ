@@ -47,7 +47,20 @@ def audit(root=ROOT):
     return rows, preset
 
 
-def prepare(workspace, local_runtime, root=ROOT):
+def unique_sources(rows):
+    selected = {}
+    for base, row in rows:
+        key = row['file']
+        if key in selected:
+            old_base, old_row = selected[key]
+            if contained(old_base, old_row.get('input_file', key)).read_bytes() != contained(base, row.get('input_file', key)).read_bytes():
+                raise ValueError('Conflicting source exports: ' + key)
+        else:
+            selected[key] = (base, row)
+    return list(selected.values())
+
+
+def prepare(workspace, local_runtime, root=ROOT, include_bootstrap=False):
     """Create an isolated source overlay. This neither installs a model nor runs a job."""
     root = Path(root).resolve()
     workspace, local_runtime = Path(workspace).resolve(), Path(local_runtime).resolve()
@@ -64,8 +77,16 @@ def prepare(workspace, local_runtime, root=ROOT):
                    'local_runtime': str(local_runtime), 'sources': [], 'selections': {},
                    'original_contract_sha256': preset['original_contract_sha256'],
                    'gpu_validated': False}
-        for row in rows:
-            data = contained(root / 'sources', row['file']).read_text()
+        all_rows = [(root / 'sources', row) for row in rows]
+        if include_bootstrap:
+            from .bootstrap import audit_bootstrap
+            all_rows += [(root / 'bootstrap_sources', row) for row in audit_bootstrap()]
+            bridge = 'rollout_bridge_perrow_int8_r5.py'
+            rel = 'libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/' + bridge
+            all_rows.append((root / 'reference', {'file': rel, 'input_file': bridge}))
+            receipt['include_bootstrap'] = True
+        for base, row in unique_sources(all_rows):
+            data = contained(base, row.get('input_file', row['file'])).read_text()
             data = data.replace('@WORKSPACE@', str(workspace)).replace('@LOCAL_RUNTIME@', str(local_runtime))
             if '@USER_HOME@' in data:
                 raise ValueError('Unbound home path in source')
@@ -97,8 +118,14 @@ def verify_prepared(workspace):
         raise ValueError('Unexpected recipe')
     # Recompute expected rendered contents, not just hashes from a mutable receipt.
     expected = {}
-    for row in rows:
-        data = contained(ROOT / 'sources', row['file']).read_text()
+    all_rows = [(ROOT / 'sources', row) for row in rows]
+    if receipt.get('include_bootstrap'):
+        from .bootstrap import audit_bootstrap
+        all_rows += [(ROOT / 'bootstrap_sources', row) for row in audit_bootstrap()]
+        bridge = 'rollout_bridge_perrow_int8_r5.py'
+        all_rows.append((ROOT / 'reference', {'file': 'libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/' + bridge, 'input_file': bridge}))
+    for base, row in unique_sources(all_rows):
+        data = contained(base, row.get('input_file', row['file'])).read_text()
         data = data.replace('@WORKSPACE@', str(workspace)).replace('@LOCAL_RUNTIME@', receipt['local_runtime'])
         expected[row['file']] = digest(data.encode())
     if len(receipt['sources']) != len(expected) or {r['file']: r['sha256'] for r in receipt['sources']} != expected:
@@ -119,6 +146,7 @@ def verify_prepared(workspace):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--include-bootstrap', action='store_true')
     parser.add_argument('--workspace', type=Path)
     parser.add_argument('--local-runtime', type=Path)
     args = parser.parse_args()
@@ -128,7 +156,7 @@ def main():
     else:
         if args.workspace is None or args.local_runtime is None:
             parser.error('--workspace and --local-runtime are required')
-        result = prepare(args.workspace, args.local_runtime)
+        result = prepare(args.workspace, args.local_runtime, include_bootstrap=args.include_bootstrap)
         print(json.dumps({'status': 'SOURCE_PREPARED_NOT_GPU_VALIDATED', 'workspace': result['workspace']}))
 
 

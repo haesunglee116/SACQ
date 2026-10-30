@@ -72,7 +72,7 @@ The bridge must be loaded under the module name `rollout_bridge_r1`, as in the
 checking in [reference/rollout_bridge_perrow_int8_r5.py](reference/rollout_bridge_perrow_int8_r5.py).
 Its `build()` requires `bootstrap_policy_perrow_int8_r5.py` and its
 approved model/input contracts. The bootstrap sources are now packaged separately
-(see below); contract relocation and full-model GPU validation remain pending.
+(see below). The [standalone runner](INFERENCE.md) relocates the pinned contracts and has passed full-model GPU validation.
 Use an existing verified runtime; do not substitute the A16 pipeline's model loader.
 
 The installer checks the prepared source hashes, frozen selections, compatible
@@ -166,8 +166,9 @@ or the original raw-binding oracle used by the validation gates.
 The remaining requirements are explicitly listed in
 [presets/external_runtime.json](presets/external_runtime.json). In particular,
 the released Spatial A16 example is not the fixed LIBERO-10 A8 timing fixture.
-A portable model/input bundle, contract relocation and full-model GPU validation
-are still required before this becomes a standalone A8 inference command.
+The [standalone A8 inference command](INFERENCE.md) includes the portable LIBERO-10
+model/input bundle, hash-bound contract relocation, and builders for both base Sage
+variants and the FP32 extension. Full-model validation passed on RTX 4090.
 
 Component validation: [40-input GPU replay](../../experiments/gr00t_libero/a8_runtime_validation.json).
 This reused the existing node runtime; it is not a fresh-host installation test.

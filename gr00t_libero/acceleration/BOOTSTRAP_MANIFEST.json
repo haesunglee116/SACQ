@@ -478,5 +478,17 @@
     "original_sha256": "97adba871934d20afedc7d90e4df2ca2d0ae4bbab8c6ec3db9c2b34fc884d001",
     "export_sha256": "97adba871934d20afedc7d90e4df2ca2d0ae4bbab8c6ec3db9c2b34fc884d001",
     "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/fixed_episode_noise_2026_09_09.py",
+    "original_sha256": "3134180b25b7b7690b72ff20a784d5c140a39165e86c6288145cf25e5173a3da",
+    "export_sha256": "3134180b25b7b7690b72ff20a784d5c140a39165e86c6288145cf25e5173a3da",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/gpu_clock_sampler_r1.py",
+    "original_sha256": "8958019b576e9c31f59d7831d81d038adb3b4bb9df79179c4c1d12abde8a28c4",
+    "export_sha256": "8958019b576e9c31f59d7831d81d038adb3b4bb9df79179c4c1d12abde8a28c4",
+    "modifications": "Path placeholders only; numerical code unchanged"
   }
 ]

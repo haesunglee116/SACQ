@@ -1,0 +1,24 @@
+# Relevant dependencies observed in the validated A8 environment.
+# This is separate from the A16 environment; see INFERENCE.md.
+torch==2.11.0+cu129
+vllm==0.24.0+cu129
+vllm-omni==0.24.1
+transformers==5.19.0
+triton==3.6.0
+numpy==2.2.6
+scipy==1.15.3
+pillow==12.3.0
+einops==0.8.2
+hqq==0.2.8.post1
+ninja==1.13.2
+setuptools==81.0.0
+packaging==26.2
+msgpack==1.2.3
+omegaconf==2.4.0
+nvidia-ml-py==13.615.71
+torchvision==0.26.0+cu129
+accelerate==1.12.0
+diffusers==0.38.0
+safetensors==0.8.0
+tokenizers==0.23.3
+huggingface-hub==1.33.0

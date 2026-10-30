@@ -48,11 +48,19 @@ def prepare_source(source, output):
             ['git', '-C', str(source), 'rev-parse', 'HEAD'], text=True).strip()
         if revision != recipe['source_commit']:
             raise ValueError('Checkout does not match the pinned Sage commit')
+    # Accept either pristine upstream or the two pinned current-stream patches.
+    base_recipe = json.loads((ROOT / 'presets/sage_base_build.json').read_text())
+    patches = {r['relative_path']: r for r in base_recipe['patches']}
+    needs_patch = set()
     # Verify every header and CUDA unit before compilation, including dirty worktrees.
     for row in recipe['source_manifest']:
         expected = recipe['original_source_sha256'] if row['file'] == TARGET else row['sha256']
-        if digest(contained(source, row['file']).read_bytes()) != expected:
-            raise ValueError('Sage source mismatch: ' + row['file'])
+        actual = digest(contained(source, row['file']).read_bytes())
+        if actual != expected:
+            patch = patches.get(row['file'])
+            if patch is None or actual != patch['original_sha256']:
+                raise ValueError('Sage source mismatch: ' + row['file'])
+            needs_patch.add(row['file'])
     if digest((source / 'LICENSE').read_bytes()) != recipe['license_sha256']:
         raise ValueError('Unexpected Sage license')
     patched, binding = patch_source((source / TARGET).read_text(), recipe)
@@ -64,6 +72,13 @@ def prepare_source(source, output):
             dest = contained(temporary, row['file'])
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(contained(source, row['file']), dest)
+        if needs_patch:
+            if needs_patch != set(patches):
+                raise ValueError('Mixed partial stream patches are unsupported')
+            subprocess.run(['patch', '--batch', '--fuzz=0', '-p1', '-i', str(ROOT / 'sage_current_stream.patch')], cwd=temporary, check=True)
+            for name in needs_patch:
+                if digest((temporary / name).read_bytes()) != patches[name]['patched_sha256']:
+                    raise ValueError('Stream patch hash mismatch: ' + name)
         shutil.copyfile(source / 'LICENSE', temporary / 'SAGE_LICENSE')
         (temporary / TARGET).write_text(patched)
         (temporary / 'binding.cpp').write_text(binding)
