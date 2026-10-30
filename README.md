@@ -86,7 +86,7 @@ separately from Git: [download the four suite archives](https://github.com/haesu
 
 ## Validation and supported scope
 
-The current CPU suite passes 211 tests. The existing real-model validation records a diagnostic
+The current CPU suite passes 214 tests. The existing real-model validation records a diagnostic
 connecting fitting, allocation, index correction, calibration and a 50-episode
 rollout. The diagnostic reused an existing candidate bank, fitted one candidate
 and performed one calibration update. It is not a complete rerun of all paper
@@ -94,8 +94,9 @@ experiments. See [VALIDATION.md](VALIDATION.md) for the tested versions and scop
 
 The final inference kernel sources, frozen choices and original measurement
 identities are included. CPU packaging tests do not revalidate GPU performance:
-the relocated A8 overlay requires an existing compatible INT8 bootstrap, and
-has not been rerun on a GPU. See the [experiment map](experiments/gr00t_libero/README.md)
+the full relocated A8 model still needs contract/runtime integration. Bootstrap
+sources and a portable Sage FP32 builder are included; the rebuilt attention
+extension passed byte-equality checks on 40 recorded inputs. See the [experiment map](experiments/gr00t_libero/README.md)
 and [release notes](RELEASE_NOTES.md).
 
 ## Development and distribution

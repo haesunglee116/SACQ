@@ -1,0 +1,386 @@
+{
+  "scope": "Static imports only; dynamic contract-selected modules and compiled extensions require separate resolution",
+  "external_or_injected_imports": {
+    "__future__": [
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/deepstack_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/fa_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/graph_wrap_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hf_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hqq_fused_dequant_2026_08_31.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/cuda_ffn_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/kv_hoist_a8_logical_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/spinquant_stiefel_optimizer.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "argparse": [
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "ast": [
+      "gr00t_final_seed17_20260922/model_install_gptq3_baseline.py"
+    ],
+    "benchmark_inference": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py"
+    ],
+    "collections": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py"
+    ],
+    "contextlib": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py"
+    ],
+    "copy": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py"
+    ],
+    "csv": [
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py"
+    ],
+    "ctypes": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py"
+    ],
+    "gc": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/priority_measure_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py"
+    ],
+    "gr00t": [
+      "gr00t_final_seed17_20260922/model_install_gptq_baseline.py",
+      "gr00t_final_seed17_20260922/model_install_hqq_baseline.py",
+      "gr00t_final_seed17_20260922/pack_sacq_reference.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_optimizations_a8_shared_r6.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_action_measure_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/memory_bounded_a8_shared_r8.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_modulation_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "gzip": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py"
+    ],
+    "hashlib": [
+      "gr00t_final_seed17_20260922/io_utils.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py"
+    ],
+    "hqq": [
+      "gr00t_final_seed17_20260922/model_install_hqq_baseline.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hqq_fused_dequant_2026_08_31.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py"
+    ],
+    "importlib": [
+      "gr00t_final_seed17_20260922/model_install.py",
+      "gr00t_final_seed17_20260922/model_install_multi.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py"
+    ],
+    "inspect": [
+      "gr00t_final_seed17_20260922/model_install_gptq_baseline_r2.py",
+      "gr00t_final_seed17_20260922/model_install_multi.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1b.py"
+    ],
+    "io": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py"
+    ],
+    "json": [
+      "gr00t_final_seed17_20260922/io_utils.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "math": [
+      "gr00t_final_seed17_20260922/pack_sacq_reference.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py"
+    ],
+    "numpy": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py"
+    ],
+    "os": [
+      "gr00t_final_seed17_20260922/io_utils.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/cuda_ffn_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_register_lut_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py"
+    ],
+    "pathlib": [
+      "gr00t_final_seed17_20260922/io_utils.py",
+      "gr00t_final_seed17_20260922/model_install.py",
+      "gr00t_final_seed17_20260922/model_install_gptq3_baseline.py",
+      "gr00t_final_seed17_20260922/model_install_multi.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/cuda_ffn_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_register_lut_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "pickle": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py"
+    ],
+    "random": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py",
+      "libero_pro_eval/spinquant_stiefel_optimizer.py"
+    ],
+    "re": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py"
+    ],
+    "rollout_bridge_r1": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_language_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/common_bf16_language_fusions_r1.py"
+    ],
+    "sageattention": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py"
+    ],
+    "statistics": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py"
+    ],
+    "subprocess": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py"
+    ],
+    "sys": [
+      "gr00t_final_seed17_20260922/model_install.py",
+      "gr00t_final_seed17_20260922/model_install_multi.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py"
+    ],
+    "tempfile": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py"
+    ],
+    "torch": [
+      "gr00t_final_seed17_20260922/model_install_gptq_baseline.py",
+      "gr00t_final_seed17_20260922/model_install_hqq_baseline.py",
+      "gr00t_final_seed17_20260922/pack_gptq_reference.py",
+      "gr00t_final_seed17_20260922/pack_sacq_reference.py",
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/deepstack_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/fa_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/graph_wrap_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hf_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hqq_fused_dequant_2026_08_31.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_language_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/common_bf16_language_fusions_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_vision_joint_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_vision_rotary_fusion_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/cuda_ffn_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_candidates_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dictionary_candidates_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_dictionary_decode.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_optimizations_a8_shared_r6.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_pointwise.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fixed_adaln_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fixed_schedule_outputs.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/full_backbone_graph_a8_shared_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/fused_action_measure_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/kv_hoist_a8_logical_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/language_a8_input_sharing_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/memory_bounded_a8_shared_r8.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_modulation_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_vision_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_register_lut_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_simd_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_dictionary_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/priority_fused_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/priority_measure_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/qkv_shared_aux_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/qkv_shared_aux_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+      "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/spinquant_stiefel_optimizer.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "transformers": [
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/fa_capture_safe_2026_08_31.py",
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hf_capture_safe_2026_08_31.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_vision_rotary_fusion_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_optimizations_a8_shared_r6.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/full_backbone_graph_a8_shared_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py"
+    ],
+    "tree": [
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "triton": [
+      "libero_pro_eval/claude_packed_runtime_2026_08_31/hqq_fused_dequant_2026_08_31.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_r4.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_language_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_square_runtime_r2.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/common_bf16_language_fusions_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_swiglu_joint_kernel_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_vision_joint_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/common_vision_rotary_fusion_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/decoder_candidates_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/dictionary_candidates_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_dictionary_decode.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_pointwise.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_vision_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_simd_r3.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_dictionary_decode_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/priority_fused_r3.py"
+    ],
+    "types": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/exact_optimizations_a8_shared_r6.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_modulation_runtime_r1b.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_vision_runtime_r1b.py"
+    ],
+    "typing": [
+      "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+      "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+      "libero_pro_eval/measure_hotspot_protection_proxy.py",
+      "libero_pro_eval/train_spinquant_r1r2_vla_objective.py"
+    ],
+    "vllm_omni": [
+      "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+      "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py"
+    ]
+  },
+  "complete_runtime_closure": false
+}

@@ -1,0 +1,482 @@
+[
+  {
+    "file": "gr00t_final_seed17_20260922/install_packed_memory_reference.py",
+    "original_sha256": "44ec4cdd269a2cd775d1787b764179b7c27c558650aa45b9b333a554d12f6410",
+    "export_sha256": "44ec4cdd269a2cd775d1787b764179b7c27c558650aa45b9b333a554d12f6410",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/io_utils.py",
+    "original_sha256": "fb373987a452b3cc41d7ed79cdb643b19a2fddb8c5f69841ec8ba8994e73eac5",
+    "export_sha256": "fb373987a452b3cc41d7ed79cdb643b19a2fddb8c5f69841ec8ba8994e73eac5",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install.py",
+    "original_sha256": "f4374087da1e3fddd0569e532ea363604677bab7a862c5eaa0d7fbc38291f5aa",
+    "export_sha256": "f4374087da1e3fddd0569e532ea363604677bab7a862c5eaa0d7fbc38291f5aa",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install_gptq3_baseline.py",
+    "original_sha256": "27044fd22dfe5bb72032dd9799e612af4d50a4274f83eef430b2c875c0df7cb0",
+    "export_sha256": "27044fd22dfe5bb72032dd9799e612af4d50a4274f83eef430b2c875c0df7cb0",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install_gptq_baseline.py",
+    "original_sha256": "f91881589e9f10c07af599ca12a87619d59ca672ded964989dbcd7a1dbbd1d6f",
+    "export_sha256": "f91881589e9f10c07af599ca12a87619d59ca672ded964989dbcd7a1dbbd1d6f",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install_gptq_baseline_r2.py",
+    "original_sha256": "dd4ac99981bd2b0e573cb6db66f98500908e954dce3d20f0add7e9f91b5c6db1",
+    "export_sha256": "dd4ac99981bd2b0e573cb6db66f98500908e954dce3d20f0add7e9f91b5c6db1",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install_hqq_baseline.py",
+    "original_sha256": "d319afd44a459b3a30c19616cde61b8e43c2864699f92b4ec85d0306e63502ac",
+    "export_sha256": "d319afd44a459b3a30c19616cde61b8e43c2864699f92b4ec85d0306e63502ac",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/model_install_multi.py",
+    "original_sha256": "8cc24515c3a5c846581c5e8f8d3ad33495a2c0bc0160a82cca7940589bc54ef1",
+    "export_sha256": "8cc24515c3a5c846581c5e8f8d3ad33495a2c0bc0160a82cca7940589bc54ef1",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/pack_gptq_reference.py",
+    "original_sha256": "783efa61929a75650b2b92637ff6ab1bbd36708c83ecd4482da3c5bbc879e592",
+    "export_sha256": "783efa61929a75650b2b92637ff6ab1bbd36708c83ecd4482da3c5bbc879e592",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "gr00t_final_seed17_20260922/pack_sacq_reference.py",
+    "original_sha256": "8b64dd6b09bd84c54ce56b483641f46398e4d701633afbaf48a5fd6d5386da3a",
+    "export_sha256": "8b64dd6b09bd84c54ce56b483641f46398e4d701633afbaf48a5fd6d5386da3a",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/analyze_hqq_hadamard_mlp_outliers.py",
+    "original_sha256": "a455d70646d661c5e3118f05dc600d4747bb06dada34ae1444819af010286f1e",
+    "export_sha256": "c8bab423ed3b39ee939b8bb0eab65ed56ab341a06a1b53a1f685319baefac265",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/claude_packed_runtime_2026_08_31/deepstack_capture_safe_2026_08_31.py",
+    "original_sha256": "b61bcd3036a2071bd6a98b1b37f6c929cb5f9da50380b497a7c3b52d77976dff",
+    "export_sha256": "b61bcd3036a2071bd6a98b1b37f6c929cb5f9da50380b497a7c3b52d77976dff",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/claude_packed_runtime_2026_08_31/fa_capture_safe_2026_08_31.py",
+    "original_sha256": "0dce75937e4ace696e240657098cc2ae971ebe1bb3fe64b7d170192b5c474947",
+    "export_sha256": "0dce75937e4ace696e240657098cc2ae971ebe1bb3fe64b7d170192b5c474947",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/claude_packed_runtime_2026_08_31/graph_wrap_2026_08_31.py",
+    "original_sha256": "3c17badcf6483c2a5b28e05879961623b229287f1b79d4fd6eab73f4f7dfbe46",
+    "export_sha256": "3c17badcf6483c2a5b28e05879961623b229287f1b79d4fd6eab73f4f7dfbe46",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/claude_packed_runtime_2026_08_31/hf_capture_safe_2026_08_31.py",
+    "original_sha256": "c4cd5be8d8b44bc68224ac6e446289bcd1fe6dc463197c48c4e7bcb509c8cbd6",
+    "export_sha256": "c4cd5be8d8b44bc68224ac6e446289bcd1fe6dc463197c48c4e7bcb509c8cbd6",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/claude_packed_runtime_2026_08_31/hqq_fused_dequant_2026_08_31.py",
+    "original_sha256": "f6153c57019d54f31d469fad15d02fdaa038f39762c948538e9215dc7d23acc4",
+    "export_sha256": "f6153c57019d54f31d469fad15d02fdaa038f39762c948538e9215dc7d23acc4",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/bootstrap_policy_perrow_int8_r5.py",
+    "original_sha256": "496dd15cae6eef97262aaf4c99fbb1eac5d0138917fe3f31426843629ef1965f",
+    "export_sha256": "136b569a125841a69ff1285bdfca70bdde24bc81a29ed8a859bd381319923fa7",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/recovery_attention_adapter_fp32_r2.py",
+    "original_sha256": "1dd3a83fc2cc6635c19faf45196f6a255b0176440370f2cc79ed9adbf0f84c4a",
+    "export_sha256": "1dd3a83fc2cc6635c19faf45196f6a255b0176440370f2cc79ed9adbf0f84c4a",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_fusion_runtime_r2.py",
+    "original_sha256": "b9167b188bb864ff13edea1ba043dac5b5069494e22709d3a16086034d598cb5",
+    "export_sha256": "b9167b188bb864ff13edea1ba043dac5b5069494e22709d3a16086034d598cb5",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_r4.py",
+    "original_sha256": "ed982fd4318269b01cca654f1263d52a1dd6bf1ba2e5ffb045057ad308630b79",
+    "export_sha256": "ed982fd4318269b01cca654f1263d52a1dd6bf1ba2e5ffb045057ad308630b79",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_cross_kv_native_joint_runtime_r4.py",
+    "original_sha256": "26deda29fc39aa1c05624f7776b54c75a25d2b555d40514ad041ba581be9f482",
+    "export_sha256": "26deda29fc39aa1c05624f7776b54c75a25d2b555d40514ad041ba581be9f482",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_language_joint_runtime_r1.py",
+    "original_sha256": "c19482ca783811c0af776af02c86a11d1b5aed2d808c9e66348a21d6680f3723",
+    "export_sha256": "c19482ca783811c0af776af02c86a11d1b5aed2d808c9e66348a21d6680f3723",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_joint_runtime_r1.py",
+    "original_sha256": "06381ec9c6985ddfa8a5ad4170835a72b5709f3a6d76c646498a11368e974250",
+    "export_sha256": "06381ec9c6985ddfa8a5ad4170835a72b5709f3a6d76c646498a11368e974250",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_rms_tail_square_runtime_r2.py",
+    "original_sha256": "d7c70de178312b57d72b779d6551643e40390790c85051f0188bf690df46f805",
+    "export_sha256": "d7c70de178312b57d72b779d6551643e40390790c85051f0188bf690df46f805",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1.py",
+    "original_sha256": "cbe557f4fd0c029d258f98a933c445afcaa3385b5fcc983fb6bf43760dd5479d",
+    "export_sha256": "cbe557f4fd0c029d258f98a933c445afcaa3385b5fcc983fb6bf43760dd5479d",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/a8_swiglu_joint_runtime_r1b.py",
+    "original_sha256": "fcd438090b97294ae04b9ae46a846d0ff7537e2005083d33fa5c3c9c8df3e57a",
+    "export_sha256": "fcd438090b97294ae04b9ae46a846d0ff7537e2005083d33fa5c3c9c8df3e57a",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_accuracy_recovery_2026_10_20_r1/shape_modules/common_bf16_language_fusions_r1.py",
+    "original_sha256": "da704e2aa0bc8dc45262c5a83069191d668afe72106f62b9eeac9f1f3b1dca09",
+    "export_sha256": "da704e2aa0bc8dc45262c5a83069191d668afe72106f62b9eeac9f1f3b1dca09",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_attention_expansion_goal_2026_10_18_r1/load_sage_raw_original_oracle_r1.py",
+    "original_sha256": "cdf266dc2137364be1063fc9a0faa12a74cf87611df53d71c8c24a261a58884b",
+    "export_sha256": "cdf266dc2137364be1063fc9a0faa12a74cf87611df53d71c8c24a261a58884b",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_sage_attention_adapter_r4.py",
+    "original_sha256": "aec99508a9c1def127d37f091423564207cfa4b613c7abe925b6694d1124acf9",
+    "export_sha256": "aec99508a9c1def127d37f091423564207cfa4b613c7abe925b6694d1124acf9",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_self_qkv_fusion_runtime_r3.py",
+    "original_sha256": "9488fb9f76e58034335b66f4a371d9b47da7ecc56fe00a1eec5c484814c28417",
+    "export_sha256": "9488fb9f76e58034335b66f4a371d9b47da7ecc56fe00a1eec5c484814c28417",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_swiglu_joint_kernel_r1.py",
+    "original_sha256": "c6c527b4832d01d12bb20e1fb65f7dd76937bd9baa60f8d0ae0e4fa5ec518a22",
+    "export_sha256": "c6c527b4832d01d12bb20e1fb65f7dd76937bd9baa60f8d0ae0e4fa5ec518a22",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/a8_vision_joint_runtime_r1b.py",
+    "original_sha256": "c0b6c4b21ea0019455b88c2ca3338f07d9078e78c4392e440c603b8fa7e21b6c",
+    "export_sha256": "c0b6c4b21ea0019455b88c2ca3338f07d9078e78c4392e440c603b8fa7e21b6c",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1/binding.cpp",
+    "original_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "export_sha256": "2a0f8785056f8307e26063b659c15528aedad0b2e94b5cc9d5b8e2c5fa5f0af7",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_r1/kernel.cu",
+    "original_sha256": "e6c61f3ff0beaa91d3100c7b3e21d14b550be768e6b47c7402025561811835ce",
+    "export_sha256": "e6c61f3ff0beaa91d3100c7b3e21d14b550be768e6b47c7402025561811835ce",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/adaln_norm_modulate_runtime_r2.py",
+    "original_sha256": "db3cd060e7b612e5f2f9a78946d7d967db6517f5b04b88c1cae198c9cef86949",
+    "export_sha256": "db3cd060e7b612e5f2f9a78946d7d967db6517f5b04b88c1cae198c9cef86949",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/benchmark_a8_joint_pair_confirm_r1.py",
+    "original_sha256": "e125c16cd5e30aa871bf89f5d59097ecb413f5926122ad0cc246d52607212abe",
+    "export_sha256": "e125c16cd5e30aa871bf89f5d59097ecb413f5926122ad0cc246d52607212abe",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_attribution_r3.py",
+    "original_sha256": "f68fc1ad5002b335bd34bd07e195fe8c01b3b819875a412ccb866a2082a64d87",
+    "export_sha256": "f68fc1ad5002b335bd34bd07e195fe8c01b3b819875a412ccb866a2082a64d87",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/bottleneck_fused_detail_r1.py",
+    "original_sha256": "f844670b8c741c29a0142be59132c16d5138458e79ed9ca1f5e9550586e90926",
+    "export_sha256": "f844670b8c741c29a0142be59132c16d5138458e79ed9ca1f5e9550586e90926",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/common_vision_rotary_fusion_r1.py",
+    "original_sha256": "9c41964a46df8797d0d9dbda285e950a669db63a1544f0464b308848678894eb",
+    "export_sha256": "9c41964a46df8797d0d9dbda285e950a669db63a1544f0464b308848678894eb",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r3.py",
+    "original_sha256": "a6cf06e7f569d330f2da6e8642574630d85078af167f8cdfd1a890973b04f6b8",
+    "export_sha256": "a6cf06e7f569d330f2da6e8642574630d85078af167f8cdfd1a890973b04f6b8",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/compact_storage_a8_r5.py",
+    "original_sha256": "1e1df54c6f341b9da05e097b3c5f25458aab38028d43c3e504f9afa432ce2a17",
+    "export_sha256": "1e1df54c6f341b9da05e097b3c5f25458aab38028d43c3e504f9afa432ce2a17",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/cuda_ffn_r3.py",
+    "original_sha256": "8b22eb1beed3f7f6caa19f04606d9414d5dabf8eb95b718da32271dc79520706",
+    "export_sha256": "9e1ac5010357ccf6cc96626cdec3644e1b29752b57c4c15b690a817f95230b9f",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/decoder_candidates_r1.py",
+    "original_sha256": "12cd471613f01837cf0bf5c7c341345bcfea0062ad7dd2c65311515f8f9b467d",
+    "export_sha256": "12cd471613f01837cf0bf5c7c341345bcfea0062ad7dd2c65311515f8f9b467d",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/dictionary_candidates_r1.py",
+    "original_sha256": "e51687087322a228fa0d814144c601e337f2223f44b98498c378afc1f097c771",
+    "export_sha256": "e51687087322a228fa0d814144c601e337f2223f44b98498c378afc1f097c771",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/exact_dictionary_decode.py",
+    "original_sha256": "f4fe81a38bdea633f82b125fe9708db02bc5f7b30b6cf686659751a4566c4922",
+    "export_sha256": "f4fe81a38bdea633f82b125fe9708db02bc5f7b30b6cf686659751a4566c4922",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/exact_optimizations_a8_shared_r6.py",
+    "original_sha256": "03cd125b3f2b24cae2b587d7ba5713d6425d79b36acab9d58631c01c86889b39",
+    "export_sha256": "03cd125b3f2b24cae2b587d7ba5713d6425d79b36acab9d58631c01c86889b39",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/exact_pointwise.py",
+    "original_sha256": "ffd78a833d6e6ec115ad95222dc38fba51925041956cd8fa284a405b633b1463",
+    "export_sha256": "ffd78a833d6e6ec115ad95222dc38fba51925041956cd8fa284a405b633b1463",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/final_model.py",
+    "original_sha256": "470a9067b780ec8fe4d16b9bfd74240f956bfd29496c9e50be81f8e12cfae5ec",
+    "export_sha256": "470a9067b780ec8fe4d16b9bfd74240f956bfd29496c9e50be81f8e12cfae5ec",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fixed_adaln_r2.py",
+    "original_sha256": "5af879f9184046ff2951f3b10038de2c83dc28fd4ccca24c32100ae1ec110b98",
+    "export_sha256": "5af879f9184046ff2951f3b10038de2c83dc28fd4ccca24c32100ae1ec110b98",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fixed_schedule_outputs.py",
+    "original_sha256": "3c904bf548b508b94091fb92b3fd6031aac3e8412ef6eec3358fb95e8747aff4",
+    "export_sha256": "3c904bf548b508b94091fb92b3fd6031aac3e8412ef6eec3358fb95e8747aff4",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/full_backbone_graph_a8_shared_r2.py",
+    "original_sha256": "1912cbe0595fb76b4d53d7aac6454d378c07e989d9035a18c4a14d5809daf3f5",
+    "export_sha256": "1912cbe0595fb76b4d53d7aac6454d378c07e989d9035a18c4a14d5809daf3f5",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_action_candidates_r1.py",
+    "original_sha256": "b10b2e76ebb5f112791ab4180ffbb3a614935e37d38b7704a29a6dd6e196f357",
+    "export_sha256": "b10b2e76ebb5f112791ab4180ffbb3a614935e37d38b7704a29a6dd6e196f357",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/fused_action_measure_r1.py",
+    "original_sha256": "61972f0b1dd9d4b7ea9c44f75f5891fc11189dbc5d546170ff744efede17b866",
+    "export_sha256": "61972f0b1dd9d4b7ea9c44f75f5891fc11189dbc5d546170ff744efede17b866",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/kernel_ffn_r3/codebook_cutlass_binding.cpp",
+    "original_sha256": "39a556a10716435f898c7ffafab1f3641eafb07a8ca547225a8b2e6bd1eac783",
+    "export_sha256": "39a556a10716435f898c7ffafab1f3641eafb07a8ca547225a8b2e6bd1eac783",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/kernel_ffn_r3/codebook_cutlass_kernel.cu",
+    "original_sha256": "46c7389a876e8a13f07ad54a65e5e133aefb761a88a6b702d46d85be087aa9f6",
+    "export_sha256": "46c7389a876e8a13f07ad54a65e5e133aefb761a88a6b702d46d85be087aa9f6",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/kv_hoist_a8_logical_r2.py",
+    "original_sha256": "2aaefcd853b2dc5098f2b6198daf60ce5fa531c7e35119b109f180bd9b64eb34",
+    "export_sha256": "2aaefcd853b2dc5098f2b6198daf60ce5fa531c7e35119b109f180bd9b64eb34",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/language_a8_input_sharing_r1.py",
+    "original_sha256": "d778ebf34a6d58690bc1c3051c08597d029a8386d8f7c629b6f2d2f67666b7b4",
+    "export_sha256": "d778ebf34a6d58690bc1c3051c08597d029a8386d8f7c629b6f2d2f67666b7b4",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/memory_bounded_a8_shared_r8.py",
+    "original_sha256": "893c67d5991fad5ce57ed021a246aaaf7252121043092f4362b05bdba998de62",
+    "export_sha256": "893c67d5991fad5ce57ed021a246aaaf7252121043092f4362b05bdba998de62",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/no_counter_diagnostics_r1.py",
+    "original_sha256": "577ae0a8a5696cab628ae1fb8057da833ead66cecb4d0175d58d5566a30dbb48",
+    "export_sha256": "577ae0a8a5696cab628ae1fb8057da833ead66cecb4d0175d58d5566a30dbb48",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_all_rng_snapshot_r1.py",
+    "original_sha256": "5654097df8b496746dcf33494de4aa556c2fc922d2260a28120e6e8033cced32",
+    "export_sha256": "5654097df8b496746dcf33494de4aa556c2fc922d2260a28120e6e8033cced32",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_modulation_runtime_r1b.py",
+    "original_sha256": "14128b7d73769700ae31e91187604b9bae97bbed0be793fa8c30cfd061193ea0",
+    "export_sha256": "14128b7d73769700ae31e91187604b9bae97bbed0be793fa8c30cfd061193ea0",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_a8_scope_vision_runtime_r1b.py",
+    "original_sha256": "25c744e521d7948a984f17e65aa80b7d0a6afca562658371c73a6d5a7b5b834f",
+    "export_sha256": "25c744e521d7948a984f17e65aa80b7d0a6afca562658371c73a6d5a7b5b834f",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_action_stages_r3.py",
+    "original_sha256": "01fbb2121af9b385862858016f110373c190ac4bb64d6bb1e099dd87d2abafbd",
+    "export_sha256": "01fbb2121af9b385862858016f110373c190ac4bb64d6bb1e099dd87d2abafbd",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_register_lut_r1.cu",
+    "original_sha256": "fab6fd25e0f3107a508a2aec6d5765db56322ab7189a29bba62dd022fbc56ebf",
+    "export_sha256": "fab6fd25e0f3107a508a2aec6d5765db56322ab7189a29bba62dd022fbc56ebf",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_register_lut_r1.py",
+    "original_sha256": "c72fef30300fe179a0c69db73c800821b783dfc08eca1d964fcd12fd19ddaea3",
+    "export_sha256": "3bd2c0a55971dd5a6d8680ebc99e00bb6ca72e287ced1a0ba4301e45d7db0d9f",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_decode_simd_r3.py",
+    "original_sha256": "2415e78924d9c4e9e1e045ef95209f41a0b8b223292ceb904db56416e27ec6d2",
+    "export_sha256": "2415e78924d9c4e9e1e045ef95209f41a0b8b223292ceb904db56416e27ec6d2",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_dictionary_decode_r1.py",
+    "original_sha256": "39b465f2328eaa594d96d7f5e2938b3f531aec6e1ff82470ff08983cd72ec2ab",
+    "export_sha256": "39b465f2328eaa594d96d7f5e2938b3f531aec6e1ff82470ff08983cd72ec2ab",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/omni_sacq_adapter_r2.py",
+    "original_sha256": "fca8a5718fe14081492c76f1e36b3ea26bb12edbd532c3d701bacf0a40ac330d",
+    "export_sha256": "fca8a5718fe14081492c76f1e36b3ea26bb12edbd532c3d701bacf0a40ac330d",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/postcache_native_revalidation_r1.py",
+    "original_sha256": "8f11c16d4152b84b1326226cf9b5e1a8abfacb8cf9bae26f1a3724d0f02b3326",
+    "export_sha256": "8f11c16d4152b84b1326226cf9b5e1a8abfacb8cf9bae26f1a3724d0f02b3326",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/priority_fused_r3.py",
+    "original_sha256": "7d099f64f9e18f08f4722bb2673132fe80f5cd0b3cf91e4af3426e595e3f6c1b",
+    "export_sha256": "7d099f64f9e18f08f4722bb2673132fe80f5cd0b3cf91e4af3426e595e3f6c1b",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/priority_measure_r3.py",
+    "original_sha256": "646929f21487ac4c8161ee03b079dcf32f54dc96d9d60f02fe523eca2b10ce0d",
+    "export_sha256": "646929f21487ac4c8161ee03b079dcf32f54dc96d9d60f02fe523eca2b10ce0d",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/qkv_shared_aux_r2.py",
+    "original_sha256": "4c9424414edac8f567df51c4ec429c6bcbe064e7ffc5aaa80be1539d5506933f",
+    "export_sha256": "4c9424414edac8f567df51c4ec429c6bcbe064e7ffc5aaa80be1539d5506933f",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/qkv_shared_aux_r3.py",
+    "original_sha256": "a257228e4a37a1305b046d8d44a99931d1e622eb201caeadac3ebb14a524a52a",
+    "export_sha256": "a257228e4a37a1305b046d8d44a99931d1e622eb201caeadac3ebb14a524a52a",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/inference_acceleration_2026_10_11/whole_model_graph_runtime_r2.py",
+    "original_sha256": "37a17f609b0dd74b11c620f56c3bb5ef5663460649ac9983e0dd089440ddc2cf",
+    "export_sha256": "37a17f609b0dd74b11c620f56c3bb5ef5663460649ac9983e0dd089440ddc2cf",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/measure_dit_single_layer_downgrade_sensitivity.py",
+    "original_sha256": "770a573e46cd16a69c8335b85981b5cbd22730fdebad006f6d40539e6fa043ad",
+    "export_sha256": "0d755d5465a0a8f0f1a91452ff19ac56bf1544ef96d92080673b4ac3a5254aa8",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/measure_embedding_quant_memory_v1.py",
+    "original_sha256": "5b328eddcb12e74f66dfd3e9a39f404497090f0c7fb248a34deaa77749cc7c69",
+    "export_sha256": "6aeb2c922e9d0dd812decd0e3d85f9d9c69105964b1a72ac80a61d536a4b706c",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/measure_embedding_vision_quant_memory_v1.py",
+    "original_sha256": "0a8c14c42395c41d59f68ddfa918a0e1bc827d9f142d6f82af8267d4b12fde80",
+    "export_sha256": "207a4a13899033b6acee2b9e47c4f082559104a3f11720af6e784a663c5af887",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/measure_hotspot_protection_proxy.py",
+    "original_sha256": "4aa58c6967c7329cd816ea8cf142f2354e8aa154556d858ecc5e6ff25fc21c5c",
+    "export_sha256": "dd0a66dfd46dd95d0ca13bd509531d2d6cbabd45fff112755ef3305f1eae0c4d",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/spinquant_stiefel_optimizer.py",
+    "original_sha256": "cc9841c1250781ed7a00ab043402c3cd1f6c046af0247362973d7b14868014b7",
+    "export_sha256": "cc9841c1250781ed7a00ab043402c3cd1f6c046af0247362973d7b14868014b7",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  },
+  {
+    "file": "libero_pro_eval/train_spinquant_r1r2_vla_objective.py",
+    "original_sha256": "97adba871934d20afedc7d90e4df2ca2d0ae4bbab8c6ec3db9c2b34fc884d001",
+    "export_sha256": "97adba871934d20afedc7d90e4df2ca2d0ae4bbab8c6ec3db9c2b34fc884d001",
+    "modifications": "Path placeholders only; numerical code unchanged"
+  }
+]

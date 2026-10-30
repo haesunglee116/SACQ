@@ -6,8 +6,9 @@ eight frozen launch-selection tables, an installer preserving the selected
 installation order, and a source-preparation tool. It is separate from the
 existing A16 training/evaluation pipeline and does not change its defaults.
 
-**Integration level:** source packaging and CPU staging/guard tests. The
-relocated package has not been compiled or revalidated on a GPU. It requires a
+**Integration level:** source packaging, CPU staging/guard tests, and a rebuilt
+Sage FP32 extension verified byte-exact on 40 saved attention inputs. The
+full relocated model has not been revalidated on a GPU. It requires a
 compatible existing INT8 bootstrap; this is not a standalone model loader or a
 one-command reproduction of the recorded timing. See [recorded experiments](../../experiments/gr00t_libero/README.md).
 
@@ -69,10 +70,10 @@ with torch.inference_mode():
 The bridge must be loaded under the module name `rollout_bridge_r1`, as in the
 [original worker](reference/final_worker.py). Its source is included for identity
 checking in [reference/rollout_bridge_perrow_int8_r5.py](reference/rollout_bridge_perrow_int8_r5.py).
-Its `build()` requires the external `bootstrap_policy_perrow_int8_r5.py` and its
-approved model/input contracts. Those historical bootstrap and full-model graph
-construction dependencies are **not yet packaged by this overlay**. Use an
-existing verified runtime; do not substitute the A16 pipeline's model loader.
+Its `build()` requires `bootstrap_policy_perrow_int8_r5.py` and its
+approved model/input contracts. The bootstrap sources are now packaged separately
+(see below); contract relocation and full-model GPU validation remain pending.
+Use an existing verified runtime; do not substitute the A16 pipeline's model loader.
 
 The installer checks the prepared source hashes, frozen selections, compatible
 bridge, projection recipe, attention recipe, inference mode and SM89. It rejects
@@ -108,3 +109,65 @@ This is inference-only. Do not enable frozen-weight reuse, forward monkeypatches
 or inference CUDA Graphs in codebook fitting or calibration training. The final
 kernel combination was not rerun for success rate; see the separate latency and
 success records rather than attributing a new rollout result to this export.
+
+## Bootstrap and runtime source preparation
+
+The original INT8 bootstrap and 79 supporting source files are now included in
+`bootstrap_sources/`, with original and exported hashes in
+[BOOTSTRAP_MANIFEST.json](BOOTSTRAP_MANIFEST.json). They cover packed model
+installation, shape adapters, storage compaction, fixed-output reuse and graph
+construction. [BOOTSTRAP_DEPENDENCIES.json](BOOTSTRAP_DEPENDENCIES.json) lists
+static external imports; it does not certify dynamic dependency closure.
+Path substitution is the only change. Inherited probe/training
+entry points are reference dependencies, not supported launch commands.
+
+Inspect and stage these sources separately without importing CUDA:
+
+```bash
+python -m gr00t_libero.acceleration.bootstrap --check
+python -m gr00t_libero.acceleration.bootstrap \
+  --workspace /absolute/new-bootstrap-workspace \
+  --local-runtime /absolute/local-runtime-root
+python -m gr00t_libero.acceleration.runtime_check
+```
+
+The bootstrap staging command also places the original bridge beside its loader.
+It does not combine the bootstrap with the kernel workspace or rewrite model
+contracts. `runtime_check` fails on missing/mismatched package versions; matching
+versions alone does not certify custom builds or a working model.
+
+### Rebuild the FP32 attention stream extension
+
+The portable builder reproduces the recorded patch and compiler flags. It checks
+every recorded CUDA/header hash, the patched CUDA file hash and binding hash.
+It changes only the launch stream and exported wrapper name. It does not change
+attention arithmetic, quantization or accumulation precision.
+
+```bash
+git clone https://github.com/thu-ml/SageAttention.git SageAttention
+cd SageAttention
+git checkout d1a57a546c3d395b1ffcbeecc66d81db76f3b4b5
+cd ..
+# Run from the SACQ repository root, with the matching environment activated.
+python -m gr00t_libero.acceleration.build_sage \
+  --source /absolute/SageAttention \
+  --output /absolute/new-sage-build \
+  --cuda-home /absolute/cuda-toolkit
+```
+
+Use PyTorch `2.11.0+cu129`, an SM89-capable CUDA toolkit, a compatible C++ compiler,
+and Ninja on `PATH`. `--prepare-only` verifies/copies sources without importing
+PyTorch or compiling. The builder preserves SageAttention's license and never
+modifies the input checkout. Its `BUILD_RECEIPT.json` is a compilation receipt,
+**not a numerical or CUDA Graph PASS**. This extension supplements the base
+SageAttention installation; it does not install the complete Sage Python package
+or the original raw-binding oracle used by the validation gates.
+
+The remaining requirements are explicitly listed in
+[presets/external_runtime.json](presets/external_runtime.json). In particular,
+the released Spatial A16 example is not the fixed LIBERO-10 A8 timing fixture.
+A portable model/input bundle, contract relocation and full-model GPU validation
+are still required before this becomes a standalone A8 inference command.
+
+Component validation: [40-input GPU replay](../../experiments/gr00t_libero/a8_runtime_validation.json).
+This reused the existing node runtime; it is not a fresh-host installation test.

@@ -1,5 +1,13 @@
 # Release notes
 
+## A8 bootstrap and attention build support — 2026-10-30
+
+- Added 80 path-relocatable bootstrap/helper sources with original/exported SHA-256 manifests.
+- Added isolated bootstrap staging, pinned external package requirements and a version checker.
+- Added a portable builder for the recorded Sage FP32 current-stream extension, checking all source/header hashes and preserving upstream license terms.
+- Rebuilt the extension and verified byte-exact output on 40 saved Action/Vision attention inputs against the existing implementation.
+- This is component validation; full-model relocation, public LIBERO-10 inputs/contracts and end-to-end timing remain pending.
+
 ## Owner-approved license — 2026-10-29
 
 - Applied Apache-2.0 to original SACQ code and documentation.

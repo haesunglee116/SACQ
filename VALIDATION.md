@@ -1,5 +1,16 @@
 # Validation scope
 
+## A8 runtime preparation — 2026-10-30
+
+- Full CPU suite: **214 tests passed**. Bootstrap staging/hash/path guards and unchanged kernel installation-order tests pass.
+- Source distribution built and unpacked successfully; release audit and pipeline source staging pass.
+- The portable Sage builder reproduced the original patched CUDA and binding hashes and compiled successfully with the recorded PyTorch/toolkit.
+- All 40 recorded attention input files (16 Action self-attention, 24 Vision attention) gave byte-exact output against the existing FP32 current-stream extension on RTX 4090.
+- No new inputs, fitting, rollout or latency measurement. Existing runtime reused; fresh-host installation and the full relocated model are not validated.
+- Machine-readable evidence: [a8_runtime_validation.json](experiments/gr00t_libero/a8_runtime_validation.json).
+
+The older entries below describe validation at their recorded dates.
+
 ## Final kernel source integration — 2026-10-29
 
 - Full CPU suite: **204 tests passed**, including six acceleration integration tests.

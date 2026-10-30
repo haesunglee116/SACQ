@@ -100,6 +100,17 @@ def audit(root):
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
             module.audit(acceleration)
+            manifest = json.loads((acceleration / 'BOOTSTRAP_MANIFEST.json').read_text())
+            declared = {r['file'] for r in manifest}
+            base = acceleration / 'bootstrap_sources'
+            actual = {str(p.relative_to(base)) for p in base.rglob('*')
+                      if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc'}
+            if len(declared) != len(manifest) or declared != actual:
+                raise ValueError('Bootstrap inventory mismatch')
+            for row in manifest:
+                path = module.contained(base, row['file'])
+                if module.digest(path.read_bytes()) != row['export_sha256']:
+                    raise ValueError('Bootstrap hash mismatch: ' + row['file'])
         except (ValueError, OSError, KeyError) as exc:
             errors.append(f'Acceleration bundle audit: {exc}')
     return dict(files_checked=count, errors=errors,

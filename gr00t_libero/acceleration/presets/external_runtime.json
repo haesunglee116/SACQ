@@ -1,0 +1,24 @@
+{
+  "schema": "sacq_a8_external_runtime_v1",
+  "versions": {
+    "torch": "2.11.0+cu129",
+    "vllm": "0.24.0+cu129",
+    "vllm-omni": "0.24.1",
+    "transformers": "5.19.0",
+    "triton": "3.6.0"
+  },
+  "vllm_omni": {
+    "source_tag": "v0.24.1",
+    "source_commit": "b9e9d236c3f78afd405119a5b686ebebeeb53984"
+  },
+  "cuda_arch": "8.9",
+  "gpu_family": "SM89",
+  "sageattention_commit": "d1a57a546c3d395b1ffcbeecc66d81db76f3b4b5",
+  "status": "PINNED_REQUIREMENTS_NOT_A_COMPLETE_INSTALLER",
+  "missing_public_reproduction_inputs": [
+    "LIBERO-10 quantized checkpoint and fixed observation/noise/reference-action bundle",
+    "Relocated hash-bound bootstrap contracts and selection tables",
+    "Base SageAttention package with current-stream changes and original raw-binding oracle",
+    "GR00T/vLLM-Omni integration and remaining compiled extension receipts"
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "source_commit": "d1a57a546c3d395b1ffcbeecc66d81db76f3b4b5",
+  "torch_version": "2.11.0+cu129",
+  "compiler_flags_from_pinned_setup": {
+    "CXX_FLAGS": [
+      "-g",
+      "-O3",
+      "-fopenmp",
+      "-lgomp",
+      "-std=c++17",
+      "-DENABLE_BF16"
+    ],
+    "NVCC_FLAGS": [
+      "-O3",
+      "-std=c++17",
+      "-U__CUDA_NO_HALF_OPERATORS__",
+      "-U__CUDA_NO_HALF_CONVERSIONS__",
+      "--use_fast_math",
+      "--threads=8",
+      "-Xptxas=-v",
+      "-diag-suppress=174"
+    ]
+  },
+  "repository": "https://github.com/thu-ml/SageAttention",
+  "cuda_arch": "8.9",
+  "module_name": "a8_recovery_sage_fp32_stream_r2",
+  "symbol": "qk_int8_sv_f8_accum_f32_fuse_v_scale_attn_inst_buf",
+  "original_source_sha256": "cbb3d4a8e84b0ac3d6814f227130088c35ad4b0919dca7118cc6b57b2ab04858",
+  "patched_source_sha256": "212d00adf5786411a22bf36764f1b2345f52ffcdcd6edd0dd44f16fc1a394633",
+  "binding_sha256": "d635299aa882a217e4fdd922bf9ad9ace53bebf2b452b75210bd1316acc0080b",
+  "source_manifest": [
+    {
+      "file": "csrc/cp_async.cuh",
+      "sha256": "26822f5737962b11048aad28225a3b5d5fb624116feb4a5bbb107188173e71c2"
+    },
+    {
+      "file": "csrc/dispatch_utils.h",
+      "sha256": "495530b01f786c43ec56f79a7bdbb11f42872ec9efa5d612b84d42afbd2ea28c"
+    },
+    {
+      "file": "csrc/fused/fused.cu",
+      "sha256": "7202345adcd3f8c368e9ca1b723ec2d3a9e8e1da805d72ee401f7b945712f551"
+    },
+    {
+      "file": "csrc/fused/fused.h",
+      "sha256": "4939aa5ed5225df9bfb9bf2a53c6a30ccf19b9e12b80c97d958d10e7dae2ba4e"
+    },
+    {
+      "file": "csrc/fused/pybind.cpp",
+      "sha256": "b08f3638b5bb41476c53945a3639a61218e9522d65bf4865c4aa765c06eca48a"
+    },
+    {
+      "file": "csrc/math.cuh",
+      "sha256": "84dd5b41df8d3c4e20e8cc3152c14719e1261f338f317ff4d1d6951e18544c60"
+    },
+    {
+      "file": "csrc/mma.cuh",
+      "sha256": "841a0b028e25b48fd83ad042d7bf817f84bfd5e5630d19d08510b0b797914231"
+    },
+    {
+      "file": "csrc/numeric_conversion.cuh",
+      "sha256": "bb7edb348764a13827bb025c326784a609a416ba7758a5f69d9ac2460a26aa3d"
+    },
+    {
+      "file": "csrc/permuted_smem.cuh",
+      "sha256": "339e07ae005e35d9d3850eeca70e75c22c8adb2ee0122450789ee2b15911a950"
+    },
+    {
+      "file": "csrc/qattn/attn_cuda_sm80.h",
+      "sha256": "38315c1db9a5f71cd82192f91a3e4c9a505c88c9d56bc3a6a9dc1cf162c00385"
+    },
+    {
+      "file": "csrc/qattn/attn_cuda_sm89.h",
+      "sha256": "7372fbf05d5a25fc8fd4403ed187ec857fdf2e8d662e295181e48c9dc6ed3f7d"
+    },
+    {
+      "file": "csrc/qattn/attn_cuda_sm90.h",
+      "sha256": "8083a0c9f13d1c671fe7334a7caed30e00502ecbc96abe0ed1a387d39af93f91"
+    },
+    {
+      "file": "csrc/qattn/attn_utils.cuh",
+      "sha256": "9317f7e56cfab0d293eebc9b5253b2d3897ed0478df7f40c90182c830362e4d8"
+    },
+    {
+      "file": "csrc/qattn/pybind_sm80.cpp",
+      "sha256": "4cec1d9d03e61b2fca0d1b5442838478e017a6b3670284222d3a08290868e297"
+    },
+    {
+      "file": "csrc/qattn/pybind_sm89.cpp",
+      "sha256": "6de181e603e5bd6ae3a5bc4e818ac527d898926a7f6cceb06b2b198ea6a62198"
+    },
+    {
+      "file": "csrc/qattn/pybind_sm90.cpp",
+      "sha256": "61771928e3e52c024d5c548e9d9ac7192a9dcff4a62c2e9efee468c74da7cac6"
+    },
+    {
+      "file": "csrc/qattn/qk_int_sv_f16_cuda_sm80.cu",
+      "sha256": "c4b64b76c32d517fe48788a25d578986d70f13a7b68f3ec550058f04b4d9214c"
+    },
+    {
+      "file": "csrc/qattn/qk_int_sv_f8_cuda_sm89.cuh",
+      "sha256": "9dfe17b60fb02047ed6ac03ca9af24565d7b6e773fd62526c6a89bf539e180f0"
+    },
+    {
+      "file": "csrc/qattn/qk_int_sv_f8_cuda_sm90.cu",
+      "sha256": "ad2b0ff7c5f171ad524f2e529dc7eb7d9f167f29094563d99a3d9da888d22572"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f16_attn_inst_buf.cu",
+      "sha256": "08e3931844ae4a20311d2eb387845214ee694461ecfbcc5721b74b58feae718f"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f16_fuse_v_scale_attn_inst_buf.cu",
+      "sha256": "741986fc6c233dbb482c79636c895ea994631eb3e6ad7052701a9a54e7cf6601"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f32_attn.cu",
+      "sha256": "b2e42ada0001c22e9699ac9beebdf771b8d40e8df2106aaba8b352bea32148d2"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f32_attn_inst_buf.cu",
+      "sha256": "78442fb3dc94b0976569adb87a1316b30e1e7324531a46c2748e17d1d4f33050"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f32_fuse_v_scale_attn.cu",
+      "sha256": "0a6a0592543953be55e759364e85d4c1e9f538cd2b8da597f3d20603b5ba9ee9"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f32_fuse_v_scale_attn_inst_buf.cu",
+      "sha256": "212d00adf5786411a22bf36764f1b2345f52ffcdcd6edd0dd44f16fc1a394633"
+    },
+    {
+      "file": "csrc/qattn/sm89_qk_int8_sv_f8_accum_f32_fuse_v_scale_fuse_v_mean_attn.cu",
+      "sha256": "4aea1e82208df256babdde7ab2cb750cc2ab3c2be8c6ac440cb585f57cc25e00"
+    },
+    {
+      "file": "csrc/reduction_utils.cuh",
+      "sha256": "e07a550e43b566c5e224262ce3cc5c9d9f6e2a1238a5b4044129d4144585be75"
+    },
+    {
+      "file": "csrc/utils.cuh",
+      "sha256": "7537c4be65077441743b5fe060b542c4fa7cd11e743925da902d4b9bacea5a25"
+    },
+    {
+      "file": "csrc/wgmma.cuh",
+      "sha256": "9520e9561072b48c10a80156ebc953050e63476ca59f766f34bef08c74859ddc"
+    }
+  ],
+  "original_build_receipt_sha256": "bb6c4f3c7cae3d796338b0cbcee3303328a2ffc2d1f213cec7dce25670e709cb",
+  "license_sha256": "178f46f58127373d449565589a32c2b5b60c082934618c17b7ce6890c61ef394"
+}

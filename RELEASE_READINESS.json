@@ -701,7 +701,7 @@
     "release_url": "https://github.com/haesunglee116/SACQ/releases/tag/calibration-v1"
   },
   "acceleration": {
-    "status": "source overlay and CPU integration tests; GPU revalidation pending",
+    "status": "Kernel overlay plus bootstrap source staging and portable Sage FP32 builder; full-model relocation pending",
     "guide": "gr00t_libero/acceleration/README.md",
     "source_files": 96,
     "frozen_selections": 8,
@@ -709,9 +709,14 @@
     "gpu_rerun": false,
     "default_pipeline_changed": false,
     "experiment_map": "experiments/gr00t_libero/README.md",
-    "CPU_tests": 204,
-    "new_integration_tests": 6,
-    "package_build": "sdist and wheel built; unpacked source release checks passed"
+    "CPU_tests": 214,
+    "new_integration_tests": 9,
+    "package_build": "sdist and wheel built; unpacked source release checks passed",
+    "bootstrap_source_files": 80,
+    "bootstrap_sources_packaged": true,
+    "sage_extension_compile_pass": true,
+    "sage_extension_actual_input_byte_checks": 40,
+    "validation": "experiments/gr00t_libero/a8_runtime_validation.json"
   },
   "owner_code_license_scope": "original SACQ code and documentation; third-party terms retained; dataset/model licensing separate",
   "owner_license_approval": "User: \uadf8\ub798 \uadf8\ub807\uac8c \ucd94\ucc9c\ub300\ub85c \ud558\uc790.",

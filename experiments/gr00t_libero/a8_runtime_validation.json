@@ -1,0 +1,457 @@
+{
+  "status": "PASS",
+  "scope": "SOFTWARE_VALIDATION_NOT_BENCHMARK",
+  "attention_inputs": 40,
+  "all_output_bytes_equal": true,
+  "checks": [
+    {
+      "input_sha256": "b1ceeef0be6078a458db1fde9a1bcbfa862e9d25d8130f4fe179a382bd24097e",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "b5c1c2d9b0c2eaadfa6a51f2190aaba3296bbf230858628016412dd4f84c6bff",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "b5a6c4bac2b18b78a46a236ff7ade1c6add05a4c3e40cf62694e554bbb2ae826",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "bd5ac4a24ced2a6837cd656ba4411e6d285e3ad071048864b8307364f816999e",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "c58968594f5cd97d3954655410ecc2d79efb4e92cb512b96a9aea161e1ec1e3b",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "6c382bf83843c16db88f5cc8f3d7110050eba342f82e6d1c549581757de23521",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "0c3ce2a0b0864bcdb07e4644bc38b96687bdd0fd587e978bde0350fe7306fa15",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "d49e5312d43c88ffead4c959091a2fd48c0c57b3a0951af8eb8772ad656c8796",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "53c26e3797f2a5b7d8a490899563de89f44825f957a483aeca5b1a4c9e360873",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "61f8483e62821f3f64f54f6fdbd243d322524d81358598b036f786efaebd4a37",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "3e4f4acd1b6b153b104a53937dd6e59b297e7043505f89639d5f76a2b6d98c35",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "37b165bc3dd72b6f2d2b8cc6f2cccd04ad1cc309c8be15617984e342fc184b7f",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "ad500f67f6b19d7c04943c2aab7c9a3616815fbeaeacb13e577430904d3357cb",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "325b2c938f47daa47c2bbdd6e3538ff3164998e78aa06cf0b34ed0e0006bd74e",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "62b421aa5272414c7388905e5e273d2261509d969c883b4e4a4f307c3e9cfb5c",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "c613e2c58bae6ae0f62df102d0f00a237e03dcd0ca708b5675d9f38a360ad443",
+      "shape": [
+        1,
+        32,
+        41,
+        48
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "d4a57fa0f4dd6451f4d760ca3db2b21bca39d1d5f1f88610f99dda66f551ecb8",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "5dbb03fb53502bc979b637c9e3004186af894ce545f4868b6e8f7bfb8bb4f660",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "79c0153e639f1f0949d8f41b507b45d2558747b7bc899fd2348b6dc813201b79",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "54c6e81a753b676d20753d0ad9a3450b546efb2c2e05d903a69f51aa51922617",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "f25cefe845d8133b0f6f992db4c45400330758a8f78cad22e54042f1d13a1497",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "e4a7338bb21f638d060baacf3ac8514ae909a14142d62a14a3695b8d4f00fff7",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "234248eed48f117076d4d169e612f7036e7117cb232414df3a6c9319fd394b2a",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "8f24698bb34b6079b2e071d03ae20ae4377daddb117740fa8a86eb7a87e62747",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "4e3a6db1281e4e8648d9d7ff01c1f6fd880f7f5e0184cd10523995ba070a9ec3",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "dae9e7bd1f6cb8a5b229d11d6d679b3504b42d3f28afd9f924fe7ed75f24aafc",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "dee5148fc38d4fe33edb835d356b42098284c6bf55f6e33d4e9dfaf873cdf133",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "65825624a1248b697cff54f7f6ddab9efaaea2bc8511f968d656b0654e06548a",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "cc292e990875c2a3d1201c9ce330cfb537c1763481ed4a809d295bd87de90975",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "129869232ff7842511640dc6f20201e08d9c3025dafd61f1a17fcb0f3a59a05d",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "5641eda69d88b08be807138a9205c75dd6ad6544480eb854eb19e2669e9c6495",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "4f1897157a12b1aa7440d88abbf586da91ad6f86235e120632fe9a97abb42bcd",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "40d63148cd41eb81ed3049aea11425258f81e30a222cf389456cd269cc285fbd",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "46b8f9b016ae86e06198d1e2fefb993971bff39e1a5661f9b82bc217b7036a78",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "5815b39a356477e64edfc1a2932cfc8df1420a78c82ffa1ad89c1c24f83f3187",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "b7d311c9b2e9370e3f0664164b0d44c941b4ed6966cff485ee80765dad2ce316",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "18f200b07f90ed94b400f313cd5190ef188f1eddb32a38c25a355604f08b4047",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "2cad4e4b0ba29796d3e62cfa2ea2eaefdd260bada16c64f782a16e95bdfb77e6",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "6a015f06f4339e7e72768f247055548358f2ab8150136c650b1e9c2c1bc1d422",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    },
+    {
+      "input_sha256": "c1e16ea6fad5f9316ed7e0223acaf78ced126be21066a066599154a9e3819944",
+      "shape": [
+        1,
+        16,
+        256,
+        64
+      ],
+      "bytes_equal": true,
+      "max_abs": 0.0
+    }
+  ],
+  "device": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.11.0+cu129",
+  "new_build_binary_sha256": "e512c3edfed93f41418155b1b2a730422d04777e80fa5c3439f16c91a6c62199",
+  "model_validated": false,
+  "latency_measured": false,
+  "rollout": false,
+  "source_contract_sha256": "01071a443b6f3485a62a246b5db439edee38407d958b96de8a90790ce361652e",
+  "validation_kind": "component replay against original current-stream extension; not whole-model validation",
+  "fresh_host_install": false
+}
