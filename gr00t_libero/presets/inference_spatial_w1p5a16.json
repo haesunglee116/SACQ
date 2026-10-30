@@ -1,0 +1,1035 @@
+{
+  "schema": "sacq_inference_download_v1",
+  "description": "Representative Spatial W1.5A16 software example, not a new paper result",
+  "inference": {
+    "schema": "sacq_single_request_v1",
+    "condition": "sacq",
+    "suite": "libero_spatial",
+    "seed": 7000,
+    "denoising_steps": 4,
+    "model": "model",
+    "processor": "processor",
+    "request": "request.msgpack",
+    "files": {
+      "model/model-00002-of-00002.safetensors": "ac70555aee124ef20d23473c85dbcfda42dc8d9f859384822e8aef19fd2d45dd",
+      "model/model.safetensors.index.json": "407804ea5a62f4f8823f48811ae0edbb82fac101e9cf4d7273e6e2f692bb4d59",
+      "model/processor_config.json": "545bb44c7d8caaf5ac82df55b90831271a1469a4e48adcc9a5f469f064f4e121",
+      "model/statistics.json": "853bd068c7a5be4c7657fae634b654de38ea3e64c5e57409cbd3f4b57b6461c2",
+      "model/config.json": "ce763f74ad1cda2ca9e67491229cbc5810d83cae675cb4dad839a69a9731fd97",
+      "model/embodiment_id.json": "abc4a749389837416a102d9455a8c089336f2e417afb18565703b9944974bc35",
+      "model/model-00001-of-00002.safetensors": "b7c7314a989ae3b577e3265e3f25c42a018ab4a476ab99e4d0fa61266d38a878",
+      "processor/model.safetensors": "fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede",
+      "processor/tokenizer_config.json": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+      "processor/video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "processor/config.json": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
+      "processor/merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "processor/generation_config.json": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
+      "processor/preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "processor/chat_template.json": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
+      "processor/tokenizer.json": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+      "processor/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "request.msgpack": "62e9dc0bba100f8aed2e8c1d5aadffa4d54f2c2b75674eddf9a0fd67ff65983c",
+      "quantized/vlm.pt": "af423ebe3d6194ad07441be1ddd4e6e00fc00cac2f7514f24b4cf6dd151b978e",
+      "quantized/dit.pt": "1773beaf7c2d391d1cb570c0aa60d7b1636c0af8371d34df54357184dcf16cc0",
+      "quantized/vlm_spec.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "quantized/dit_spec.txt": "b807cb9b51090dbafaff7f6b0538dd467e00ba3575514a0e0b0e1a88eb5417ec",
+      "quantized/0.pt": "1609f3540c732b13722066a79f8ddcfdf390cf2fe7673a3623868c01e6a1c6f1",
+      "quantized/1.pt": "b50251bdd0a38a48f5a6afa261a0a582090b336d2a3993636cdf47a96a427a0a",
+      "quantized/2.pt": "97a70677fffcc0daa769100d67670b6860284973df66bbaa8cf958b2063797c6",
+      "quantized/3.pt": "4e8b7e11bdd3a99614f9449bcb6b31563917b0d14e7172cd8de697b4ffaa53f2",
+      "quantized/4.pt": "919a66b4fcf12c2d22ba0ad58b6292a1ea11b5a039d1bbb3846823d20b4b6fa5",
+      "quantized/5.pt": "d4c9418764f542489ef94ce723752a9302c02303e3e4daac98d327c894dc4f94",
+      "quantized/6.pt": "5e4eeb25e56c990199c2e6d5c8741023bc62bd4798141d27f9ab7e350f0308df",
+      "quantized/7.pt": "7033d31440d11f107cb4f848797c648dde386275c205e523aac47e51612f3ae3",
+      "quantized/8.pt": "9b4fb9d2ca2c13b4df6de0991514138759d1373f1604a3db90b435cd6a9bf712",
+      "quantized/9.pt": "1ddc654122727062c3b89e8465270a29c9cb571e1107db0ce7b9b468bf405036",
+      "quantized/10.pt": "81881f54af66aabae6ff5c5a4db5a3717119d5359ff2e816cfb12a2d180990b6",
+      "quantized/11.pt": "7525c2c41e7afd1bfaa193a555c22665978ad3e57e4974491068fdf55c50ce9b",
+      "quantized/12.pt": "65bb678235147905edf28c0e9e7c0304c47d80dfa04433894d50ec8486a7edf8",
+      "quantized/13.pt": "aa4b45d447a0b68a41d4c873614da5328a5bb9613a2eb481add4b1bd2133de2e",
+      "quantized/14.pt": "794c07618c31ee127cc72450bdd8f03ebc72687d7aa79187569a4f31e0e0f2b7",
+      "quantized/15.pt": "a080744cce483ea5f520c4e70314eafd1b76a41379b9da68e1071c4d0d382a5e",
+      "quantized/16.pt": "c58ec891fafa01560fef6704bc7fdba42a8c7c6bad18f5728bf205b8cb109447",
+      "quantized/17.pt": "74a2cd72ac5998292cda5e15692109a3aadde2dfbf828c81075f866d0f2e09b7",
+      "quantized/18.pt": "3c59db259c1976bee36edf5f9c2e8f92531ea45988c5324d6765071fa2180d7d",
+      "quantized/19.pt": "8263ad7301157fc8fc769e4341ba4fbd402a8085e9b28f5d30e29f150f3ab6b7",
+      "quantized/20.pt": "d5d084d2f448fbff7354a35d869c8f6e61bc4a075e09f8480fc61fd78997c236",
+      "quantized/21.pt": "74866281d18275792f1f92d53dfb1b7977e3e5aa11cd5be0cc2c247627d5628f",
+      "quantized/22.pt": "c25e56d05a647f7e6f27ddfd06a9979fafe27c6aef3dd82c3918c4559ad8f37a",
+      "quantized/23.pt": "0120c544b4508231c67d3750655896b251dcb61ca63a9ba48512d8fae0b93869",
+      "quantized/24.pt": "6f97e9174d8e10e609e67cbaff9a77d43cbf405bbbcc11d166d6ff8167121c22",
+      "quantized/25.pt": "7160daa39a4ee553ee9407ba3e20741b8dda55584a6aec187dec98367d389523",
+      "quantized/26.pt": "ea36e42028b2b52a01e712febdb77c0cacbf524c3f8703754fca42a17b7d57f1",
+      "quantized/27.pt": "5471ea916f4fc2de54e19df4747fbb3e5ac89423561d44b32319965eaf102188",
+      "quantized/28.pt": "88a6581d5f4b0a21f9aba0bd94732188e1e036192a5821ef389ff99e9b9921fe",
+      "quantized/29.pt": "6ccb33a6cb24123f847b8f4742426736a07caa050a5324e2c6ff619bdeb8e65f",
+      "quantized/30.pt": "7d4788d53a6c978e49a2d7da5e86f781fe71c89a66bfb91c9cd1dc38826e213d",
+      "quantized/31.pt": "4f7d770e5a2675085645d3784f976a47dd175fc0441220b8d1286b5f778f67e3",
+      "quantized/32.pt": "64f964f83fba9f7795e9f0ace2b9c115f24b65f12f099ec840bebefd12dcbb13",
+      "quantized/33.pt": "80116313802ce1a81640569c9a57ac06f5db7c8d5970f5aaf25c1e0b58be4859",
+      "quantized/34.pt": "bcf95c5307acb9255ba901efc2e50b155916c600402c3cdf0ba0d46fad530b67",
+      "quantized/35.pt": "f40c13b82981c2a093d5504a9e236ac3e2d94edd85c3770735465e29442febd2",
+      "quantized/36.pt": "f48a55e96b7f9bd0d7b2b1aaf89b79af5cceef88d5e130adc3b6b5bd8690e53d",
+      "quantized/37.pt": "ff21b1ee75bbd858b4200a054e1f648dd45d5b7c5abcb82837c55172ca271442",
+      "quantized/38.pt": "b12f1355eba7178d91a16011a5a632eaa23c5146d859ded782a94e060aed22ba",
+      "quantized/39.pt": "5d717cb88f3b2a2d1871499eb77ff694c243ba9bb4d0b6ff95c68a15a2f1246d",
+      "quantized/40.pt": "c6fa3ea23e00033133ff108bea71a858bcca42db8974de47193919f9e0620163",
+      "quantized/41.pt": "a3e97e3030d0cffea75daa6d8d8aa81b0479c0c4e4f286bcaaff587a39c01403",
+      "quantized/42.pt": "125237ac48025da9377ee431f5e3955692e57d92f674e945cecca2d1a6572b6e",
+      "quantized/43.pt": "8737bbaa5126fae02ad8553afe94db571cc0c1a60cdf3fb0a0d761b12cb5bea8",
+      "quantized/44.pt": "7a97bf1538a9dd4ecbc66af4917b2bb7a919dee8c16e837b85b421cc6af75c00",
+      "quantized/45.pt": "99d4f46c31abe53803343df842eea4f06556c09145cca9ce59b349304fccf401",
+      "quantized/46.pt": "5ff9dc38fb9ba3e4c11a092008a4755fa680bb387e37e38a79d7ce6eb6dc67fa",
+      "quantized/47.pt": "65e4196c76dc595269933755d24a270c3c8fa62bcf2ca5e831563b50ff0d623e",
+      "quantized/48.pt": "0e35f92f998365a1b4f0bb4c8ffe93154aba7ba629ca7600190ecaaa9f3f155c",
+      "quantized/49.pt": "38c88d1ce6e71c168b6d85c61a7b57fa3347f6ce9f9a5834e9cca03eea52dbcb",
+      "quantized/50.pt": "9020a9f1518dec2879fa1c0348fe99acf26a2e297135c1b69f7d87958e782d8e",
+      "quantized/51.pt": "10c3a887c3e3005c72de57a83a6b8c20e539edc2bf0954adbd70cbac5fdb1115",
+      "quantized/52.pt": "b61845abd7bdea89618660162118c0c3c40b29ff6999b4b36f666dd9431677d5",
+      "quantized/53.pt": "8b5117bd7a29c89eb57f5e5459b5d44669cdd7b68e6e892ed90285ca59ede71a",
+      "quantized/54.pt": "5852e591cb4c0c1cc1d27e3599844e725ba83f0c4e3a6add431f4de9f5865164",
+      "quantized/55.pt": "3b7f1c1b03251a8cc0413445bca4b9d2c758c24448de3d0cfa3ce96b0620bb0b",
+      "quantized/56.pt": "8d1ac1a732d1a4fd6827cd6fec441c8499bd3152d7fb4d4c32388dca5458ee87",
+      "quantized/57.pt": "fba19ac2c339906905ccdceb6381b5ac7ce9b19a9630bae295bbabdebcb68da7",
+      "quantized/58.pt": "5a4e27d15f3385a3c2456e8130dcfdc7c3382f91dc08087b6d947b06eba9e06e",
+      "quantized/59.pt": "0c12ccc8a23eecd40851b8b2bbdba420a38d72a01d0d747bbe621c6b3dbdde09",
+      "quantized/60.pt": "f131726fd90ceeef1d12b1851bd17aecb4bd00bd240e18678e6528f128f58863",
+      "quantized/61.pt": "f4f469402199f0ae846b54f139dbab08c13a7f46adf1708a43a107eb162f15d5",
+      "quantized/62.pt": "b34daa9f903ce4cc06b0a1fe2918846e0eca353e67fee2577148da35cbf5cd12",
+      "quantized/63.pt": "d828117329952d328cd44f449de13b1e7b5e58ace7fabbb9286e8d97b25f56c7",
+      "quantized/64.pt": "942066e2159f53cad5b3f0fea98a48250b5a9513a71a4bdcdae83227430801ec",
+      "quantized/65.pt": "6ec462c8e80ec9c4e83c3b6cbc798894a4f2262e15cdb1934a56bc2e470491fc",
+      "quantized/66.pt": "6b626e13d6c84659c27812f4180a85d92273a44ce95d6b356d65a3df5b385c11",
+      "quantized/67.pt": "b33141afc33aac8c0960613562f0ee07aad87703cec0a79bd2e1ce2bcb5a0d2a",
+      "quantized/68.pt": "05d226ae1c5a51698f63d5365dbadcefe5b096749ab11b197b22a713824fc242",
+      "quantized/69.pt": "db4322223e62ecd8753a5b193076f6891b95fd4d53bc82ba3f6b5e37ae09d7f3",
+      "quantized/70.pt": "c7a2fc4c6b5fa9e4d7676fa70594244c782276caec28136287dbaa338588ea7f",
+      "quantized/71.pt": "118d16abfd840fab693157a5456786d6bb974e992575ed24082bb050b2c2b447",
+      "quantized/72.pt": "1476b55054d85b2ecd0e4473936d5c747541f3a56c90c4982c0061657489dec4",
+      "quantized/73.pt": "f07dce741e94c4a095fc675893caecf54a5e0f1f2a58854dd2d9ace166891f7e",
+      "quantized/74.pt": "c35178f5cd3ac2464d5546461f42bcea8d7b3a948dcb2be655c8ff7d504ae6be",
+      "quantized/75.pt": "5b59aed1780f2faf923de849d9eafd0789d4ccffeb52459cd455340e8d02094d",
+      "quantized/76.pt": "3dffac8b12e32c6098918d184d9cda4037649b96a7dd37f191976156572845cc",
+      "quantized/77.pt": "b74f3a2c3bd154394b4b1d267f97bf2d46a79d57205b925c65cdd2b8979ae009",
+      "quantized/78.pt": "ad6db184c7665d9e4bab99d52156a3632ef9c42c0f08cdf5d50b5c5bc9722bb6",
+      "quantized/79.pt": "f302ac89382c808f6c9333977b5a75e9f0e24b021dc1f55c30e1f605fe11a3e9",
+      "quantized/80.pt": "626018e2254c0be935bbb264d4643e8667d3d416ef28484f036cd0713c6bf0fb",
+      "quantized/81.pt": "f2c22bdd3a97d1ef7e2d2fade0ca0529f9775a3b1a44c18469f67194e0aabe78",
+      "quantized/82.pt": "57bef08809fe0646fdb0654c58e4f56579451c808dd8fabfcbe9ca3a222fae74",
+      "quantized/83.pt": "02ba4fc1b7db8404fd5fa5a918146d9bb1c0c1cc433ebd5e522ab7456330888c",
+      "quantized/84.pt": "c3d91b5e754a6625d9f201ce0718dd9fd2b4580c39bcb9b1e6d51f279c738e2a",
+      "quantized/85.pt": "c570689e18186ab209536864c85b2494887de730b6d716260db9e86d1492cfd4",
+      "quantized/86.pt": "fefd3e4624b548fc1ff42493a5d738a76ffcb92ba3edd643371245cca6cc1b87",
+      "quantized/87.pt": "045606d6fae62232304d421f08e5333872667ccf93677cfdf2fe8969252caa95",
+      "quantized/88.pt": "1212e5ce0efd84eef108ee630819d5ef5bb9137616395bc2c56def882b0934b3",
+      "quantized/89.pt": "a26c2bbf7058cb215233609743d77c9657cbf3e9f35085041d912ee206bab5d7",
+      "quantized/90.pt": "dff1d54033e5cdfa641ef5bf2970923922bf9c1f807be365ac16a6c4c04c405a",
+      "quantized/91.pt": "a1cd0fd848b3dea9918b6068f5e93ced73ded9b6702e02da6fc4f24cc56080a2",
+      "quantized/92.pt": "c70cd83c9e8060e2cd8fb9612e56b3e659171156e5de0ef27a41cd1ec48f09fc",
+      "quantized/93.pt": "14bea754744fda9258a16c8b6c9a2f8d0ea9cc9aae22f7bd573b9ded0e937f12",
+      "quantized/94.pt": "7ec1f3a12de8a64dccd1d356141eb1664fe7c349ebecba5cccc342500296a9c2",
+      "quantized/95.pt": "aa8cdef459a52915cca8e970ffadb6cc7ce27ef89bd084932a17573738d14a1f",
+      "quantized/96.pt": "d3f17d90517c6993634a9435a1cfc2b50fc33d4f2691699369df10dc6ced0f27",
+      "quantized/97.pt": "03080f434d42ae7bf90aa4783471c4da3be97f7d60bb03df65f9922c38f863f7",
+      "quantized/98.pt": "521f1d96154776812aff73af4bbbbf4af5e9aca0195d75412268b5ce02672d02",
+      "quantized/99.pt": "9ba4004f276c4f6870d0b3500702a52c9728b9b8fff8d66ce58d12df9c45197f",
+      "quantized/100.pt": "37ed29a29e640918df768b5bff95dbe9864e0254768625fa2fb4650575fbebe4",
+      "quantized/101.pt": "007525e091a81ee5ae127d172539d4e93fec13a7d5deadcf2398c994f6d0d52a",
+      "quantized/102.pt": "da43de1af32cb4d5942f67bc2378004d26ff1c6abab139aa1db69b05eae543f9",
+      "quantized/103.pt": "ba53798d3853f2171704484aa416b83a29a0332e19e8dcb62cf51cd3043e42d3",
+      "quantized/104.pt": "8b7f4fb852ba4a1880020ed8b9cbfa2f6de6b1021afb9d684c24f59e5698c01b"
+    },
+    "workshop_model": {
+      "expected_sacq_count": 337,
+      "expected_gptq_count": 105,
+      "gptq": [
+        {
+          "layer": "backbone.model.model.visual.blocks.0.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/0.pt",
+          "sha256": "1609f3540c732b13722066a79f8ddcfdf390cf2fe7673a3623868c01e6a1c6f1"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.10.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/1.pt",
+          "sha256": "b50251bdd0a38a48f5a6afa261a0a582090b336d2a3993636cdf47a96a427a0a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.12.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/2.pt",
+          "sha256": "97a70677fffcc0daa769100d67670b6860284973df66bbaa8cf958b2063797c6"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.14.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/3.pt",
+          "sha256": "4e8b7e11bdd3a99614f9449bcb6b31563917b0d14e7172cd8de697b4ffaa53f2"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.16.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/4.pt",
+          "sha256": "919a66b4fcf12c2d22ba0ad58b6292a1ea11b5a039d1bbb3846823d20b4b6fa5"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.18.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/5.pt",
+          "sha256": "d4c9418764f542489ef94ce723752a9302c02303e3e4daac98d327c894dc4f94"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.2.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/6.pt",
+          "sha256": "5e4eeb25e56c990199c2e6d5c8741023bc62bd4798141d27f9ab7e350f0308df"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.21.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/7.pt",
+          "sha256": "7033d31440d11f107cb4f848797c648dde386275c205e523aac47e51612f3ae3"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.23.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/8.pt",
+          "sha256": "9b4fb9d2ca2c13b4df6de0991514138759d1373f1604a3db90b435cd6a9bf712"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.4.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/9.pt",
+          "sha256": "1ddc654122727062c3b89e8465270a29c9cb571e1107db0ce7b9b468bf405036"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.6.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/10.pt",
+          "sha256": "81881f54af66aabae6ff5c5a4db5a3717119d5359ff2e816cfb12a2d180990b6"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.8.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/11.pt",
+          "sha256": "7525c2c41e7afd1bfaa193a555c22665978ad3e57e4974491068fdf55c50ce9b"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.0.linear_fc1",
+          "bits": 4,
+          "path": "quantized/12.pt",
+          "sha256": "65bb678235147905edf28c0e9e7c0304c47d80dfa04433894d50ec8486a7edf8"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.1.linear_fc1",
+          "bits": 4,
+          "path": "quantized/13.pt",
+          "sha256": "aa4b45d447a0b68a41d4c873614da5328a5bb9613a2eb481add4b1bd2133de2e"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.2.linear_fc1",
+          "bits": 4,
+          "path": "quantized/14.pt",
+          "sha256": "794c07618c31ee127cc72450bdd8f03ebc72687d7aa79187569a4f31e0e0f2b7"
+        },
+        {
+          "layer": "backbone.model.model.visual.merger.linear_fc1",
+          "bits": 4,
+          "path": "quantized/15.pt",
+          "sha256": "a080744cce483ea5f520c4e70314eafd1b76a41379b9da68e1071c4d0d382a5e"
+        },
+        {
+          "layer": "action_head.model.proj_out_2",
+          "bits": 3,
+          "path": "quantized/16.pt",
+          "sha256": "c58ec891fafa01560fef6704bc7fdba42a8c7c6bad18f5728bf205b8cb109447"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.1.attn.proj",
+          "bits": 4,
+          "path": "quantized/17.pt",
+          "sha256": "74a2cd72ac5998292cda5e15692109a3aadde2dfbf828c81075f866d0f2e09b7"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.1.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/18.pt",
+          "sha256": "3c59db259c1976bee36edf5f9c2e8f92531ea45988c5324d6765071fa2180d7d"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.10.attn.qkv",
+          "bits": 4,
+          "path": "quantized/19.pt",
+          "sha256": "8263ad7301157fc8fc769e4341ba4fbd402a8085e9b28f5d30e29f150f3ab6b7"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.11.attn.proj",
+          "bits": 4,
+          "path": "quantized/20.pt",
+          "sha256": "d5d084d2f448fbff7354a35d869c8f6e61bc4a075e09f8480fc61fd78997c236"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.11.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/21.pt",
+          "sha256": "74866281d18275792f1f92d53dfb1b7977e3e5aa11cd5be0cc2c247627d5628f"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.12.attn.qkv",
+          "bits": 4,
+          "path": "quantized/22.pt",
+          "sha256": "c25e56d05a647f7e6f27ddfd06a9979fafe27c6aef3dd82c3918c4559ad8f37a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.13.attn.proj",
+          "bits": 4,
+          "path": "quantized/23.pt",
+          "sha256": "0120c544b4508231c67d3750655896b251dcb61ca63a9ba48512d8fae0b93869"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.13.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/24.pt",
+          "sha256": "6f97e9174d8e10e609e67cbaff9a77d43cbf405bbbcc11d166d6ff8167121c22"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.14.attn.qkv",
+          "bits": 4,
+          "path": "quantized/25.pt",
+          "sha256": "7160daa39a4ee553ee9407ba3e20741b8dda55584a6aec187dec98367d389523"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.15.attn.proj",
+          "bits": 4,
+          "path": "quantized/26.pt",
+          "sha256": "ea36e42028b2b52a01e712febdb77c0cacbf524c3f8703754fca42a17b7d57f1"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.15.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/27.pt",
+          "sha256": "5471ea916f4fc2de54e19df4747fbb3e5ac89423561d44b32319965eaf102188"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.16.attn.qkv",
+          "bits": 4,
+          "path": "quantized/28.pt",
+          "sha256": "88a6581d5f4b0a21f9aba0bd94732188e1e036192a5821ef389ff99e9b9921fe"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.17.attn.proj",
+          "bits": 4,
+          "path": "quantized/29.pt",
+          "sha256": "6ccb33a6cb24123f847b8f4742426736a07caa050a5324e2c6ff619bdeb8e65f"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.17.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/30.pt",
+          "sha256": "7d4788d53a6c978e49a2d7da5e86f781fe71c89a66bfb91c9cd1dc38826e213d"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.18.attn.qkv",
+          "bits": 4,
+          "path": "quantized/31.pt",
+          "sha256": "4f7d770e5a2675085645d3784f976a47dd175fc0441220b8d1286b5f778f67e3"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.19.attn.proj",
+          "bits": 4,
+          "path": "quantized/32.pt",
+          "sha256": "64f964f83fba9f7795e9f0ace2b9c115f24b65f12f099ec840bebefd12dcbb13"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.19.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/33.pt",
+          "sha256": "80116313802ce1a81640569c9a57ac06f5db7c8d5970f5aaf25c1e0b58be4859"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.2.attn.qkv",
+          "bits": 4,
+          "path": "quantized/34.pt",
+          "sha256": "bcf95c5307acb9255ba901efc2e50b155916c600402c3cdf0ba0d46fad530b67"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.20.attn.proj",
+          "bits": 4,
+          "path": "quantized/35.pt",
+          "sha256": "f40c13b82981c2a093d5504a9e236ac3e2d94edd85c3770735465e29442febd2"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.20.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/36.pt",
+          "sha256": "f48a55e96b7f9bd0d7b2b1aaf89b79af5cceef88d5e130adc3b6b5bd8690e53d"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.21.attn.qkv",
+          "bits": 4,
+          "path": "quantized/37.pt",
+          "sha256": "ff21b1ee75bbd858b4200a054e1f648dd45d5b7c5abcb82837c55172ca271442"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.22.attn.proj",
+          "bits": 4,
+          "path": "quantized/38.pt",
+          "sha256": "b12f1355eba7178d91a16011a5a632eaa23c5146d859ded782a94e060aed22ba"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.22.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/39.pt",
+          "sha256": "5d717cb88f3b2a2d1871499eb77ff694c243ba9bb4d0b6ff95c68a15a2f1246d"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.23.attn.qkv",
+          "bits": 4,
+          "path": "quantized/40.pt",
+          "sha256": "c6fa3ea23e00033133ff108bea71a858bcca42db8974de47193919f9e0620163"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.3.attn.proj",
+          "bits": 4,
+          "path": "quantized/41.pt",
+          "sha256": "a3e97e3030d0cffea75daa6d8d8aa81b0479c0c4e4f286bcaaff587a39c01403"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.3.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/42.pt",
+          "sha256": "125237ac48025da9377ee431f5e3955692e57d92f674e945cecca2d1a6572b6e"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.4.attn.qkv",
+          "bits": 4,
+          "path": "quantized/43.pt",
+          "sha256": "8737bbaa5126fae02ad8553afe94db571cc0c1a60cdf3fb0a0d761b12cb5bea8"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.5.attn.proj",
+          "bits": 4,
+          "path": "quantized/44.pt",
+          "sha256": "7a97bf1538a9dd4ecbc66af4917b2bb7a919dee8c16e837b85b421cc6af75c00"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.5.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/45.pt",
+          "sha256": "99d4f46c31abe53803343df842eea4f06556c09145cca9ce59b349304fccf401"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.6.attn.qkv",
+          "bits": 4,
+          "path": "quantized/46.pt",
+          "sha256": "5ff9dc38fb9ba3e4c11a092008a4755fa680bb387e37e38a79d7ce6eb6dc67fa"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.7.attn.proj",
+          "bits": 4,
+          "path": "quantized/47.pt",
+          "sha256": "65e4196c76dc595269933755d24a270c3c8fa62bcf2ca5e831563b50ff0d623e"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.7.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/48.pt",
+          "sha256": "0e35f92f998365a1b4f0bb4c8ffe93154aba7ba629ca7600190ecaaa9f3f155c"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.8.attn.qkv",
+          "bits": 4,
+          "path": "quantized/49.pt",
+          "sha256": "38c88d1ce6e71c168b6d85c61a7b57fa3347f6ce9f9a5834e9cca03eea52dbcb"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.9.attn.proj",
+          "bits": 4,
+          "path": "quantized/50.pt",
+          "sha256": "9020a9f1518dec2879fa1c0348fe99acf26a2e297135c1b69f7d87958e782d8e"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.9.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/51.pt",
+          "sha256": "10c3a887c3e3005c72de57a83a6b8c20e539edc2bf0954adbd70cbac5fdb1115"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.1.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/52.pt",
+          "sha256": "b61845abd7bdea89618660162118c0c3c40b29ff6999b4b36f666dd9431677d5"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.11.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/53.pt",
+          "sha256": "8b5117bd7a29c89eb57f5e5459b5d44669cdd7b68e6e892ed90285ca59ede71a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.13.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/54.pt",
+          "sha256": "5852e591cb4c0c1cc1d27e3599844e725ba83f0c4e3a6add431f4de9f5865164"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.15.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/55.pt",
+          "sha256": "3b7f1c1b03251a8cc0413445bca4b9d2c758c24448de3d0cfa3ce96b0620bb0b"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.17.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/56.pt",
+          "sha256": "8d1ac1a732d1a4fd6827cd6fec441c8499bd3152d7fb4d4c32388dca5458ee87"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.19.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/57.pt",
+          "sha256": "fba19ac2c339906905ccdceb6381b5ac7ce9b19a9630bae295bbabdebcb68da7"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.20.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/58.pt",
+          "sha256": "5a4e27d15f3385a3c2456e8130dcfdc7c3382f91dc08087b6d947b06eba9e06e"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.22.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/59.pt",
+          "sha256": "0c12ccc8a23eecd40851b8b2bbdba420a38d72a01d0d747bbe621c6b3dbdde09"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.3.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/60.pt",
+          "sha256": "f131726fd90ceeef1d12b1851bd17aecb4bd00bd240e18678e6528f128f58863"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.5.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/61.pt",
+          "sha256": "f4f469402199f0ae846b54f139dbab08c13a7f46adf1708a43a107eb162f15d5"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.7.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/62.pt",
+          "sha256": "b34daa9f903ce4cc06b0a1fe2918846e0eca353e67fee2577148da35cbf5cd12"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.9.mlp.linear_fc2",
+          "bits": 4,
+          "path": "quantized/63.pt",
+          "sha256": "d828117329952d328cd44f449de13b1e7b5e58ace7fabbb9286e8d97b25f56c7"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.0.linear_fc2",
+          "bits": 4,
+          "path": "quantized/64.pt",
+          "sha256": "942066e2159f53cad5b3f0fea98a48250b5a9513a71a4bdcdae83227430801ec"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.1.linear_fc2",
+          "bits": 4,
+          "path": "quantized/65.pt",
+          "sha256": "6ec462c8e80ec9c4e83c3b6cbc798894a4f2262e15cdb1934a56bc2e470491fc"
+        },
+        {
+          "layer": "backbone.model.model.visual.deepstack_merger_list.2.linear_fc2",
+          "bits": 4,
+          "path": "quantized/66.pt",
+          "sha256": "6b626e13d6c84659c27812f4180a85d92273a44ce95d6b356d65a3df5b385c11"
+        },
+        {
+          "layer": "backbone.model.model.visual.merger.linear_fc2",
+          "bits": 4,
+          "path": "quantized/67.pt",
+          "sha256": "b33141afc33aac8c0960613562f0ee07aad87703cec0a79bd2e1ce2bcb5a0d2a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.0.attn.proj",
+          "bits": 4,
+          "path": "quantized/68.pt",
+          "sha256": "05d226ae1c5a51698f63d5365dbadcefe5b096749ab11b197b22a713824fc242"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.0.attn.qkv",
+          "bits": 4,
+          "path": "quantized/69.pt",
+          "sha256": "db4322223e62ecd8753a5b193076f6891b95fd4d53bc82ba3f6b5e37ae09d7f3"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.0.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/70.pt",
+          "sha256": "c7a2fc4c6b5fa9e4d7676fa70594244c782276caec28136287dbaa338588ea7f"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.1.attn.qkv",
+          "bits": 4,
+          "path": "quantized/71.pt",
+          "sha256": "118d16abfd840fab693157a5456786d6bb974e992575ed24082bb050b2c2b447"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.10.attn.proj",
+          "bits": 4,
+          "path": "quantized/72.pt",
+          "sha256": "1476b55054d85b2ecd0e4473936d5c747541f3a56c90c4982c0061657489dec4"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.10.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/73.pt",
+          "sha256": "f07dce741e94c4a095fc675893caecf54a5e0f1f2a58854dd2d9ace166891f7e"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.11.attn.qkv",
+          "bits": 4,
+          "path": "quantized/74.pt",
+          "sha256": "c35178f5cd3ac2464d5546461f42bcea8d7b3a948dcb2be655c8ff7d504ae6be"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.12.attn.proj",
+          "bits": 4,
+          "path": "quantized/75.pt",
+          "sha256": "5b59aed1780f2faf923de849d9eafd0789d4ccffeb52459cd455340e8d02094d"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.12.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/76.pt",
+          "sha256": "3dffac8b12e32c6098918d184d9cda4037649b96a7dd37f191976156572845cc"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.13.attn.qkv",
+          "bits": 4,
+          "path": "quantized/77.pt",
+          "sha256": "b74f3a2c3bd154394b4b1d267f97bf2d46a79d57205b925c65cdd2b8979ae009"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.14.attn.proj",
+          "bits": 4,
+          "path": "quantized/78.pt",
+          "sha256": "ad6db184c7665d9e4bab99d52156a3632ef9c42c0f08cdf5d50b5c5bc9722bb6"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.14.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/79.pt",
+          "sha256": "f302ac89382c808f6c9333977b5a75e9f0e24b021dc1f55c30e1f605fe11a3e9"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.15.attn.qkv",
+          "bits": 4,
+          "path": "quantized/80.pt",
+          "sha256": "626018e2254c0be935bbb264d4643e8667d3d416ef28484f036cd0713c6bf0fb"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.16.attn.proj",
+          "bits": 4,
+          "path": "quantized/81.pt",
+          "sha256": "f2c22bdd3a97d1ef7e2d2fade0ca0529f9775a3b1a44c18469f67194e0aabe78"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.16.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/82.pt",
+          "sha256": "57bef08809fe0646fdb0654c58e4f56579451c808dd8fabfcbe9ca3a222fae74"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.17.attn.qkv",
+          "bits": 4,
+          "path": "quantized/83.pt",
+          "sha256": "02ba4fc1b7db8404fd5fa5a918146d9bb1c0c1cc433ebd5e522ab7456330888c"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.18.attn.proj",
+          "bits": 4,
+          "path": "quantized/84.pt",
+          "sha256": "c3d91b5e754a6625d9f201ce0718dd9fd2b4580c39bcb9b1e6d51f279c738e2a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.18.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/85.pt",
+          "sha256": "c570689e18186ab209536864c85b2494887de730b6d716260db9e86d1492cfd4"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.19.attn.qkv",
+          "bits": 4,
+          "path": "quantized/86.pt",
+          "sha256": "fefd3e4624b548fc1ff42493a5d738a76ffcb92ba3edd643371245cca6cc1b87"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.2.attn.proj",
+          "bits": 4,
+          "path": "quantized/87.pt",
+          "sha256": "045606d6fae62232304d421f08e5333872667ccf93677cfdf2fe8969252caa95"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.2.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/88.pt",
+          "sha256": "1212e5ce0efd84eef108ee630819d5ef5bb9137616395bc2c56def882b0934b3"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.20.attn.qkv",
+          "bits": 4,
+          "path": "quantized/89.pt",
+          "sha256": "a26c2bbf7058cb215233609743d77c9657cbf3e9f35085041d912ee206bab5d7"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.21.attn.proj",
+          "bits": 4,
+          "path": "quantized/90.pt",
+          "sha256": "dff1d54033e5cdfa641ef5bf2970923922bf9c1f807be365ac16a6c4c04c405a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.21.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/91.pt",
+          "sha256": "a1cd0fd848b3dea9918b6068f5e93ced73ded9b6702e02da6fc4f24cc56080a2"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.22.attn.qkv",
+          "bits": 4,
+          "path": "quantized/92.pt",
+          "sha256": "c70cd83c9e8060e2cd8fb9612e56b3e659171156e5de0ef27a41cd1ec48f09fc"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.23.attn.proj",
+          "bits": 4,
+          "path": "quantized/93.pt",
+          "sha256": "14bea754744fda9258a16c8b6c9a2f8d0ea9cc9aae22f7bd573b9ded0e937f12"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.23.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/94.pt",
+          "sha256": "7ec1f3a12de8a64dccd1d356141eb1664fe7c349ebecba5cccc342500296a9c2"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.3.attn.qkv",
+          "bits": 4,
+          "path": "quantized/95.pt",
+          "sha256": "aa8cdef459a52915cca8e970ffadb6cc7ce27ef89bd084932a17573738d14a1f"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.4.attn.proj",
+          "bits": 4,
+          "path": "quantized/96.pt",
+          "sha256": "d3f17d90517c6993634a9435a1cfc2b50fc33d4f2691699369df10dc6ced0f27"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.4.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/97.pt",
+          "sha256": "03080f434d42ae7bf90aa4783471c4da3be97f7d60bb03df65f9922c38f863f7"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.5.attn.qkv",
+          "bits": 4,
+          "path": "quantized/98.pt",
+          "sha256": "521f1d96154776812aff73af4bbbbf4af5e9aca0195d75412268b5ce02672d02"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.6.attn.proj",
+          "bits": 4,
+          "path": "quantized/99.pt",
+          "sha256": "9ba4004f276c4f6870d0b3500702a52c9728b9b8fff8d66ce58d12df9c45197f"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.6.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/100.pt",
+          "sha256": "37ed29a29e640918df768b5bff95dbe9864e0254768625fa2fb4650575fbebe4"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.7.attn.qkv",
+          "bits": 4,
+          "path": "quantized/101.pt",
+          "sha256": "007525e091a81ee5ae127d172539d4e93fec13a7d5deadcf2398c994f6d0d52a"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.8.attn.proj",
+          "bits": 4,
+          "path": "quantized/102.pt",
+          "sha256": "da43de1af32cb4d5942f67bc2378004d26ff1c6abab139aa1db69b05eae543f9"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.8.mlp.linear_fc1",
+          "bits": 4,
+          "path": "quantized/103.pt",
+          "sha256": "ba53798d3853f2171704484aa416b83a29a0332e19e8dcb62cf51cd3043e42d3"
+        },
+        {
+          "layer": "backbone.model.model.visual.blocks.9.attn.qkv",
+          "bits": 4,
+          "path": "quantized/104.pt",
+          "sha256": "8b7f4fb852ba4a1880020ed8b9cbfa2f6de6b1021afb9d684c24f59e5698c01b"
+        }
+      ],
+      "vlm": {
+        "path": "quantized/vlm.pt",
+        "sha256": "af423ebe3d6194ad07441be1ddd4e6e00fc00cac2f7514f24b4cf6dd151b978e"
+      },
+      "dit": {
+        "path": "quantized/dit.pt",
+        "sha256": "1773beaf7c2d391d1cb570c0aa60d7b1636c0af8371d34df54357184dcf16cc0"
+      },
+      "vlm_spec": {
+        "path": "quantized/vlm_spec.txt",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "dit_spec": {
+        "path": "quantized/dit_spec.txt",
+        "sha256": "b807cb9b51090dbafaff7f6b0538dd467e00ba3575514a0e0b0e1a88eb5417ec"
+      }
+    }
+  },
+  "archive": {
+    "url": "https://github.com/haesunglee116/SACQ/releases/download/inference-spatial-v1/sacq_spatial_w1p5a16_example_v1.tar.gz",
+    "sha256": "85160366cc2bc7cf8d94738425d666132f080614eb688571d849099838530709",
+    "bytes": 839647359
+  },
+  "archive_files": {
+    "request.msgpack": "62e9dc0bba100f8aed2e8c1d5aadffa4d54f2c2b75674eddf9a0fd67ff65983c",
+    "quantized/vlm.pt": "af423ebe3d6194ad07441be1ddd4e6e00fc00cac2f7514f24b4cf6dd151b978e",
+    "quantized/dit.pt": "1773beaf7c2d391d1cb570c0aa60d7b1636c0af8371d34df54357184dcf16cc0",
+    "quantized/vlm_spec.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "quantized/dit_spec.txt": "b807cb9b51090dbafaff7f6b0538dd467e00ba3575514a0e0b0e1a88eb5417ec",
+    "quantized/0.pt": "1609f3540c732b13722066a79f8ddcfdf390cf2fe7673a3623868c01e6a1c6f1",
+    "quantized/1.pt": "b50251bdd0a38a48f5a6afa261a0a582090b336d2a3993636cdf47a96a427a0a",
+    "quantized/2.pt": "97a70677fffcc0daa769100d67670b6860284973df66bbaa8cf958b2063797c6",
+    "quantized/3.pt": "4e8b7e11bdd3a99614f9449bcb6b31563917b0d14e7172cd8de697b4ffaa53f2",
+    "quantized/4.pt": "919a66b4fcf12c2d22ba0ad58b6292a1ea11b5a039d1bbb3846823d20b4b6fa5",
+    "quantized/5.pt": "d4c9418764f542489ef94ce723752a9302c02303e3e4daac98d327c894dc4f94",
+    "quantized/6.pt": "5e4eeb25e56c990199c2e6d5c8741023bc62bd4798141d27f9ab7e350f0308df",
+    "quantized/7.pt": "7033d31440d11f107cb4f848797c648dde386275c205e523aac47e51612f3ae3",
+    "quantized/8.pt": "9b4fb9d2ca2c13b4df6de0991514138759d1373f1604a3db90b435cd6a9bf712",
+    "quantized/9.pt": "1ddc654122727062c3b89e8465270a29c9cb571e1107db0ce7b9b468bf405036",
+    "quantized/10.pt": "81881f54af66aabae6ff5c5a4db5a3717119d5359ff2e816cfb12a2d180990b6",
+    "quantized/11.pt": "7525c2c41e7afd1bfaa193a555c22665978ad3e57e4974491068fdf55c50ce9b",
+    "quantized/12.pt": "65bb678235147905edf28c0e9e7c0304c47d80dfa04433894d50ec8486a7edf8",
+    "quantized/13.pt": "aa4b45d447a0b68a41d4c873614da5328a5bb9613a2eb481add4b1bd2133de2e",
+    "quantized/14.pt": "794c07618c31ee127cc72450bdd8f03ebc72687d7aa79187569a4f31e0e0f2b7",
+    "quantized/15.pt": "a080744cce483ea5f520c4e70314eafd1b76a41379b9da68e1071c4d0d382a5e",
+    "quantized/16.pt": "c58ec891fafa01560fef6704bc7fdba42a8c7c6bad18f5728bf205b8cb109447",
+    "quantized/17.pt": "74a2cd72ac5998292cda5e15692109a3aadde2dfbf828c81075f866d0f2e09b7",
+    "quantized/18.pt": "3c59db259c1976bee36edf5f9c2e8f92531ea45988c5324d6765071fa2180d7d",
+    "quantized/19.pt": "8263ad7301157fc8fc769e4341ba4fbd402a8085e9b28f5d30e29f150f3ab6b7",
+    "quantized/20.pt": "d5d084d2f448fbff7354a35d869c8f6e61bc4a075e09f8480fc61fd78997c236",
+    "quantized/21.pt": "74866281d18275792f1f92d53dfb1b7977e3e5aa11cd5be0cc2c247627d5628f",
+    "quantized/22.pt": "c25e56d05a647f7e6f27ddfd06a9979fafe27c6aef3dd82c3918c4559ad8f37a",
+    "quantized/23.pt": "0120c544b4508231c67d3750655896b251dcb61ca63a9ba48512d8fae0b93869",
+    "quantized/24.pt": "6f97e9174d8e10e609e67cbaff9a77d43cbf405bbbcc11d166d6ff8167121c22",
+    "quantized/25.pt": "7160daa39a4ee553ee9407ba3e20741b8dda55584a6aec187dec98367d389523",
+    "quantized/26.pt": "ea36e42028b2b52a01e712febdb77c0cacbf524c3f8703754fca42a17b7d57f1",
+    "quantized/27.pt": "5471ea916f4fc2de54e19df4747fbb3e5ac89423561d44b32319965eaf102188",
+    "quantized/28.pt": "88a6581d5f4b0a21f9aba0bd94732188e1e036192a5821ef389ff99e9b9921fe",
+    "quantized/29.pt": "6ccb33a6cb24123f847b8f4742426736a07caa050a5324e2c6ff619bdeb8e65f",
+    "quantized/30.pt": "7d4788d53a6c978e49a2d7da5e86f781fe71c89a66bfb91c9cd1dc38826e213d",
+    "quantized/31.pt": "4f7d770e5a2675085645d3784f976a47dd175fc0441220b8d1286b5f778f67e3",
+    "quantized/32.pt": "64f964f83fba9f7795e9f0ace2b9c115f24b65f12f099ec840bebefd12dcbb13",
+    "quantized/33.pt": "80116313802ce1a81640569c9a57ac06f5db7c8d5970f5aaf25c1e0b58be4859",
+    "quantized/34.pt": "bcf95c5307acb9255ba901efc2e50b155916c600402c3cdf0ba0d46fad530b67",
+    "quantized/35.pt": "f40c13b82981c2a093d5504a9e236ac3e2d94edd85c3770735465e29442febd2",
+    "quantized/36.pt": "f48a55e96b7f9bd0d7b2b1aaf89b79af5cceef88d5e130adc3b6b5bd8690e53d",
+    "quantized/37.pt": "ff21b1ee75bbd858b4200a054e1f648dd45d5b7c5abcb82837c55172ca271442",
+    "quantized/38.pt": "b12f1355eba7178d91a16011a5a632eaa23c5146d859ded782a94e060aed22ba",
+    "quantized/39.pt": "5d717cb88f3b2a2d1871499eb77ff694c243ba9bb4d0b6ff95c68a15a2f1246d",
+    "quantized/40.pt": "c6fa3ea23e00033133ff108bea71a858bcca42db8974de47193919f9e0620163",
+    "quantized/41.pt": "a3e97e3030d0cffea75daa6d8d8aa81b0479c0c4e4f286bcaaff587a39c01403",
+    "quantized/42.pt": "125237ac48025da9377ee431f5e3955692e57d92f674e945cecca2d1a6572b6e",
+    "quantized/43.pt": "8737bbaa5126fae02ad8553afe94db571cc0c1a60cdf3fb0a0d761b12cb5bea8",
+    "quantized/44.pt": "7a97bf1538a9dd4ecbc66af4917b2bb7a919dee8c16e837b85b421cc6af75c00",
+    "quantized/45.pt": "99d4f46c31abe53803343df842eea4f06556c09145cca9ce59b349304fccf401",
+    "quantized/46.pt": "5ff9dc38fb9ba3e4c11a092008a4755fa680bb387e37e38a79d7ce6eb6dc67fa",
+    "quantized/47.pt": "65e4196c76dc595269933755d24a270c3c8fa62bcf2ca5e831563b50ff0d623e",
+    "quantized/48.pt": "0e35f92f998365a1b4f0bb4c8ffe93154aba7ba629ca7600190ecaaa9f3f155c",
+    "quantized/49.pt": "38c88d1ce6e71c168b6d85c61a7b57fa3347f6ce9f9a5834e9cca03eea52dbcb",
+    "quantized/50.pt": "9020a9f1518dec2879fa1c0348fe99acf26a2e297135c1b69f7d87958e782d8e",
+    "quantized/51.pt": "10c3a887c3e3005c72de57a83a6b8c20e539edc2bf0954adbd70cbac5fdb1115",
+    "quantized/52.pt": "b61845abd7bdea89618660162118c0c3c40b29ff6999b4b36f666dd9431677d5",
+    "quantized/53.pt": "8b5117bd7a29c89eb57f5e5459b5d44669cdd7b68e6e892ed90285ca59ede71a",
+    "quantized/54.pt": "5852e591cb4c0c1cc1d27e3599844e725ba83f0c4e3a6add431f4de9f5865164",
+    "quantized/55.pt": "3b7f1c1b03251a8cc0413445bca4b9d2c758c24448de3d0cfa3ce96b0620bb0b",
+    "quantized/56.pt": "8d1ac1a732d1a4fd6827cd6fec441c8499bd3152d7fb4d4c32388dca5458ee87",
+    "quantized/57.pt": "fba19ac2c339906905ccdceb6381b5ac7ce9b19a9630bae295bbabdebcb68da7",
+    "quantized/58.pt": "5a4e27d15f3385a3c2456e8130dcfdc7c3382f91dc08087b6d947b06eba9e06e",
+    "quantized/59.pt": "0c12ccc8a23eecd40851b8b2bbdba420a38d72a01d0d747bbe621c6b3dbdde09",
+    "quantized/60.pt": "f131726fd90ceeef1d12b1851bd17aecb4bd00bd240e18678e6528f128f58863",
+    "quantized/61.pt": "f4f469402199f0ae846b54f139dbab08c13a7f46adf1708a43a107eb162f15d5",
+    "quantized/62.pt": "b34daa9f903ce4cc06b0a1fe2918846e0eca353e67fee2577148da35cbf5cd12",
+    "quantized/63.pt": "d828117329952d328cd44f449de13b1e7b5e58ace7fabbb9286e8d97b25f56c7",
+    "quantized/64.pt": "942066e2159f53cad5b3f0fea98a48250b5a9513a71a4bdcdae83227430801ec",
+    "quantized/65.pt": "6ec462c8e80ec9c4e83c3b6cbc798894a4f2262e15cdb1934a56bc2e470491fc",
+    "quantized/66.pt": "6b626e13d6c84659c27812f4180a85d92273a44ce95d6b356d65a3df5b385c11",
+    "quantized/67.pt": "b33141afc33aac8c0960613562f0ee07aad87703cec0a79bd2e1ce2bcb5a0d2a",
+    "quantized/68.pt": "05d226ae1c5a51698f63d5365dbadcefe5b096749ab11b197b22a713824fc242",
+    "quantized/69.pt": "db4322223e62ecd8753a5b193076f6891b95fd4d53bc82ba3f6b5e37ae09d7f3",
+    "quantized/70.pt": "c7a2fc4c6b5fa9e4d7676fa70594244c782276caec28136287dbaa338588ea7f",
+    "quantized/71.pt": "118d16abfd840fab693157a5456786d6bb974e992575ed24082bb050b2c2b447",
+    "quantized/72.pt": "1476b55054d85b2ecd0e4473936d5c747541f3a56c90c4982c0061657489dec4",
+    "quantized/73.pt": "f07dce741e94c4a095fc675893caecf54a5e0f1f2a58854dd2d9ace166891f7e",
+    "quantized/74.pt": "c35178f5cd3ac2464d5546461f42bcea8d7b3a948dcb2be655c8ff7d504ae6be",
+    "quantized/75.pt": "5b59aed1780f2faf923de849d9eafd0789d4ccffeb52459cd455340e8d02094d",
+    "quantized/76.pt": "3dffac8b12e32c6098918d184d9cda4037649b96a7dd37f191976156572845cc",
+    "quantized/77.pt": "b74f3a2c3bd154394b4b1d267f97bf2d46a79d57205b925c65cdd2b8979ae009",
+    "quantized/78.pt": "ad6db184c7665d9e4bab99d52156a3632ef9c42c0f08cdf5d50b5c5bc9722bb6",
+    "quantized/79.pt": "f302ac89382c808f6c9333977b5a75e9f0e24b021dc1f55c30e1f605fe11a3e9",
+    "quantized/80.pt": "626018e2254c0be935bbb264d4643e8667d3d416ef28484f036cd0713c6bf0fb",
+    "quantized/81.pt": "f2c22bdd3a97d1ef7e2d2fade0ca0529f9775a3b1a44c18469f67194e0aabe78",
+    "quantized/82.pt": "57bef08809fe0646fdb0654c58e4f56579451c808dd8fabfcbe9ca3a222fae74",
+    "quantized/83.pt": "02ba4fc1b7db8404fd5fa5a918146d9bb1c0c1cc433ebd5e522ab7456330888c",
+    "quantized/84.pt": "c3d91b5e754a6625d9f201ce0718dd9fd2b4580c39bcb9b1e6d51f279c738e2a",
+    "quantized/85.pt": "c570689e18186ab209536864c85b2494887de730b6d716260db9e86d1492cfd4",
+    "quantized/86.pt": "fefd3e4624b548fc1ff42493a5d738a76ffcb92ba3edd643371245cca6cc1b87",
+    "quantized/87.pt": "045606d6fae62232304d421f08e5333872667ccf93677cfdf2fe8969252caa95",
+    "quantized/88.pt": "1212e5ce0efd84eef108ee630819d5ef5bb9137616395bc2c56def882b0934b3",
+    "quantized/89.pt": "a26c2bbf7058cb215233609743d77c9657cbf3e9f35085041d912ee206bab5d7",
+    "quantized/90.pt": "dff1d54033e5cdfa641ef5bf2970923922bf9c1f807be365ac16a6c4c04c405a",
+    "quantized/91.pt": "a1cd0fd848b3dea9918b6068f5e93ced73ded9b6702e02da6fc4f24cc56080a2",
+    "quantized/92.pt": "c70cd83c9e8060e2cd8fb9612e56b3e659171156e5de0ef27a41cd1ec48f09fc",
+    "quantized/93.pt": "14bea754744fda9258a16c8b6c9a2f8d0ea9cc9aae22f7bd573b9ded0e937f12",
+    "quantized/94.pt": "7ec1f3a12de8a64dccd1d356141eb1664fe7c349ebecba5cccc342500296a9c2",
+    "quantized/95.pt": "aa8cdef459a52915cca8e970ffadb6cc7ce27ef89bd084932a17573738d14a1f",
+    "quantized/96.pt": "d3f17d90517c6993634a9435a1cfc2b50fc33d4f2691699369df10dc6ced0f27",
+    "quantized/97.pt": "03080f434d42ae7bf90aa4783471c4da3be97f7d60bb03df65f9922c38f863f7",
+    "quantized/98.pt": "521f1d96154776812aff73af4bbbbf4af5e9aca0195d75412268b5ce02672d02",
+    "quantized/99.pt": "9ba4004f276c4f6870d0b3500702a52c9728b9b8fff8d66ce58d12df9c45197f",
+    "quantized/100.pt": "37ed29a29e640918df768b5bff95dbe9864e0254768625fa2fb4650575fbebe4",
+    "quantized/101.pt": "007525e091a81ee5ae127d172539d4e93fec13a7d5deadcf2398c994f6d0d52a",
+    "quantized/102.pt": "da43de1af32cb4d5942f67bc2378004d26ff1c6abab139aa1db69b05eae543f9",
+    "quantized/103.pt": "ba53798d3853f2171704484aa416b83a29a0332e19e8dcb62cf51cd3043e42d3",
+    "quantized/104.pt": "8b7f4fb852ba4a1880020ed8b9cbfa2f6de6b1021afb9d684c24f59e5698c01b",
+    "NOTICE.txt": "1f40b10f8175e1bd36c3778bf3f7505ea524d5b80367b042085ddda2c01ec256",
+    "NVIDIA_OPEN_MODEL_LICENSE.txt": "66d986cc6ced1ec660457b40a7d56fad96d082cea1a979496964596a8b2ac934"
+  },
+  "upstream": [
+    {
+      "kind": "model",
+      "target": "model/model-00002-of-00002.safetensors",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/model-00002-of-00002.safetensors"
+    },
+    {
+      "kind": "model",
+      "target": "model/model.safetensors.index.json",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/model.safetensors.index.json"
+    },
+    {
+      "kind": "model",
+      "target": "model/processor_config.json",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/processor_config.json"
+    },
+    {
+      "kind": "model",
+      "target": "model/statistics.json",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/statistics.json"
+    },
+    {
+      "kind": "model",
+      "target": "model/config.json",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/config.json"
+    },
+    {
+      "kind": "model",
+      "target": "model/embodiment_id.json",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/embodiment_id.json"
+    },
+    {
+      "kind": "model",
+      "target": "model/model-00001-of-00002.safetensors",
+      "repo_id": "nvidia/GR00T-N1.7-LIBERO",
+      "revision": "2ea293aa20ba7cf5bbf3ba17a5fbcb1a01cbfe21",
+      "filename": "libero_spatial/model-00001-of-00002.safetensors"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/model.safetensors",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "model.safetensors"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/tokenizer_config.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "tokenizer_config.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/video_preprocessor_config.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "video_preprocessor_config.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/config.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "config.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/merges.txt",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "merges.txt"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/generation_config.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "generation_config.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/preprocessor_config.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "preprocessor_config.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/chat_template.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "chat_template.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/tokenizer.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "tokenizer.json"
+    },
+    {
+      "kind": "processor",
+      "target": "processor/vocab.json",
+      "repo_id": "nvidia/Cosmos-Reason2-2B",
+      "revision": "9ce19a195e423419c349abfc86fd07178b230561",
+      "filename": "vocab.json"
+    }
+  ]
+}

@@ -873,3 +873,26 @@ No model bundle has been published by this change.
 The complete CPU suite passed **208 tests**. The source distribution built
 successfully and includes both entrypoints, the inference guide and new tests.
 The publication source/license checker reported no errors.
+
+## Standalone inference GPU validation (2026-10-30)
+
+The new standalone entrypoint now passed BF16 and representative Spatial
+W1.5A16 GPU inference on RTX 4090. A fresh prepared public source tree and
+metadata-cleaned artifacts were compared against the original research policy
+wrapper and installer using the previously published request `sp1_req0015`,
+seed 7000, four denoising steps, and the exact existing checkpoint shard hashes.
+All seven `[5,16,1]` action arrays matched byte for byte, maximum difference 0,
+for both conditions. The existing policy runtime and CUDA host were reused.
+No success rollout, timing benchmark, new fitting, A8 test or all-suite test was
+performed. This supersedes the prior unverified status for this single example.
+
+The published tensor export removes unused metadata only and checks equality
+of every retained tensor, dtype, shape and installation field. The ready-to-use
+downloader pins NVIDIA model revisions and all input hashes; three new CPU
+tests exercise resume identity, unsafe archive rejection, wrong model rejection
+and refusal to overwrite unrelated directories.
+
+All **211 CPU tests** passed from the built source distribution in the node-local
+policy runtime. Source-distribution content checks passed. The initial shared
+runtime test process was stopped during filesystem I/O wait and was not counted
+as a completed test run.

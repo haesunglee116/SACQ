@@ -39,6 +39,10 @@ The example is a software demonstration, not a paper experiment configuration.
 For GR00T execution, use the separate policy and simulator environments described
 in the [environment guide](gr00t_libero/ENVIRONMENT.md).
 
+A [ready-to-use Spatial BF16/SACQ A16 example](gr00t_libero/INFERENCE.md) now
+includes a pinned input downloader and GPU-validated action generation. Original
+model downloads remain subject to their upstream access and license terms.
+
 ## Pipeline
 
 ```mermaid
@@ -82,7 +86,7 @@ separately from Git: [download the four suite archives](https://github.com/haesu
 
 ## Validation and supported scope
 
-The current CPU suite passes 208 tests. The existing real-model validation records a diagnostic
+The current CPU suite passes 211 tests. The existing real-model validation records a diagnostic
 connecting fitting, allocation, index correction, calibration and a 50-episode
 rollout. The diagnostic reused an existing candidate bank, fitted one candidate
 and performed one calibration update. It is not a complete rerun of all paper

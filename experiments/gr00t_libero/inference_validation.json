@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "kind": "SOFTWARE_VALIDATION_NOT_BENCHMARK",
+  "comparisons": {
+    "bf16": {
+      "action.x": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.y": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.z": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.roll": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.pitch": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.yaw": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.gripper": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      }
+    },
+    "sacq": {
+      "action.x": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.y": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.z": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.roll": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.pitch": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.yaw": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      },
+      "action.gripper": {
+        "shape": [
+          5,
+          16,
+          1
+        ],
+        "byte_equal": true,
+        "max_abs": 0.0
+      }
+    }
+  },
+  "date": "2026-10-30",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "seed": 7000,
+  "denoising_steps": 4,
+  "request_id": "sp1_req0015",
+  "request_sha256": "62e9dc0bba100f8aed2e8c1d5aadffa4d54f2c2b75674eddf9a0fd67ff65983c",
+  "scope": "One previously published Spatial request, batch 5, 16-step action chunk, BF16 and representative W1.5A16; software validation only",
+  "limitations": [
+    "Not a new success-rate or latency result",
+    "Existing policy environment and CUDA host reused",
+    "Not validation of A8 or all suites"
+  ],
+  "tensor_export": {
+    "files": 107,
+    "all_tensor_values_exact": true
+  }
+}
