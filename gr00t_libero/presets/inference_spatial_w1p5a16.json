@@ -793,7 +793,7 @@
     }
   },
   "archive": {
-    "url": "https://github.com/haesunglee116/SACQ/releases/download/inference-spatial-v1/sacq_spatial_w1p5a16_example_v1.tar.gz",
+    "url": "https://github.com/haesunglee116/SACQ/releases/download/inference-spatial-v1/sacq_spatial_w1p5a16_example_v1.tar.gz?download=1",
     "sha256": "85160366cc2bc7cf8d94738425d666132f080614eb688571d849099838530709",
     "bytes": 839647359
   },

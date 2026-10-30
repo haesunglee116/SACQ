@@ -12,6 +12,9 @@ byte (all seven action arrays, maximum absolute difference 0). This covers one
 published request with five observations and a 16-step action chunk, seed 7000,
 and four denoising steps. The existing CUDA host and policy environment were
 reused. See [the validation record](../experiments/gr00t_libero/inference_validation.json).
+The public archive was also downloaded anonymously, restored to a new directory,
+and rerun on GPU with byte-identical output. Exact-hash local upstream model
+files were reused for that download/restore check.
 It is not a new success-rate result or a validation of A8 acceleration.
 
 ## Ready-to-use reference inputs

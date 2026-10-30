@@ -148,5 +148,14 @@
   "tensor_export": {
     "files": 107,
     "all_tensor_values_exact": true
+  },
+  "public_download_roundtrip": {
+    "status": "PASS",
+    "anonymous_release_download": true,
+    "archive_sha256": "85160366cc2bc7cf8d94738425d666132f080614eb688571d849099838530709",
+    "upstream_models": "Reused local files after exact pinned SHA verification; no new gated weight download",
+    "gpu_inference": true,
+    "actions_byte_equal": true,
+    "scope": "Same representative Spatial request; no new benchmark"
   }
 }

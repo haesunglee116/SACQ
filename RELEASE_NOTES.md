@@ -84,3 +84,14 @@ are included. Third-party terms remain separate; see
 Source code is available in the SACQ GitHub repository. Calibration dataset assets are available in the calibration-v1 release.
 No package-index release is claimed by this update. Original SACQ code and
 documentation use Apache-2.0; third-party terms are retained.
+
+### Standalone Spatial inference example (2026-10-30)
+
+Added a pinned downloader and published representative W1.5A16 calibrated model
+artifacts plus an example observation in `inference-spatial-v1`. Original GR00T
+and Cosmos files come from their official repositories; Cosmos access approval
+is required. BF16 and SACQ A16 outputs matched the original research path byte
+for byte on the fixed example. All 211 CPU tests passed. See
+[the inference guide](gr00t_libero/INFERENCE.md) for commands and validation scope.
+This completes the representative standalone example, not full benchmark
+reproduction or the separate A8 acceleration integration.

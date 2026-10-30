@@ -896,3 +896,10 @@ All **211 CPU tests** passed from the built source distribution in the node-loca
 policy runtime. Source-distribution content checks passed. The initial shared
 runtime test process was stopped during filesystem I/O wait and was not counted
 as a completed test run.
+
+The published artifact archive was then downloaded anonymously through the
+public downloader into a new directory, checked against the pinned SHA-256,
+combined with exact-hash local copies of upstream models, and executed again
+on GPU. All returned action arrays remained byte-identical. This exercises
+public artifact download/restore; it is not a fresh download of gated Cosmos
+weights or a new-host installation.
