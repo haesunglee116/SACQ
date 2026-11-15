@@ -15,8 +15,30 @@ from gr00t.policy.gr00t_policy import Gr00tPolicy
 from measure_dit_single_layer_downgrade_sensitivity import patched_env, replace_embedding
 from measure_dit_scalar_vs_vector_2026_07_17 import load_batches
 from measure_embedding_vision_quant_memory_v1 import quantize_visual_linears
-from measure_gr00t_dit_fullstack_proxy_2026_07_21 import VLM_ENV
 from measure_hotspot_protection_proxy import move_to_device, run_outputs
+
+# Statistics are collected before language/action quantization. Do not import
+# the historical proxy environment: it installs a legacy 2.1-bit VLM overlay.
+VLM_ENV = {
+    "VLM_BITS": "16", "DIT_BITS": "16",
+    "VLM_QUANT_MODE": "uniform", "DIT_QUANT_MODE": "uniform",
+    "VLM_ROTATION_MODE": "none",
+    "VLM_FORCE_BITS_SPECS_FILE": "", "VLM_CODEBOOK_OVERLAY_PATH": "",
+    "DIT_FORCE_BITS_SPECS_FILE": "", "DIT_CODEBOOK_OVERLAY_PATH": "",
+    "ACTION_HEAD_SINGLE_EMBODIMENT_ID": "2", "DIT_INCLUDE_ADALN": "0",
+}
+
+
+def verify_bf16_weights(model, before):
+    """Fail before collecting metrics if the fixed language/action weights changed."""
+    named = dict(model.named_modules())
+    for name, weight in before.items():
+        layer = named[name]
+        if (not isinstance(layer, torch.nn.Linear)
+                or layer.weight.dtype != torch.bfloat16
+                or not torch.equal(weight, layer.weight.detach().cpu())):
+            raise RuntimeError(f"Statistics require unchanged BF16 weights: {name}")
+
 
 QA = PROJ / "quantization_analysis"
 MODULE_CSV = QA / "gr00t_dit_scalar_vs_vector_2026-07-17/dit_modules.csv"
@@ -56,6 +78,10 @@ def main():
         ),
     )
     args = ap.parse_args()
+    inherited = sorted(k for k in os.environ
+                       if k.startswith(("VLM_", "DIT_", "GR00T_", "ACTION_HEAD_")))
+    if inherited:
+        raise ValueError(f"Remove inherited quantization controls before statistics capture: {inherited}")
     out = Path(args.out_dir); out.mkdir(parents=True, exist_ok=True)
     device = torch.device(args.device)
 
@@ -75,10 +101,28 @@ def main():
     for p in policy.model.parameters(): p.requires_grad_(False)
     batches = load_batches(policy, Path(args.request_dir), args.limit)
     named = dict(policy.model.named_modules())
+    language = [n for n, layer in named.items()
+                if "language_model.layers." in n and isinstance(layer, torch.nn.Linear)]
+    if len(language) != 112:
+        raise RuntimeError(f"Expected 112 language linears, got {len(language)}")
+    before = {n: named[n].weight.detach().cpu().clone() for n in language + core}
+    verify_bf16_weights(policy.model, before)
     with patched_env(VLM_ENV):
-        quantize_gr00t_vlm27_dit4(policy.model, group_size=64, device=args.device)
+        replacements = quantize_gr00t_vlm27_dit4(policy.model, group_size=64, device=args.device)
+    if replacements != 0:
+        raise RuntimeError(f"Language/action quantization during statistics: {replacements}")
     replace_embedding(policy.model, 4, 64, True)
     quantize_visual_linears(policy.model, nbits=4, group_size=64, device=args.device)
+    verify_bf16_weights(policy.model, before)
+    (out / "statistics_background.json").write_text(json.dumps({
+        "schema": "sacq_dit_statistics_background_v1",
+        "language_weights": "BF16 checkpoint, unchanged",
+        "dit_weights": "BF16 checkpoint, unchanged",
+        "language_linears_verified": len(language), "dit_linears_verified": len(core),
+        "vision_bits": 4, "embedding_bits": 4,
+        "legacy_vlm_overlay": False, "checkpoint": str(args.ckpt),
+    }, indent=2))
+    del before
     gc.collect(); torch.cuda.empty_cache()
 
     pair = defaultdict(list); handles = []

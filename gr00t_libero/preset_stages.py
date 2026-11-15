@@ -60,7 +60,7 @@ def prepare(stage, bindings, output_dir):
             command('metrics_'+suite, dict(base,operation='metrics',checkpoint=models[suite]),
                     ['--out-dir',metrics,'--ckpt',models[suite],'--request-dir',dit_requests,
                      '--limit',64,'--calib-calls',48,'--device','cuda:0','--ff-up-activation-curvature','diag_mean'])
-            outputs.extend(map(str,[metrics/'metrics.pt',metrics/'consumption.json']))
+            outputs.extend(map(str,[metrics/'metrics.pt',metrics/'consumption.json',metrics/'statistics_background.json']))
         for k in preset['candidate_k']:
             dest = root/'bank'/f'vlm_k{k}'
             command(f'vlm_k{k}',dict(base,operation='vlm',checkpoint=models['libero_spatial']),

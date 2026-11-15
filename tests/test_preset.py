@@ -75,7 +75,8 @@ class UpstreamPresetTests(unittest.TestCase):
         b['dit_requests'] = self.captures('dit', map(str, range(64)))
         row = prepare('fitting', b, self.root/'plan')
         self.assertEqual(len(row['commands']), 44)
-        self.assertEqual(len(row['outputs']), 8128+8)
+        self.assertEqual(len(row['outputs']), 8128+12)
+        self.assertEqual(sum(p.endswith('/statistics_background.json') for p in row['outputs']), 4)
         self.assertEqual(len(set(row['outputs'])), len(row['outputs']))
         groups = json.loads((self.root/'plan/inventory-spec.json').read_text())['groups']
         self.assertEqual(sum(len(g['layers']) for g in groups), 8128)

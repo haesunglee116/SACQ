@@ -215,7 +215,8 @@
   {
     "file": "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/dit_metrics.py",
     "original_sha256": "8c841edd787de4ae1aef43d4dbe62e290dee53d4245a26744f899664f710ca3b",
-    "export_sha256": "292c97dcd4c331f74c5ec1a5961d05ef739c618808057dc031cc73637c7d1049"
+    "export_sha256": "cbf2533c17b6331da8bc4cc242fd54f6cd082cf7f1c0a8319aa2912c5eae9b6b",
+    "release_modification": "DiT statistics use unchanged BF16 language/action checkpoint weights, with runtime weight verification and provenance; retain vision/embedding4. Replaces legacy2.1bit VLM background for new runs."
   },
   {
     "file": "libero_pro_eval/quantization_analysis/workshop_fixedalloc_refit_20260919/source/dit_fitter.py",

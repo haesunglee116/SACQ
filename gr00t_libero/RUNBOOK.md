@@ -1,5 +1,15 @@
 # GR00T–LIBERO execution runbook
 
+New DiT statistics runs use **BF16 language VLM and BF16 DiT checkpoint weights**,
+with the existing 4-bit vision and embedding background. No quantized VLM overlay
+or forced-bit file is required for this stage. The collector verifies unchanged
+language/action weights and writes `statistics_background.json`. Run it without
+inherited `VLM_*`, `DIT_*`, `GR00T_*`, or `ACTION_HEAD_*` environment overrides.
+This changes the statistics background for new runs; historical results and
+saved statistics are not relabeled as BF16-background runs. Recollect statistics
+and regenerate downstream candidates/allocation to use the new setting.
+
+
 Run these commands from the extracted source distribution, not from the installed
 numerical wheel alone. This is the execution order and artifact contract; it is
 not a bundled model or dataset. Model weights, captures with episode provenance,
