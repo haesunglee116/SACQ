@@ -33,7 +33,7 @@ def prepare(stage, bindings, output_dir):
     if ref(allocation)['sha256'] != preset['allocation']['sha256']:
         raise ValueError('Preset allocation checksum mismatch')
     common = {'workspace', 'processor', 'models', 'output_root'}
-    extra = {'vlm_requests', 'dit_requests'} if stage == 'fitting' else {'bank_manifest', 'allocation_requests'}
+    extra = {'vlm_requests', 'dit_requests'} if stage == 'fitting' else {'bank_manifest', 'scalar_bank_manifest', 'allocation_requests'}
     if set(bindings) != common | extra:
         raise ValueError('Expected path-only bindings: '+', '.join(sorted(common | extra)))
     workspace = path(bindings['workspace']); processor = path(bindings['processor'])
@@ -84,13 +84,15 @@ def prepare(stage, bindings, output_dir):
                 raise ValueError('Fitting input directory must contain exactly the recorded 64 requests')
             inputs.extend(ref(p) for p in files)
     elif stage == 'allocation':
+        scalar_bank = path(bindings['scalar_bank_manifest'])
+        inputs.append(ref(scalar_bank))
         bank = path(bindings['bank_manifest']); requests = path(bindings['allocation_requests'])
         files = sorted(requests.glob('*.msgpack'))
         if len(files) != 40 or any(sum(p.name.startswith(s + '_') for p in files) != 10 for s in preset['suites']):
             raise ValueError('Allocation requires 40 requests, ten named for each suite')
         inputs.extend(ref(p) for p in files)
         settings = preset['allocation']['origin_search']
-        command('allocation',dict(base,operation='allocation',models=models,bank_manifest=ref(bank),
+        command('allocation',dict(base,operation='allocation',models=models,bank_manifest=ref(bank),scalar_bank_manifest=ref(scalar_bank),
                                   allocation_requests=str(requests),allocation_work=str(root/'work')),
                 ['--out',root/'allocation.csv','--target-payload-bytes',settings['target_payload_bytes'],
                  '--target-nominal-bits',settings['target_nominal_bits'],'--start-k',settings['start_k'],

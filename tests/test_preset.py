@@ -90,12 +90,14 @@ class UpstreamPresetTests(unittest.TestCase):
         b['allocation_requests'] = self.captures('alloc', [f'{s}_{i:02}' for s in self.suites for i in range(10)])
         bank = self.root/'bank.json'; bank.write_text('{}')
         b['bank_manifest'] = str(bank)
+        scalar = self.root/'scalar.json'; scalar.write_text('{}')
+        b['scalar_bank_manifest'] = str(scalar)
         row = prepare('allocation', b, self.root/'plan')
         argv = row['commands'][0]['argv']
         self.assertEqual(argv[argv.index('--target-nominal-bits')+1], '1.25')
         self.assertEqual(argv[argv.index('--n-gpus')+1], '8')
         self.assertTrue(any(p.endswith('allocation_ckpt2.00.csv') for p in row['outputs']))
-        self.assertEqual(len(row['inputs']), 42)
+        self.assertEqual(len(row['inputs']), 43)
 
     def test_incomplete_capture_set_rejected_before_writing(self):
         from gr00t_libero.preset_stages import prepare

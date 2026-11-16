@@ -703,3 +703,5 @@ The [final A8 kernel overlay](acceleration/README.md) and
 [recorded experiment map](../experiments/gr00t_libero/README.md) are separate from
 the existing A16 pipeline. The overlay stages source and frozen choices for a
 compatible INT8 bootstrap; it is not enabled for calibration or rollout by default.
+
+New allocation runs use [GPTQ scalar candidates](GPTQ_ALLOCATION.md) and reuse the selected artifacts during refinement. Historical preset results retain their original search provenance.

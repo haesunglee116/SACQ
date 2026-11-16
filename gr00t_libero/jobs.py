@@ -134,6 +134,26 @@ class Builder:
             expected = selected[row['layer']]
             if row['scope'] != expected['scope'] or int(row['k']) != int(expected['k']):
                 raise ValueError('Bank candidate differs from allocation')
+        # New GPTQ-search snapshots carry a mandatory byte-identity binding.
+        # Historical CSVs without a binding retain their documented legacy path.
+        binding_path = Path(job['allocation'] + '.scalar_bank.json')
+        if any(r.get('scalar_method') == 'GPTQ' for r in rows) and not binding_path.is_file():
+            raise ValueError('GPTQ allocation requires its scalar bank binding sidecar')
+        if binding_path.exists():
+            try:
+                from .scalar_bank import ScalarBank
+            except ImportError:
+                from scalar_bank import ScalarBank
+            binding = self.json(dict(path=str(binding_path), sha256=pipeline.sha(binding_path)))
+            if (binding.get('schema') != 'sacq_allocation_scalar_binding_v1' or
+                    binding.get('method') != 'GPTQ' or
+                    binding['allocation_sha256'] != pipeline.sha(job['allocation'])):
+                raise ValueError('Allocation scalar binding mismatch')
+            self.read(binding['bank'])
+            scalar_bank = ScalarBank(binding['bank'])
+            suite = job.get('suite') or spec.get('bank_selection', {}).get('suite')
+            scalar_bank.check_selected(suite, rows, job['gptq'])
+            job['allocation_scalar_binding'] = binding
         background = {r['layer']: r for r in job['gptq']}
         if set(background).intersection(selected):
             raise ValueError('Codebook and frozen background layers overlap')

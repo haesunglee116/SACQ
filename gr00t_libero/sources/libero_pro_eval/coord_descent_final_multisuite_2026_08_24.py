@@ -42,7 +42,8 @@ SUITES = ("libero_10", "libero_goal", "libero_object", "libero_spatial")
 SUITE_ORDER = {suite: index for index, suite in enumerate(SUITES)}
 GROUP_SIZE = 64
 VECTOR_DIM = 4
-HQQ_SENTINEL_K = {90000: 4, 80000: 3}
+HQQ_SENTINEL_K = {90000: 4, 80000: 3}  # Legacy CSV IDs; candidates now use GPTQ.
+SCALAR_BANK = None
 
 sys.path.insert(0, str(PROJ))
 sys.path.insert(0, str(PROJ / "Isaac-GR00T-N1.7"))
@@ -175,7 +176,7 @@ def load_suite_batches(policy, suite: str, limit: int):
 
 
 def payload_bytes(params: int, k: int) -> int:
-    """Exact serialized layer payload; candidate bias is constant and omitted."""
+    """Search accounting layout (legacy packing); not the BF16 artifact file size."""
     assert params % GROUP_SIZE == 0
     if k in HQQ_SENTINEL_K:
         groups = params // GROUP_SIZE
@@ -351,10 +352,10 @@ class SuiteReplica:
         if cached is not None:
             return cached
         if k in HQQ_SENTINEL_K:
-            weight = infra.quantize_weight_hqq(
-                self.orig_weights[name], nbits=HQQ_SENTINEL_K[k],
-                group_size=GROUP_SIZE, device=str(self.device),
-            ).to(torch.bfloat16)
+            if SCALAR_BANK is None:
+                raise RuntimeError('GPTQ scalar bank required; HQQ fallback is disabled')
+            weight = SCALAR_BANK.weight(self.suite, name, HQQ_SENTINEL_K[k],
+                                        self.orig_weights[name].shape)
         else:
             weight = packed_weight_gpu(
                 kind_of(name), self.suite, name, k, self.device
@@ -633,11 +634,19 @@ def main() -> None:
         with path.open("w", newline="") as handle:
             writer = csv.writer(handle)
             writer.writerow(["layer", "params", "bit", "k", "scope",
-                             "payload_bytes"])
+                             "payload_bytes", "scalar_method"])
             for name in sorted(candidates):
                 writer.writerow([name, params[name], f"{BIT_OF_K[state[name]]:.2f}",
                                  state[name], kind_of(name),
-                                 payload_bytes(params[name], state[name])])
+                                 payload_bytes(params[name], state[name]), "GPTQ"])
+
+        if SCALAR_BANK is None:
+            raise RuntimeError('GPTQ bank missing')
+        path.with_suffix(path.suffix + '.scalar_bank.json').write_text(json.dumps({
+            'schema': 'sacq_allocation_scalar_binding_v1',
+            'allocation_sha256': sha256(path), 'method': 'GPTQ',
+            'bank': SCALAR_BANK.reference,
+        }, indent=2) + '\n')
 
     checkpoints = []
     point = (math.ceil((nominal() - 1e-9) / args.checkpoint_step) - 1) * args.checkpoint_step
@@ -782,7 +791,7 @@ def main() -> None:
         output = Path(args.out)
         save(output)
         vc_path = output.with_suffix(output.suffix + ".vc_only.csv")
-        hqq_path = output.with_suffix(output.suffix + ".hqq_specs.txt")
+        hqq_path = output.with_suffix(output.suffix + ".scalar_specs.txt")
         with vc_path.open("w", newline="") as handle:
             writer = csv.writer(handle)
             writer.writerow(["layer", "params", "bit", "k", "scope",
@@ -808,8 +817,10 @@ def main() -> None:
             "output_csv_sha256": sha256(output),
             "vc_only_csv": str(vc_path.resolve()),
             "vc_only_csv_sha256": sha256(vc_path),
-            "hqq_specs": str(hqq_path.resolve()),
-            "hqq_specs_sha256": sha256(hqq_path),
+            "scalar_method": "GPTQ",
+            "scalar_bank_manifest": SCALAR_BANK.reference,
+            "scalar_specs": str(hqq_path.resolve()),
+            "scalar_specs_sha256": sha256(hqq_path),
             "suites": list(SUITES),
             "workers_per_suite": args.workers_per_suite,
             "requests_per_suite": args.requests_per_suite,

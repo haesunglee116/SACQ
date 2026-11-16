@@ -79,13 +79,21 @@ def main():
             registry.find_packed=bank.find_packed
         else:
             registry.ROT=Path(cfg['bank']);registry.FS2=Path(cfg['bank'])
+        from release_scalar_bank import ScalarBank
+        scalar_bank = ScalarBank(cfg['scalar_bank_manifest'])
         import coord_descent_final_multisuite_2026_08_24 as a
+        a.SCALAR_BANK = scalar_bank
         if 'bank_manifest' in cfg:
             a.preflight_exact_artifacts=lambda vlm,dit,min_bit:manifest_preflight(a,bank,vlm,dit,min_bit)
             a.exact_packed_path=lambda kind,suite,name,k:manifest_packed_path(bank,kind,suite,name,k)
         models=cfg['models']
         if set(models)!=set(a.SUITES):raise ValueError('All four suite checkpoints required')
         if not all(Path(v).is_dir() for v in models.values()):raise ValueError('Missing suite checkpoint')
+        previous_preflight = a.preflight_exact_artifacts
+        def scalar_preflight(vlm, dit, min_bit):
+            scalar_bank.preflight(a.SUITES, list(vlm)+list(dit))
+            return previous_preflight(vlm, dit, min_bit)
+        a.preflight_exact_artifacts = scalar_preflight
         a.find_packed=registry.find_packed
         a.infra.find_packed=registry.find_packed
         a.infra.local_ckpt=lambda suite:str(models[suite])

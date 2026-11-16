@@ -133,6 +133,8 @@ def prepare(workspace, gr00t_checkout=None, libero_checkout=None):
     staged.append({'file':'release_stage.py','sha256':sha(workspace/'release_stage.py')})
     shutil.copyfile(ROOT/'configuration.py',workspace/F/'release_configuration.py')
     staged.append({'file':F+'release_configuration.py','sha256':sha(workspace/F/'release_configuration.py')})
+    shutil.copyfile(ROOT/'scalar_bank.py',workspace/'release_scalar_bank.py')
+    staged.append({'file':'release_scalar_bank.py','sha256':sha(workspace/'release_scalar_bank.py')})
     shutil.copyfile(ROOT/'bank.py',workspace/'release_bank.py')
     staged.append({'file':'release_bank.py','sha256':sha(workspace/'release_bank.py')})
     shutil.copyfile(ROOT/'cache_identity.py',workspace/F/'release_cache_identity.py')
